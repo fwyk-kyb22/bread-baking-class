@@ -1,24 +1,25 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Name
+ 
+bread-baking-class
+パン教室のホームページ
+# Features
+ 
+google api　アクセスを表示
+ブログ機能
+お問い合わせフォーム
+ 
+# Requirement
+ 
+* gem 
+* gem
+ 
+ 
+# Note
+ 
+注意点などがあれば書く
+ 
+# Author
+ 
+* 大野絵美子
+ 
