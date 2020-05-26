@@ -15,10 +15,6 @@ google api　アクセスを表示
 * gem
  
  
-# Note
- 
-注意点などがあれば書く
- 
 # Author
  
 * 大野絵美子
