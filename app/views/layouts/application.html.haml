@@ -8,11 +8,15 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %header.navbar
-      .container
-        %ul.nav.navbar-nav.navbar-right
-          %li= link_to "Home",   '#'
-          %li= link_to "Lesson内容",   '#'
-          %li= link_to "ブログ", '#'
-          %li= link_to "教室の生徒さんはこちら", '#'
+    %header
+      .top-container
+        %h1{class:"top-container__name"} 𝕓𝕣𝕖𝕒𝕕-𝕓𝕒𝕜𝕚𝕟𝕘-𝕔𝕝𝕒𝕤𝕤
+        %p{class:"top-container__content"} 自宅でパンレッスンはじめました！どなたでもお気軽にどうぞ！
+      .header-menu
+        %ul
+          %li= link_to "Home", home_index_path ,class: "header-menu__right"
+          %li= link_to "Lesson内容", "#",class: "header-menu__right"
+          %li= link_to "ブログ", '#', class: "header-menu__right"
+          %li= link_to "お問い合わせフォーム", new_contact_path,class: "header-menu__right"
+          %li= link_to "教室の生徒さんはこちら", new_user_session_path,class: "header-menu__right"
     = yield

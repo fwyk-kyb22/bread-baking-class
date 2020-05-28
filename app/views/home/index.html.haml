@@ -1,26 +1,43 @@
-%h2 アクセス
-%p （個人情報のため名古屋駅にしときました）
-#map
-:css
-  #map {
-    height: 300px;
-    width: 300px;
-  }
-:javascript
-  let map
-  let geocoder
-  
-  function initMap(){
-    geocoder = new google.maps.Geocoder()
-  
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 35.171768, lng:136.882951},
-      zoom: 15,
-    });
-  
-    marker = new google.maps.Marker({
-      position:  {lat: 35.171768, lng:136.882951},
-      map: map
-    });
-  }
-%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyBjibCoD7YJY-NSiKniQlmwV92BBBKVpE8&callback=initMap"}
+.home
+  .main
+    .main--left
+      %h2{class:"main--left__access"} アクセス
+      %p （個人情報のため名古屋駅にしときました）
+      #map
+      :css
+        #map {
+          height: 300px;
+          width: 300px;
+        }
+      :javascript
+        let map
+        let geocoder
+        
+        function initMap(){
+          geocoder = new google.maps.Geocoder()
+        
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 35.171768, lng:136.882951},
+            zoom: 15,
+          });
+        
+          marker = new google.maps.Marker({
+            position:  {lat: 35.171768, lng:136.882951},
+            map: map
+          });
+        }
+      %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyBjibCoD7YJY-NSiKniQlmwV92BBBKVpE8&callback=initMap"}
+    .main--right
+      .main--right--introduction
+        %h3{class:"main--right--introduction__headline"}
+          講師紹介
+        %p{class:"main--right--introduction__content"}
+          abcでの講師歴あり。
+          %br
+          自宅でのレッスンをはじめました！
+          %br
+          好きなパンの種類はベーグルです♪
+          %br
+          いろいろな種類のパン作り、はじめてみませんか？
+        %img{src:"https://4.bp.blogspot.com/-HuxwNFUOO58/VZ-TlU5iqAI/AAAAAAAAvSA/Do3GwdcsPXU/s800/woman01_laugh.png",width:"100", height:"100" }
+ 
