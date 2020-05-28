@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'contacts/new'
-  get 'contacts/create'
   devise_for :users
+  root 'home#index'
+  resources :blogs
+  resources :home, only: [:index]
+  resources :contacts,only: [:new, :create]
 end
