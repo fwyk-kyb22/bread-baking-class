@@ -8,4 +8,11 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header.navbar
+      .container
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to "Home",   '#'
+          %li= link_to "Lesson内容",   '#'
+          %li= link_to "ブログ", '#'
+          %li= link_to "教室の生徒さんはこちら", '#'
     = yield
