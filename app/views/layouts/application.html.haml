@@ -20,6 +20,7 @@
             %li= link_to "ブログ", '#', class: "header-menu__right"
             %li= link_to "お問い合わせ", new_contact_path,class: "header-menu__right"
             %li= link_to "ログアウト", destroy_user_session_path,method: :delete,class: "header-menu__right"
+            %li= link_to "スケジュール", schedules_path ,class: "header-menu__right"
       - else
         .header-menu
           %ul
