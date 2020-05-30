@@ -247,6 +247,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actiontext
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
@@ -254,6 +255,7 @@ DEPENDENCIES
   devise
   erb2haml
   haml-rails (~> 2.0)
+  image_processing
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)
