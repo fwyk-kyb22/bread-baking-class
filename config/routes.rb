@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :articles
   root to: 'home#index'
   devise_for :users
+  resources :articles
+    namespace :admin do
+      resources :articles
+    end
   resources :home, only: :index
   resources :contacts, only: [:new, :create]
   resources :lesson,  only: :index
