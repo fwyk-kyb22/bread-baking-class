@@ -4,7 +4,9 @@ var webpack = require('webpack');
 environment.plugins.append(
   'Provide',
   new webpack.ProvidePlugin({
-    $: 'jquery',
+    $: 'jquery/src/jquery',
+      jQuery: 'jquery/src/jquery',
+      Toastr: 'toastr'
   })
 )
 

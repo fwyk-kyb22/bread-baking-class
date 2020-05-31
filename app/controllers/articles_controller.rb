@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :if_not_admin, except: [:index, :show]
   # GET /articles
   # GET /articles.json
   def index
@@ -71,4 +72,9 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:title,:content)
     end
+
+    def if_not_admin
+      redirect_to root_path unless current_user.admin?
+    end
+
 end

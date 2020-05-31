@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+@import "./lesson/index";
+@import "./home/index";
+@import "toastr";
 
 header{
   background-color: rgb(255, 244, 230);
@@ -52,5 +55,3 @@ header{
     }
   }
 }
-@import "./lesson/index";
-@import "./home/index";

@@ -65,3 +65,5 @@ gem "haml-rails", "~> 2.0"
 gem 'jquery-rails'
 gem 'actiontext'
 gem 'image_processing'
+gem "toastr-rails"
+gem 'rails-i18n'

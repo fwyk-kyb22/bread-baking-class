@@ -9,7 +9,4 @@ class ContactMailer < ApplicationMailer
     @contact = contact  
     mail to: ENV['MAIL'], subject: "お問い合わせ"
   end
-  validates :email, presence: true, length: {maximum:255},
-                    format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i}
-  validates :message, presence: true
 end

@@ -1,0 +1,6 @@
+
+ $(function () {
+  toastr.success("hello")
+ 
+  
+});
