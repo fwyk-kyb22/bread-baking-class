@@ -1,5 +1,6 @@
 
-$(function(){
-  console.log("ok")
+ $(function () {
   toastr.success("hello")
- });
+ 
+  
+});
