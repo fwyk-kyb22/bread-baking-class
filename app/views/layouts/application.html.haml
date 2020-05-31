@@ -31,3 +31,13 @@
             %li= link_to "お問い合わせ", new_contact_path,class: "header-menu__right"
             %li= link_to "教室の生徒さんはこちら", new_user_session_path,class: "header-menu__right"  
     = yield
+    :erb
+      <% if flash.any? %>
+        <script type="text/javascript">
+          <% flash.each do |key, value| %>
+            <% key = "success" if key == "notice" %>
+            <% key = "error" if key == "alert" %>
+            toastr['<%= key %>']('<%= value %>');
+          <% end %>
+        </script>
+      <% end %>
