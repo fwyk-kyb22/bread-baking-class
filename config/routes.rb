@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :home, only: :index
   resources :contacts, only: [:new, :create]
   resources :lesson,  only: :index
-  resources :schedules, only: :index
+  resources :schedules
 end

@@ -25,3 +25,4 @@ require("@rails/actiontext")
 
 import toastr from 'toastr';
 window.toastr = toastr;
+
