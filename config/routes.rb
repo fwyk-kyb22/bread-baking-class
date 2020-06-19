@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :articles
   resources :home, only: :index
-  resources :contacts, only: [:new, :create]
+  resources :applications, only: :index
   resources :lesson,  only: :index
   resources :schedules
 end
