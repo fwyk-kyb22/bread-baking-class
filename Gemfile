@@ -67,3 +67,4 @@ gem 'actiontext'
 gem 'image_processing'
 gem "toastr-rails"
 gem 'rails-i18n'
+gem 'mysql2'
