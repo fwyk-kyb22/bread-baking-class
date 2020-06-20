@@ -1,7 +1,8 @@
+@import "mixin";
 @import "_reset";
 @import "_header";
 @import "./lesson/index";
 @import "./home/index";
 @import "toastr";
-@import "applications";
 @import "schedules";
+@import "users/Sign_up";

@@ -1,25 +1,28 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :name
-    %br/
-    = f.text_field :name, autofocus: true, autocomplete: "name"
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "users/shared/links"
+.user_main
+  .user_main__container
+    %h2.user_main__container--title
+      Sign up!
+    = form_for(@user, url: user_registration_path) do |f|
+      = render "devise/shared/error_messages", resource: @user
+      .field__nickname
+        = f.label :ニックネーム, class:"field__nickname--label"
+        %br/
+        = f.text_field :name , autofocus: true,placeholder: "　例）パン大好き！", class:"field__nickname--field"
+      .field__email
+        = f.label :email, class:"field__email--label"
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "　例）xxx@xxx.xxx", class:"field__email--field"
+      - if @sns_id.present?
+        = hidden_field_tag :sns_auth, true
+      - else
+        .field__password
+          = f.label :パスワード, class:"field__password--label"
+          %br/
+          = f.password_field :password, autocomplete: "new-password",placeholder: "　6文字以上の英数字！", class:"field__password--field"
+        .field__confirmation
+          = f.label :パスワード_確認, class:"field__confirmation--label"
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "new-password" ,placeholder: "　もう一度入力してください〜",class:"field__confirmation--field"
+      .actions.user_submit
+        = f.submit "とうろく！", class:"user_submit--btn"   
+    = link_to "Log in", new_session_path(resource_name), class: "user_link__login"

@@ -1,0 +1,64 @@
+
+.user_main{
+  @include background-image;
+  width: 100%;
+  padding-bottom: 80px;
+  padding-top: 120px;
+  &__container{
+    background-color: white;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 20px;
+    padding-bottom: 120px;
+    &--title{
+      @include title;
+    }
+    .field{
+      &__nickname{
+        @include user-form;
+        &--label{
+          @include label;
+        }
+        &--field{
+          @include field;
+        }
+      }
+      &__email{
+        @include user-form;
+        &--label{
+          @include label;
+        }
+        &--field{
+          @include field;
+        }
+      }
+      &__password{
+        @include user-form;
+        &--label{
+          @include label;
+        }
+        &--field{
+          @include field;
+        }
+      }
+      &__confirmation{
+        @include user-form;
+        &--label{
+          @include label;
+        }
+        &--field{
+          @include field;
+        }
+      }
+    }
+    .user_submit{
+      padding: 20px 20% 30px 25%;
+      &--btn{
+        @include submit;
+      }
+    }
+  }
+}
+.user_link__login,.user_link__new{
+  @include link_set;
+}
