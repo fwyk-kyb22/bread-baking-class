@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :applications, only: :index
   resources :lesson,  only: :index
   resources :schedules
+  resources :comments, only: :create
 end
