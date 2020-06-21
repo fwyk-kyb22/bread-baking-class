@@ -6,8 +6,7 @@
       - flash.each do |name, msg| 
         = content_tag :div, msg, id: "flash_#{name}" 
       .field__email
-        = f.label :Email, class:"field__email--label"
-        %span 必須
+        = f.label :email, class:"field__email--label"
         %br/
         = f.email_field :email, autofocus: true, autocomplete: "email", class:"field__email--field",placeholder: "　例）xxx@xxx.xxx"
       .field__password

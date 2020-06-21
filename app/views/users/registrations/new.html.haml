@@ -7,7 +7,29 @@
       .field__nickname
         = f.label :ニックネーム, class:"field__nickname--label"
         %br/
-        = f.text_field :name , autofocus: true,placeholder: "　例）パン大好き！", class:"field__nickname--field"
+        = f.text_field :nickname , autofocus: true,placeholder: "　例）パン大好き！", class:"field__nickname--field"
+      .user_main__container__name
+        .field__familyname
+          = f.label :苗字, class:"field__familyname--label"
+          %br/
+          = f.text_field :familyname , autofocus: true , placeholder: "　例）山田", class:"field__familyname--field"
+        .field__firstname
+          = f.label :名前, class:"field__firstname--label"
+          %br/
+          = f.text_field :firstname , placeholder: "　例）太郎", class:"field__firstname--field"
+      .user_main__container__kana
+        .field__familyname_kana
+          = f.label :みょうじ　ふりがな, class:"field__familyname_kana--label"
+          %br/
+          = f.text_field :familyname_kana , placeholder: "　例）やまだ", class:"field__familyname_kana--field"
+        .field__firstname_kana
+          = f.label :なまえ　ふりがな, class:"field__firstname_kana--label"
+          %br/
+          = f.text_field :firstname_kana , placeholder: "　例）たろう", class:"field__firstname_kana--field"
+      .field__phone_number
+        = f.label :電話番号, class:"field__phone_number--label"
+        %br/
+        = f.text_field :phone_number, placeholder: "　例）000-0000-0000" ,class:"field__phone_number--field"    
       .field__email
         = f.label :email, class:"field__email--label"
         %br/
@@ -23,6 +45,10 @@
           = f.label :パスワード_確認, class:"field__confirmation--label"
           %br/
           = f.password_field :password_confirmation, autocomplete: "new-password" ,placeholder: "　もう一度入力してください〜",class:"field__confirmation--field"
+      .field__PIN
+        = f.label :PIN, class:"field__PIN--label"
+        %br/
+        = f.text_field :PIN, placeholder: "　メールでお送りした暗証番号を入力！" ,class:"field__PIN--field"    
       .actions.user_submit
         = f.submit "とうろく！", class:"user_submit--btn"   
     = link_to "Log in", new_session_path(resource_name), class: "user_link__login"

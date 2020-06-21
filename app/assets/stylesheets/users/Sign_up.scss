@@ -13,8 +13,80 @@
     &--title{
       @include title;
     }
+    &__name{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      .field{
+        &__familyname{
+          width: 35%;
+          // margin-left: 15%;
+          padding: 10px 0;
+          &--label{
+            @include label;
+          }
+          &--field{
+            @include field;
+          }
+        }
+        &__firstname{
+          width: 35%;
+          // margin-right: 15%;
+          padding: 10px 0;
+          &--label{
+            @include label;
+          }
+          &--field{
+            @include field;
+          }
+        }
+      }
+    } 
+    &__kana{ 
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      .field{
+        &__familyname_kana{
+          position: relative;
+          width: 35%;
+          // margin-left: 15%;
+          padding: 10px 0;
+          &--label{
+            @include label;
+            white-space: nowrap
+            
+          }
+          &--field{
+            @include field;
+          }
+        }
+        &__firstname_kana{
+          position: relative;
+          width: 35%;
+          // margin-right: 15%;
+          padding: 10px 0;
+          &--label{
+            @include label;
+          }
+          &--field{
+            @include field;
+          }
+        }
+      }
+    }
     .field{
       &__nickname{
+        @include user-form;
+        &--label{
+          @include label;
+        }
+        &--field{
+          @include field;
+        }
+      }
+
+      &__phone_number{
         @include user-form;
         &--label{
           @include label;
@@ -42,6 +114,15 @@
         }
       }
       &__confirmation{
+        @include user-form;
+        &--label{
+          @include label;
+        }
+        &--field{
+          @include field;
+        }
+      }
+      &__PIN{
         @include user-form;
         &--label{
           @include label;
