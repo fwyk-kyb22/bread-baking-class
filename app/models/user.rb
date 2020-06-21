@@ -12,5 +12,5 @@ class User < ApplicationRecord
   validates :familyname_kana,:firstname_kana, format: { with: /\A[ぁ-んー－]+\z/ , message: "全角ひらがなのみ使用できます！"}
   STATUS_VALUES = ['mfsadkljfe']
   validates :PIN, inclusion: { in: STATUS_VALUES , message: "暗証番号が間違ってます！"}
-  validates :phone_number, format: { with: /^\d{10}$|^\d{11}$/ , message: "ハイフンなしでお願いします！10桁or11桁になってますか？ご確認お願いします！"}
+  validates :phone_number, format: { with: /\A\d{10}\z|\A\d{11}\z/ , message: "ハイフンなしでお願いします！10桁or11桁になってますか？ご確認お願いします！"}
 end
