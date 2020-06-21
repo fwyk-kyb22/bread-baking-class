@@ -1,8 +1,9 @@
 
 header{
-  background-color: rgb(255, 244, 230);
-  padding: 20px 30px;
-  width: calc(100% - 60px);
+  background-image: url("iStock-y.jpg");
+  background-size: 787px 294px;
+  padding-top: 20px;
+  width: 100%;
   font-family: arial unicode ms;
   .top-container {
     margin: 0 auto;
@@ -16,12 +17,14 @@ header{
       padding-left: 10px;
     }
   }
+
   .header-menu{
+    background-color: #fff;
     height: 60px;
-    width: calc(100% - 30px);
-    margin: 30px auto 0 auto;
-    border-top: 1px solid #585353;
-    border-bottom: 1px solid #585353;
+    width: 100%;
+    margin-top: 30px;
+    // border-top: 1px solid #585353;
+    // border-bottom: 1px solid #585353;
     ul{
       display: flex;
       justify-content: flex-end;

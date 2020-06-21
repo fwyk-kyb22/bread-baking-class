@@ -1,8 +1,7 @@
 .lesson{
-  padding: 0 30px;
+  padding: 20px 30px;
   width: calc(100% - 60px);
-  height: 100vh;
-  background-color: rgb(255, 244, 230);
+  @include background-image;
   font-family: arial unicode ms;
   color: #585353;
   &--container {
@@ -13,7 +12,7 @@
     &__headline{
       position: relative;
       padding: 0.5em 0.7em;
-      background: rgb(255, 244, 230);
+      background: rgb(165, 229, 226);
       font-weight: bold;
       width: 20%;
       text-align: center;
@@ -24,12 +23,13 @@
       top: 100%;
       left: 30px;
       border: 15px solid transparent;
-      border-top: 15px solid rgb(255, 244, 230);
+      border-top: 15px solid rgb(165, 229, 226);
       width: 0;
       height: 0;
     }
     &__content{
       padding-top: 20px;
+      line-height: 50px;
     }
   }
 }

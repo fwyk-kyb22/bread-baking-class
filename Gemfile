@@ -69,3 +69,5 @@ gem "toastr-rails"
 gem 'rails-i18n'
 gem 'mysql2'
 gem 'pry-rails'
+gem 'rspec-rails'
+gem 'factory_bot_rails'

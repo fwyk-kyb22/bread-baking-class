@@ -1,0 +1,145 @@
+
+.user_main{
+  @include background-image;
+  width: 100%;
+  padding-bottom: 80px;
+  padding-top: 120px;
+  &__container{
+    background-color: white;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 20px;
+    padding-bottom: 120px;
+    &--title{
+      @include title;
+    }
+    &__name{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      .field{
+        &__familyname{
+          width: 35%;
+          // margin-left: 15%;
+          padding: 10px 0;
+          &--label{
+            @include label;
+          }
+          &--field{
+            @include field;
+          }
+        }
+        &__firstname{
+          width: 35%;
+          // margin-right: 15%;
+          padding: 10px 0;
+          &--label{
+            @include label;
+          }
+          &--field{
+            @include field;
+          }
+        }
+      }
+    } 
+    &__kana{ 
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      .field{
+        &__familyname_kana{
+          position: relative;
+          width: 35%;
+          // margin-left: 15%;
+          padding: 10px 0;
+          &--label{
+            @include label;
+            white-space: nowrap
+            
+          }
+          &--field{
+            @include field;
+          }
+        }
+        &__firstname_kana{
+          position: relative;
+          width: 35%;
+          // margin-right: 15%;
+          padding: 10px 0;
+          &--label{
+            @include label;
+          }
+          &--field{
+            @include field;
+          }
+        }
+      }
+    }
+    .field{
+      &__nickname{
+        @include user-form;
+        &--label{
+          @include label;
+        }
+        &--field{
+          @include field;
+        }
+      }
+
+      &__phone_number{
+        @include user-form;
+        &--label{
+          @include label;
+        }
+        &--field{
+          @include field;
+        }
+      }
+      &__email{
+        @include user-form;
+        &--label{
+          @include label;
+        }
+        &--field{
+          @include field;
+        }
+      }
+      &__password{
+        @include user-form;
+        &--label{
+          @include label;
+        }
+        &--field{
+          @include field;
+        }
+      }
+      &__confirmation{
+        @include user-form;
+        &--label{
+          @include label;
+        }
+        &--field{
+          @include field;
+        }
+      }
+      &__PIN{
+        @include user-form;
+        &--label{
+          @include label;
+        }
+        &--field{
+          @include field;
+        }
+      }
+    }
+    .user_submit{
+      padding: 20px 20% 30px 25%;
+      &--btn{
+        @include submit;
+      }
+    }
+  }
+}
+.user_link__login,.user_link__new{
+  @include link_set;
+}
