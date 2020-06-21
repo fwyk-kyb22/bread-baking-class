@@ -4,7 +4,7 @@ header{
   background-size: 787px 294px;
   padding-top: 20px;
   width: 100%;
-  font-family: arial unicode ms;
+  @include font-family;
   .top-container {
     margin: 0 auto;
     height: 80px;

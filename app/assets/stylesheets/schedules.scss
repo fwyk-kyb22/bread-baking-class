@@ -2,6 +2,7 @@
   display: flex;
   @include background-image;
   padding: 20px 0;
+  @include font-family;
   &__calendar{
     width: 55%;
     margin: 0 auto;
@@ -27,21 +28,11 @@
         width: 100%;
       }
       &--btn{
-        margin: 0 auto;
-        display: inline-block;
-        padding: 0.5em 1em;
-        text-decoration: none;
-        background: #8fabe7;/*ボタン色*/
-        color: #FFF;
-        border-bottom: solid 4px #6c7892;
-        border-radius: 3px;
+        @include btn1;
         margin: 0 37%;
       }
       &--btn:hover {
-        -webkit-transform: translateY(4px);
-        transform: translateY(4px);/*下に動く*/
-        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
-        border-bottom: none;
+        @include btn1_hover;
       }
     }
     &__list{
@@ -59,6 +50,9 @@
           font-size: 16px;
           background: #e0edff;
           border-radius: 15px;
+          span{
+            font-size: 11px;
+          }
         }
         &--name:before {
           content: "";
