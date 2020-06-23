@@ -1,10 +1,16 @@
-
+@mixin font-family{
+  font-family: Hiragino Maru Gothic ProN;
+}
+@mixin background-image{
+  background-image: url("iStock.jpg");
+  background-size:contain;
+}
 header{
   background-image: url("iStock-y.jpg");
   background-size: 787px 294px;
   padding-top: 20px;
   width: 100%;
-  font-family: arial unicode ms;
+  @include font-family;
   .top-container {
     margin: 0 auto;
     height: 80px;

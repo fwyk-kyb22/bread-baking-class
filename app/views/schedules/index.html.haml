@@ -11,6 +11,7 @@
       - @comments.each do |comment|
         .schedules__comments__list__box
           .schedules__comments__list__box--name  
-            #{comment.user.nickname}さんのこめんと  
+            #{comment.user.nickname}さん
+            %span のこめんと  
           .schedules__comments__list__box--comment
             = comment.content    

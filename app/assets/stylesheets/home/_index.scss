@@ -1,10 +1,10 @@
 .home{
   padding: 0 30px;
   width: calc(100% - 60px);
-  height: 100vh;
   @include background-image;
   font-family: arial unicode ms;
   color: #585353;
+  @include font-family;
   .main {
     display: flex;
     justify-content: space-between;
@@ -22,6 +22,7 @@
         width: 25%;
         text-align: center;
         margin-bottom: 20px;
+        border-radius: 7px;
       }
       &__access:after {
         position: absolute;
@@ -46,6 +47,7 @@
         font-weight: bold;
         width: 50%;
         text-align: center;
+        border-radius: 7px;
       }
       &__headline:after {
         position: absolute;
