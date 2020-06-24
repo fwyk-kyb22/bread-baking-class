@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: bread_baking_class_production
-  username: bread_baking_class
-  password: <%= ENV['BREAD_BAKING_CLASS_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
