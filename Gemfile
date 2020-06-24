@@ -54,6 +54,7 @@ end
 
 group :production do
   gem 'mysql2'
+  gem 'unicorn', '5.4.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -72,3 +73,4 @@ gem 'pry-rails'
 gem 'rspec-rails'
 gem 'factory_bot_rails'
 gem 'kaminari'
+gem 'dotenv-rails'
