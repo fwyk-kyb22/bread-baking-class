@@ -74,3 +74,5 @@ gem 'rspec-rails'
 gem 'factory_bot_rails'
 gem 'kaminari'
 gem 'dotenv-rails'
+gem "rack", ">= 2.2.3"
+gem "actionpack", ">= 6.0.3.2"
