@@ -7,6 +7,7 @@ environment.plugins.append(
     $: 'jquery/src/jquery',
       jQuery: 'jquery/src/jquery',
       Toastr: 'toastr'
+      Popper: ['popper.js', 'default']
   })
 )
 
