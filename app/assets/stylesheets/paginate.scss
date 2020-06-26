@@ -4,7 +4,7 @@
   // background-color: #e0edff;
   border-radius: 20px;
   a,span{
-    width:50px;
+    width:100px;
     height:50px;
     margin:2px;
     line-height:50px;
@@ -14,16 +14,16 @@
     text-decoration:none;
     color:#222;
     transition:.3s;
-    padding:0 5px;
   }
   a:hover{
     background-color: rgb(165, 229, 226);
-    border-radius:100%;
+    border-radius:50px;
+    padding: 20px;
     transform:rotate(360deg);
   }
   .current{
     background-color: rgb(165, 229, 226);
-    border-radius:100%;
+    border-radius:5px;
   }
   .dots{
     background:none;
