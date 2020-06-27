@@ -3,6 +3,11 @@ require_relative '../config/environment'
 require 'rails/test_help'
 
 class ActiveSupport::TestCase
+  unless Webpacker.compiler.fresh?
+    puts "== Webpack compiling =="
+    Webpacker.compiler.compile
+    puts "== Webpack compiled =="
+  end
   # Run tests in parallel with specified workers
   parallelize(workers: :number_of_processors)
 
