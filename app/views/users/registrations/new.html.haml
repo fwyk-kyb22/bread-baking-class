@@ -48,7 +48,12 @@
       .field__PIN
         = f.label :PIN, class:"field__PIN--label"
         %br/
-        = f.text_field :PIN, placeholder: "　メールでお送りした暗証番号を入力！" ,class:"field__PIN--field"    
+        = f.text_field :PIN, placeholder: "メールでお送りした暗証番号を入力！" ,class:"field__PIN--field"   
+      .warning
+        %p 
+          暗証番号は、教室に通っていただいている方だけ新規登録できるようにするために作りました。
+        %br  
+          mfsadkljfe　で入ることができます   
       .actions.user_submit
         = f.submit "とうろく！", class:"user_submit--btn"   
     = link_to "Log in", new_session_path(resource_name), class: "user_link__login"

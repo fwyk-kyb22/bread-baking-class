@@ -14,6 +14,13 @@
         %span 必須
         %br/
         = f.password_field :password, autocomplete: "current-password", class:"field__password--field",placeholder: " 　6文字以上の英数字"
+      .warning
+        %p 
+          教室の先生のアカウント（admin）は 
+          %br
+          email: "admin@ad.min"  
+          %br
+          password "111111"  です  
       .actions.login_submit
         = f.submit "ログイン", class:"login_submit--btn"
     -# = render "devise/shared/links"
