@@ -1,6 +1,4 @@
 
-//  $(function () {
-//   toastr.success("hello")
- 
-  
-// });
+ $(function () {
+  // toastr.success("hello")
+});

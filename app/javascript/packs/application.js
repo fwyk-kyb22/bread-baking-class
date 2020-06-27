@@ -18,8 +18,7 @@ require('toastr')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
-
+require("@rails/actiontext")
 require("trix")
 require("@rails/actiontext")
 
@@ -27,3 +26,4 @@ import "bootstrap"
 import toastr from 'toastr';
 window.toastr = toastr;
 import "../stylesheets/application"
+import "../packs/schedules"
