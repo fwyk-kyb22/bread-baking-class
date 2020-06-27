@@ -22,8 +22,9 @@ require("@rails/actiontext")
 require("trix")
 require("@rails/actiontext")
 
-import "bootstrap"
+
 import toastr from 'toastr';
 window.toastr = toastr;
 import "../stylesheets/application"
 import "../packs/schedules"
+import "bootstrap"
