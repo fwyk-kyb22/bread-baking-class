@@ -1,3 +1,29 @@
+@mixin background-image{
+  background-image: url("iStock.jpg");
+  background-size:contain;
+}
+@mixin font-family{
+  font-family: Hiragino Maru Gothic ProN;
+}
+@mixin btn1 {
+  
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+  }
+@mixin btn1_hover {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}
+
 .article{
   padding: 30px;
   width: calc(100%-60px);
