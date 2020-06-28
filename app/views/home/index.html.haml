@@ -27,16 +27,6 @@
           });
         }
       %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ ENV['GOOGLE_API_MAP_KEY'] }&libraries=places&callback=initMap"}
-      .warning
-        %p 
-          サイトをご覧くださっている企業さんへ
-        %br  
-          こちらはパン教室のホームページとなります
-        %br  
-          こちらのサイトを作った理由としましては、
-          姉が大手パン教室の講師をしていて、近いうちに独立したいといっていたので作った次第です。
-        %br  
-          使用した技術は
     .main--right
       %h3.main--right__headline
         講師紹介
@@ -49,4 +39,4 @@
           好きなパンの種類はベーグルです♪
           %br
           いろいろな種類のパン作り、はじめてみませんか？
-        = image_tag "/assets/icon.jpg",class: "main--right__introduction--image"
+        = image_tag asset_path("/assets/icon.jpg"),class: "main--right__introduction--image"

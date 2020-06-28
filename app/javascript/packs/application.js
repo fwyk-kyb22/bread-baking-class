@@ -11,7 +11,7 @@ require("bootstrap");
 
 
 
-require('toastr')
+
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
@@ -24,6 +24,7 @@ require("@rails/actiontext")
 
 
 import toastr from 'toastr';
+Toastr.options.timeout = 2000;
 window.toastr = toastr;
 import "../stylesheets/application"
 import "../packs/schedules"
