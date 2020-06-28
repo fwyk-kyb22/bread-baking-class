@@ -82,4 +82,4 @@ gem 'dotenv-rails'
 gem "rack", ">= 2.2.3"
 gem "actionpack", ">= 6.0.3.2"
 gem 'bootstrap', '~> 4.5.0'
-gem 'fog-aws'
+gem 'aws-sdk-s3', require: false 
