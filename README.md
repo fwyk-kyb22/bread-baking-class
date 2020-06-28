@@ -26,10 +26,11 @@ devise
 toastr
 kaminari
 # 今後実装したい機能
-先生のTwitterを左側に表示（ソーシャルシェア）
+Twitterを左側に表示（ソーシャルシェア）
 dooker
 payjpをつかって定期購入できる
 いいね機能
+comentをajaxで非同期通信
 # DB設計
 ## Usersテーブル
 |Column|Type|Options|
