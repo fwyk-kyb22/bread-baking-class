@@ -1,5 +1,5 @@
 @mixin background-image{
-  background-image: url("iStock.jpg");
+  background-image: image-url("iStock.jpg");
   background-size:contain;
 }
 @mixin font-family{
