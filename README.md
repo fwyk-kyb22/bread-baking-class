@@ -1,36 +1,39 @@
 # アプリ名
 bread-baking-class
-パン教室のホームページ
+* パン教室のホームページ
 # 概要
-ブログ機能（パン教室の先生のみ編集、投稿、削除ができます。）
-コメント機能（新規登録した生徒さんのみコメントできます。）
-googleapiでmap表示
-googleカレンダーを表示
+* ブログ機能（パン教室の先生のみ編集、投稿、削除ができます。）
+* コメント機能（新規登録した生徒さんのみコメントできます。）
+* googleapiでmap表示
+* googleカレンダーを表示
 # 本番環境
 aws
-テストアカウント（admin）
-  email: "admin@ad.min"
-  password:  "111111"
+* テストアカウント（admin）
+  * email: "admin@ad.min"
+  * password:  "111111"
 # 制作背景
-姉が大手パン教室で働いているため。
-顧客を意識して作りたかったため。
+* 姉が大手パン教室で働いているため。
+* 顧客を意識して作りたかったため。
 # DEMO
+<img width="1431" alt="スクリーンショット 2020-06-28 15 13 40" src="https://user-images.githubusercontent.com/64791353/85974565-c5dc1780-ba10-11ea-9618-605cf477083a.png">
+<img width="1431" alt="スクリーンショット 2020-06-28 15 14 04" src="https://user-images.githubusercontent.com/64791353/85974574-cb396200-ba10-11ea-81b2-96f6ae0c8394.png">
+<img width="1210" alt="スクリーンショット 2020-06-20 23 47 51" src="https://user-images.githubusercontent.com/64791353/85974576-cbd1f880-ba10-11ea-8475-add62919b206.png">
 
 # 使用技術
-action text
-googleカレンダー
-googlemap
-webpack
-rspec
-devise
-toastr
-kaminari
+* action text
+* googleカレンダー
+* googlemap
+* webpack
+* rspec
+* devise
+* toastr
+* kaminari
 # 今後実装したい機能
-Twitterを左側に表示（ソーシャルシェア）
-dooker
-payjpをつかって定期購入できる
-いいね機能
-comentをajaxで非同期通信
+* Twitterを左側に表示（ソーシャルシェア）
+* dooker
+* payjpをつかって定期購入できる
+* いいね機能
+* comentをajaxで非同期通信
 # DB設計
 ## Usersテーブル
 |Column|Type|Options|
