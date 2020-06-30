@@ -1,6 +1,7 @@
 .schedules
   .schedules__calendar
-    %iframe{src: "https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23F6BF26&amp;ctz=Asia%2FTokyo&amp;src=Znd5a2t5YnJuZzIyQGdtYWlsLmNvbQ&amp;color=%23039BE5&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0" }
+    = month_calendar do |date| 
+      = date 
   .schedules__comments
     - if current_user
       .schedules__comments__form    
