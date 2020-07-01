@@ -10,26 +10,38 @@
             #{meeting.start_time.hour}時〜
             %br
             = meeting.name 
+            - if user_signed_in?
+              - if current_user == @user || current_user.admin?
+                .meeting__btn
+                  = link_to '編集', edit_meeting_path(meeting),class: "meeting__edit--btn btn btn-outline-secondary btn-sm"
+                  = link_to '消す！', meeting_path(meeting), method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "meeting__destroy--btn btn btn-outline-danger btn-sm"
+        - if user_signed_in?
+          - if current_user == @user || current_user.admin?
             .meeting__btn
-              = link_to '編集', edit_meeting_path(meeting),class: "meeting__edit--btn btn btn-outline-secondary btn-sm"
-              = link_to '消す！', meeting_path(meeting), method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "meeting__destroy--btn btn btn-outline-danger btn-sm"
-        .meeting__btn
-          = link_to '予定を追加', new_meeting_path ,class: "meeting__new--btn btn btn-outline-primary btn-sm"
-        
+              = link_to '予定を追加', new_meeting_path ,class: "meeting__new--btn btn btn-outline-primary btn-sm"
   .schedules__comments
-    - if current_user
+    - if user_signed_in?
       .schedules__comments__form    
         = form_with(model:@comment, local: true) do |form|
           = form.text_area :content , placeholder: "コメントしてみて！" ,class: "schedules__comments__form--area"
           = form.submit "送信！" ,class: "schedules__comments__form--btn"
     .schedules__comments__list
       - @comments.each do |comment|
-        .schedules__comments__list__box
-          .schedules__comments__list__box--name  
-            #{comment.user.nickname}さん
-            %span のこめんと  
-          .schedules__comments__list__box--comment
-            = comment.content    
-            
+        - if comment.user.admin?
+          .schedules__comments__list__box.admin--comment
+            .schedules__comments__list__box--name.admin--comment--name
+              #{comment.user.nickname}さん
+              %span のこめんと  
+            .schedules__comments__list__box--comment.admin--comment--comment
+              = comment.content    
+        - else 
+          .schedules__comments__list__box
+            .schedules__comments__list__box--name  
+              #{comment.user.nickname}さん
+              %span のこめんと  
+            .schedules__comments__list__box--comment
+              = comment.content      
+
+              
 
  

@@ -114,7 +114,7 @@
       }
       &--btn{
         @include btn1;
-        margin: 0 37%;
+        margin: 0 42%;
         border-top: solid 1px white;
         border-left: solid 1px white;
         border-right: solid 1px white;
@@ -126,6 +126,8 @@
     &__list{
       height: 100%;
       &__box{
+        width: 100%;
+        text-align: end;
         &--name{
           height: 28px;
           position: relative;
@@ -142,15 +144,28 @@
           span{
             font-size: 11px;
           }
+          &:before{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 26%;
+            margin-left: 40px;
+            border: 15px solid transparent;
+            border-top: 15px solid #e0edff;
+          }
         }
-        &--name:before {
-          content: "";
-          position: absolute;
-          top: 100%;
-          left: 26%;
-          margin-left: -15px;
-          border: 15px solid transparent;
-          border-top: 15px solid #e0edff;
+        &--comment{
+          padding: 20px;
+        }
+      }
+      .admin--comment{
+        text-align: inherit;
+        &--name{
+          background-color: pink;
+          &:before{
+            border-top: 15px solid pink;
+            margin-left: -15px;
+          }
         }
         &--comment{
           padding: 20px;
