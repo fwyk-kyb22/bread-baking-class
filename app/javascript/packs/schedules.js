@@ -1,4 +1,0 @@
-
-// $(function () {
-//   toastr.success("hello")
-// });

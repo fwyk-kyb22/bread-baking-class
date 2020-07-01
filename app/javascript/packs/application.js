@@ -27,5 +27,5 @@ import toastr from 'toastr';
 Toastr.options.timeout = 2000;
 window.toastr = toastr;
 import "../stylesheets/application"
-import "../packs/schedules"
+import "../packs/meetings"
 import "bootstrap"

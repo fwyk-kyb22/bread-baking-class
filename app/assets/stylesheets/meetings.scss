@@ -1,76 +1,60 @@
-
 .simple-calendar {
-  background-color: #ffffff;
-  border-radius: 10px; 
+  padding: 20px;
   margin: 0 auto;
-  .day {
-   
-  }
-
-  .wday-0 {
-    
-  }
-  .wday-1 {
-    
-  }
-  .wday-2 {
-    
-  }
-  .wday-3 {
   
+  .calendar-heading{
+    font-size: 20px;
+    text-align: center;
+    a{
+      font-size: 15px;
+    }
   }
-  .wday-4 {
-  
-  }
-  .wday-5 {
-   
-  }
-  .wday-6 {
- 
-  }
-
-  .today {
-
-  }
-  .past {
- 
-  }
-  .future {
-  
-  }
-
-  .start-date {
- 
-  }
-
-  .prev-month {
-  
-  }
-  .next-month {
-   
-  }
-  .current-month {
- 
-  }
-
-  .has-events {
-    
+  .table{
+    thead{
+      th{
+        text-align: center;
+        background-color: #bfd8d8;
+      }
+    }
+    tbody{
+      tr:nth-of-type(odd){
+        background-color: #ffffff;
+      }
+      td{
+        border: 1px solid #bfd8d8;
+      }
+    }
   }
 
   .meeting__container{
     height: 100px;
     width: 100px;
   } 
-  .meeting__new--btn{
-    // display: none;
-    // &:hover{
-    //   display:show;
-    // }
-    a {
-     text-decoration: none;
-     background-color: wheat;
-     color: white;
+  .day{
+    position: relative;
+    .meeting__btn{
+      .meeting__new--btn{
+        position: absolute;
+        top: 0;
+        left: -89px;
+     
+      }
+      .meeting__edit--btn{
+        position: absolute;
+        top: 30px;
+        left: -46px;
+        
+      }
+      .meeting__destroy--btn{
+        position: absolute;
+        top: 60px;
+        left: -60px;
+       
+      }
+      a:hover{
+        text-decoration: none;
+      }
+    
     }
-   
-  }
+  }  
 }

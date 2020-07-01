@@ -1,5 +1,7 @@
 .schedules
   .schedules__calendar
+    .schedules__calendar--title
+      %h1 パン教室の予定はここから〜
     = month_calendar events: @meetings do |date, meetings| 
       = date.day
       .meeting__container
@@ -8,11 +10,11 @@
             #{meeting.start_time.hour}時〜
             %br
             = meeting.name 
-            .meeting__edit--btn
-              = link_to 'Edit', edit_meeting_path(meeting)
-              = link_to 'Destroy', meeting_path(meeting), method: :delete, data: { confirm: 'ほんとに消してええか?' }
-        .meeting__new--btn
-          = link_to 'New Meeting', new_meeting_path 
+            .meeting__btn
+              = link_to '編集', edit_meeting_path(meeting),class: "meeting__edit--btn btn btn-outline-secondary btn-sm"
+              = link_to '消す！', meeting_path(meeting), method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "meeting__destroy--btn btn btn-outline-danger btn-sm"
+        .meeting__btn
+          = link_to '予定を追加', new_meeting_path ,class: "meeting__new--btn btn btn-outline-primary btn-sm"
         
   .schedules__comments
     - if current_user
