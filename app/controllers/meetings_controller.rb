@@ -1,10 +1,13 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:edit, :update, :destroy]
+  # before_action :authenticate_user! 
 
   # GET /meetings
   # GET /meetings.json
   def index
     @meetings = Meeting.all
+    @comment = Comment.new
+    @comments = Comment.all.order('created_at DESC')
   end
 
   # GET /meetings/1

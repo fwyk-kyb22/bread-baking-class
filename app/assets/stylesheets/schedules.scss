@@ -24,20 +24,16 @@
   color: #FFF;
 }
 .schedules{
-  display: flex;
   @include background-image;
   padding: 20px 0;
   @include font-family;
   &__calendar{
     width: 55%;
     margin: 0 auto;
-    iframe{
-      height: 90vh;
-      width: 100%;
-    }
+    width: 80%;
   }
   &__comments{
-    width: 35%;
+    width: 80%;
     background-color: #ffffff;
     border-radius: 10px; 
     margin: 0 auto;
