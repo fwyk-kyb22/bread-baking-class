@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :meetings, except: :show
   root to: 'home#index'
   devise_for :users
   # resources :cards, only: [:index] do

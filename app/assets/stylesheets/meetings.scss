@@ -1,0 +1,73 @@
+
+.simple-calendar {
+  .day {
+   
+  }
+
+  .wday-0 {
+    
+  }
+  .wday-1 {
+    
+  }
+  .wday-2 {
+    
+  }
+  .wday-3 {
+  
+  }
+  .wday-4 {
+  
+  }
+  .wday-5 {
+   
+  }
+  .wday-6 {
+ 
+  }
+
+  .today {
+
+  }
+  .past {
+ 
+  }
+  .future {
+  
+  }
+
+  .start-date {
+ 
+  }
+
+  .prev-month {
+  
+  }
+  .next-month {
+   
+  }
+  .current-month {
+ 
+  }
+
+  .has-events {
+    
+  }
+
+  .meeting__container{
+    height: 100px;
+    width: 100px;
+  } 
+  .meeting__new--btn{
+    // display: none;
+    // &:hover{
+    //   display:show;
+    // }
+    a {
+     text-decoration: none;
+     background-color: wheat;
+     color: white;
+    }
+   
+  }
+}
