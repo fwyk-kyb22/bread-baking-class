@@ -6,7 +6,7 @@ bread-baking-class
 * ブログ機能（パン教室の先生のみ編集、投稿、削除ができます。）
 * コメント機能（新規登録した生徒さんのみコメントできます。）
 * googleapiでmap表示
-* googleカレンダーを表示
+* simplecalendarでカレンダー表示
 # 本番環境
 aws
 * テストアカウント（admin）
@@ -16,9 +16,13 @@ aws
 * 姉が大手パン教室で働いているため。
 * 顧客を意識して作りたかったため。
 # DEMO
-<img width="1431" alt="スクリーンショット 2020-06-28 15 13 40" src="https://user-images.githubusercontent.com/64791353/85974565-c5dc1780-ba10-11ea-9618-605cf477083a.png">
-<img width="1431" alt="スクリーンショット 2020-06-28 15 14 04" src="https://user-images.githubusercontent.com/64791353/85974574-cb396200-ba10-11ea-81b2-96f6ae0c8394.png">
-<img width="1210" alt="スクリーンショット 2020-06-20 23 47 51" src="https://user-images.githubusercontent.com/64791353/85974576-cbd1f880-ba10-11ea-8475-add62919b206.png">
+
+<img width="1228" alt="スクリーンショット 2020-07-02 19 51 55" src="https://user-images.githubusercontent.com/64791353/86350498-bde4d780-bc9d-11ea-8ee0-d0849026a4cf.png">
+<img width="1228" alt="スクリーンショット 2020-07-02 19 52 09" src="https://user-images.githubusercontent.com/64791353/86350506-c2a98b80-bc9d-11ea-8567-1f97087ca3f6.png">
+<img width="1228" alt="スクリーンショット 2020-07-02 19 52 38" src="https://user-images.githubusercontent.com/64791353/86350510-c3dab880-bc9d-11ea-91d1-1cbace600be0.png">
+<img width="1228" alt="スクリーンショット 2020-07-02 19 52 49" src="https://user-images.githubusercontent.com/64791353/86350511-c4734f00-bc9d-11ea-8889-35cb69f0bcfa.png">
+<img width="1228" alt="スクリーンショット 2020-07-02 19 53 00" src="https://user-images.githubusercontent.com/64791353/86350512-c50be580-bc9d-11ea-9493-c46d54080f59.png">
+
 
 # 使用技術
 * action text
@@ -67,7 +71,12 @@ aws
 |title|string||
 
 actiontextのdb設計は省略させていただきます
-
+ ## meetings テーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|content|text||
+|start_time|datetime||
 # Author
  
 * 大野絵美子
