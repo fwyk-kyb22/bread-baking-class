@@ -1,6 +1,14 @@
 .home
   .main
     .main--left
+      %h2{class:"main--left__access"} 今後の予定！
+      = month_calendar events: @meetings do |date, meetings| 
+        = date.day
+        - meetings.each do |meeting| 
+          .main--left__calendar
+            #{meeting.start_time.hour}時〜
+            %br
+            = meeting.name 
       %h2{class:"main--left__access"} アクセス
       %p （個人情報のため名古屋駅にしときました）
       #map
@@ -40,3 +48,5 @@
           %br
           いろいろな種類のパン作り、はじめてみませんか？
         = image_tag asset_path("icon.jpg"),class: "main--right__introduction--image"
+      %a.twitter-timeline{:href => "https://twitter.com/k6aEqYjys7aKcnR?ref_src=twsrc%5Etfw"} Tweets by k6aEqYjys7aKcnR
+      %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}

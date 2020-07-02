@@ -6,6 +6,7 @@ $(function(){
 
   $(".day a").hide(); 
   $(".day .meeting__container--content").hide(); 
+  $(".day .main--left__calendar").hide(); 
 
   $(".day").hover(
     function () {
@@ -17,6 +18,17 @@ $(function(){
       $(".day a").hide();
       $(this).css("background-color","");
       $(".day .meeting__container--content").hide();
+    }
+  );
+
+  $(".day").hover(
+    function () {
+      $(this).find('.main--left__calendar').show();
+      
+    },
+    function () {
+      $(".day .main--left__calendar").hide();
+     
     }
   );
 });
