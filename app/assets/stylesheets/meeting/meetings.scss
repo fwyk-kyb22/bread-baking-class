@@ -1,0 +1,177 @@
+@mixin background-image{
+  background-image: image-url("iStock.jpg");
+  background-size:contain;
+}
+@mixin font-family{
+  font-family: Hiragino Maru Gothic ProN;
+}
+@mixin btn1 {
+  
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+  }
+@mixin btn1_hover {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}
+.schedules{
+  @include background-image;
+  padding: 20px 0;
+  @include font-family;
+  &__calendar{
+    width: 55%;
+    margin: 0 auto;
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 10px; 
+    &--title {
+      display: block;
+      position: relative;
+      height: 45px;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 20px auto;
+      width: 300px;
+      z-index: 1;
+      padding-top: 20px;
+    }
+    &--title:before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      bottom: -10px;
+      left: -5px;
+      border: 20px solid #a5cff3;
+      border-left-color: transparent;
+      margin: -21px;
+    }
+    &--title:after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      bottom: -10px;
+      right: -10px;
+      border: 20px solid #a5cff3;
+      border-right-color: transparent;
+      margin: -21px;
+    }
+    &--title h1 {
+      width: 305px;
+      font-weight: bold;  
+      display: inline-block;
+      position: relative;
+      margin: 0;
+      padding: 0 20px;
+      line-height: 45px;
+      font-size: 18px;
+      color: #fff;
+      z-index: 1;
+      background-color: #8ec3f1;
+    }
+    &--title h1:before {
+      position: absolute;
+      content: '';
+      top: 100%;
+      left: 0;
+      border: none;
+      border-bottom: solid 10px transparent;
+      border-right: solid 15px #7fafd9;
+    }
+    &--title h1:after {
+      position: absolute;
+      content: '';
+      top: 100%;
+      right: 0;
+      border: none;
+      border-bottom: solid 10px transparent;
+      border-left: solid 15px #7fafd9;
+    }
+  }
+  &__comments{
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 10px; 
+    margin: 20px auto;
+    padding: 47px;
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &__form{
+      padding-bottom: 20px;
+      &--area{
+        padding-left: 5px;
+        height: 80px;
+        width: 100%;
+      }
+      &--btn{
+        @include btn1;
+        margin: 0 42%;
+        border-top: solid 1px white;
+        border-left: solid 1px white;
+        border-right: solid 1px white;
+      }
+      &--btn:hover {
+        @include btn1_hover;
+      }
+    }
+    &__list{
+      height: 100%;
+      &__box{
+        width: 100%;
+        text-align: end;
+        &--name{
+          height: 28px;
+          position: relative;
+          display: inline-block;
+          margin: 3px 0;
+          padding: 7px 10px;
+          min-width: 120px;
+          max-width: 100%;
+          color: #555;
+          font-size: 16px;
+          background: #e0edff;
+          border-radius: 15px;
+          line-height: 12px;
+          span{
+            font-size: 11px;
+          }
+          &:before{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 26%;
+            margin-left: 40px;
+            border: 15px solid transparent;
+            border-top: 15px solid #e0edff;
+          }
+        }
+        &--comment{
+          padding: 20px;
+        }
+      }
+      .admin--comment{
+        text-align: inherit;
+        &--name{
+          background-color: pink;
+          &:before{
+            border-top: 15px solid pink;
+            margin-left: -15px;
+          }
+        }
+        &--comment{
+          padding: 20px;
+        }
+      }
+    }
+  }
+}  
+ 

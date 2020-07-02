@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :articles
   resources :home, only: :index
   resources :lesson,  only: :index
-  resources :schedules
+  resources :meetings, except: :show
   resources :comments, only: :create
 end

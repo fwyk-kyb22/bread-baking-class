@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   
   def create
     Comment.create(comment_params)
-    redirect_to schedules_path
+    redirect_to meetings_path
   end
 
   private
