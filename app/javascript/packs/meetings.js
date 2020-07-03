@@ -6,7 +6,8 @@ $(function(){
 
   $(".day a").hide(); 
   $(".day .meeting__container--content").hide(); 
-  $(".day .main--left__calendar").hide(); 
+  $(".day .main--left__calendar--container").hide(); 
+  $('.day .main--left__calendar--mark').show();
 
   $(".day").hover(
     function () {
@@ -23,12 +24,18 @@ $(function(){
 
   $(".day").hover(
     function () {
-      $(this).find('.main--left__calendar').show();
-      
+      $(this).find('.main--left__calendar--container').show();
     },
     function () {
-      $(".day .main--left__calendar").hide();
-     
+      $(".day .main--left__calendar--container").hide();
+    }
+  );
+  $(".day").hover(
+    function () {
+      $(this).find(".main--left__calendar--mark").hide();
+    },
+    function () {
+      $(".day .main--left__calendar--mark").show();
     }
   );
 });

@@ -35,12 +35,27 @@
         height: 0;
       }
       &__calendar{
-        position: absolute;
-        top: 0;
-        left: 40px;
-        background-color: #bfd8d8;
-        width: 200px;
-        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        &--container{
+          position: absolute;
+          top: 0;
+          left: 40px;
+          background-color: #bfd8d8;
+          width: 200px;
+          z-index: 1;
+        }
+        &--mark{
+          background-color: #057bfe;
+          height: 12px;
+          width: 12px;
+          display: inline-block;
+          border-radius: 50%;
+          z-index: 1;
+        }
+        .day{
+          width: 12%;
+        }
       }
     }
     &--right {

@@ -2,13 +2,15 @@
   .main
     .main--left
       %h2{class:"main--left__access"} 今後の予定！
-      = month_calendar events: @meetings do |date, meetings| 
-        = date.day
-        - meetings.each do |meeting| 
-          .main--left__calendar
-            #{meeting.start_time.hour}時〜
-            %br
-            = meeting.name 
+      .main--left__calendar
+        = month_calendar events: @meetings do |date, meetings| 
+          = date.day
+          - meetings.each do |meeting| 
+            .main--left__calendar--mark
+            .main--left__calendar--container
+              #{meeting.start_time.hour}時〜
+              %br
+              = meeting.name 
       %h2{class:"main--left__access"} アクセス
       %p （個人情報のため名古屋駅にしときました）
       #map
