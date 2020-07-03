@@ -28,4 +28,5 @@ Toastr.options.timeout = 2000;
 window.toastr = toastr;
 import "../stylesheets/application"
 import "../packs/meetings"
+import "../packs/comments"
 import "bootstrap"

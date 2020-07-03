@@ -1,9 +1,10 @@
 class CommentsController < ApplicationController
   
-  
   def create
-    Comment.create(comment_params)
-    redirect_to meetings_path
+    @comment = Comment.create(comment_params)
+    respond_to do |format|
+      format.json 
+    end
   end
 
   private
