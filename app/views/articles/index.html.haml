@@ -12,9 +12,10 @@
             .article_main--container--title
               %p
                 = article.title
+            .article_main--container--date  
+              #{article.created_at.month}/#{article.created_at.day}(#{%w(日 月 火 水 木 金 土)[article.created_at.wday]})　#{article.created_at.hour}:#{article.created_at.min} 
             .article_main--container--content
               = article.content
-            #{article.created_at.month}/#{article.created_at.day}(#{%w(日 月 火 水 木 金 土)[article.created_at.wday]})　#{article.created_at.hour}:#{article.created_at.min}  
             = link_to '編集する！', edit_article_path(article),class: "article_main--container--btn"
             = link_to '消しちゃう！', article, method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "article_main--container--btn"
       - else
@@ -23,17 +24,19 @@
             .article_main--container--title
               %p
                 = article.title
+            .article_main--container--date  
+              #{article.created_at.month}/#{article.created_at.day}(#{%w(日 月 火 水 木 金 土)[article.created_at.wday]})　#{article.created_at.hour}:#{article.created_at.min} 
             .article_main--container--content
               = article.content
-            #{article.created_at.month}/#{article.created_at.day}(#{%w(日 月 火 水 木 金 土)[article.created_at.wday]})　#{article.created_at.hour}:#{article.created_at.min}  
     - else   
       - @articles.each do |article|
         .article_main--container
           .article_main--container--title
             %p
               = article.title
+          .article_main--container--date  
+            #{article.created_at.month}/#{article.created_at.day}(#{%w(日 月 火 水 木 金 土)[article.created_at.wday]})　#{article.created_at.hour}:#{article.created_at.min}     
           .article_main--container--content
             = article.content
-          #{article.created_at.month}/#{article.created_at.day}(#{%w(日 月 火 水 木 金 土)[article.created_at.wday]})　#{article.created_at.hour}:#{article.created_at.min} 
     .nav-links      
       = paginate @articles 
