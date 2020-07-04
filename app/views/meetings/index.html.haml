@@ -23,6 +23,8 @@
               = link_to '予定を追加', new_meeting_path ,class: "meeting__new--btn btn btn-outline-primary btn-sm"
   .schedules__comments
     - if user_signed_in?
+      - if current_user.admin?
+        -# = link_to "コメント前消し",comment_path ,method: :delete 
       .schedules__comments__form    
         = form_with(model:@comment, local: true) do |form|
           = form.text_area :content , placeholder: "コメントしてみて！" ,class: "schedules__comments__form--area"
@@ -36,6 +38,8 @@
               %span のこめんと  
             .schedules__comments__list__box--comment.admin--comment--comment
               = comment.content    
+            - if current_user == comment.user
+              = link_to "削除！",comment_path(comment.id) ,method: :delete 
         - else 
           .schedules__comments__list__box
             .schedules__comments__list__box--name  
@@ -43,7 +47,8 @@
               %span のこめんと  
             .schedules__comments__list__box--comment
               = comment.content      
-
+            - if current_user == comment.user
+              = link_to "削除！",comment_path(comment.id) ,method: :delete 
               
 
  
