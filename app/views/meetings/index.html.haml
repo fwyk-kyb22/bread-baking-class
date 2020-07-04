@@ -23,13 +23,12 @@
               = link_to '予定を追加', new_meeting_path ,class: "meeting__new--btn btn btn-outline-primary btn-sm"
   .schedules__comments
     - if user_signed_in?
-      - if current_user.admin?
-        -# = link_to "コメント前消し",comment_path ,method: :delete 
+      - if current_user == @user || current_user.admin?
+        = link_to "全て削除", destroy_all_comments_path, method: :delete   ,id: "comment--destroy_all"   
       .schedules__comments__form    
         = form_with(model:@comment, local: true) do |form|
           = form.text_area :content , placeholder: "コメントしてみて！" ,class: "schedules__comments__form--area"
           = form.submit "送信！" ,class: "schedules__comments__form--btn"
-    = link_to "全て削除", destroy_all_comments_path, method: :delete   ,id: "comment--destroy_all"   
     .schedules__comments__list
       - @comments.each do |comment|
         - if comment.user.admin?
@@ -38,7 +37,8 @@
               #{comment.user.nickname}さん
               %span のこめんと  
             .schedules__comments__list__box--comment.admin--comment--comment
-              = comment.content    
+              = comment.content  
+            #{comment.created_at.month}/#{comment.created_at.day}(#{%w(日 月 火 水 木 金 土)[comment.created_at.wday]})　#{comment.created_at.hour}:#{comment.created_at.min}   
             - if current_user == comment.user
               = link_to "削除！",comment_path(comment.id) ,method: :delete 
         - else 
@@ -47,7 +47,8 @@
               #{comment.user.nickname}さん
               %span のこめんと  
             .schedules__comments__list__box--comment
-              = comment.content      
+              = comment.content   
+            #{comment.created_at.month}/#{comment.created_at.day}(#{%w(日 月 火 水 木 金 土)[comment.created_at.wday]})　#{comment.created_at.hour}:#{comment.created_at.min}
             - if current_user == comment.user
               = link_to "削除！",comment_path(comment.id) ,method: :delete 
               
