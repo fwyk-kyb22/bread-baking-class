@@ -13,6 +13,11 @@ class CommentsController < ApplicationController
     redirect_to meetings_path, method: :get
   end
 
+  def destroy_all
+    Comment.destroy_all
+    redirect_to meetings_path, method: :get
+  end
+
   private
   def comment_params
     params.require(:comment).permit(:content).merge(user_id: current_user.id)

@@ -29,6 +29,7 @@
         = form_with(model:@comment, local: true) do |form|
           = form.text_area :content , placeholder: "コメントしてみて！" ,class: "schedules__comments__form--area"
           = form.submit "送信！" ,class: "schedules__comments__form--btn"
+    = link_to "全て削除", destroy_all_comments_path, method: :delete   ,id: "comment--destroy_all"   
     .schedules__comments__list
       - @comments.each do |comment|
         - if comment.user.admin?

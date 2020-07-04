@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   resources :home, only: :index
   resources :lesson,  only: :index
   resources :meetings, except: :show
-  resources :comments, only:[:create, :destroy]
+  resources :comments, only:[:create, :destroy] do
+    collection do
+      delete 'destroy_all'
+    end
+  end
 end

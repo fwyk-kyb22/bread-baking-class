@@ -49,4 +49,10 @@ $(function() {
       alert('error');
     });
   });
+  $('#comment--destroy_all').click(function(){
+    if(!confirm('ほんとのほんとに全部削除していいの？\n全部のコメントが消えちゃうよ！')){
+        return false;
+    }else{
+    }
+  });
 });
