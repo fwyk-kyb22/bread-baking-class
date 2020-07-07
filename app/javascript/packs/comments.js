@@ -11,7 +11,10 @@ $(function() {
                   <div class="schedules__comments__list__box--comment admin--comment--comment">
                     ${comment.content }
                   </div>
-                </div>`                
+                  <div  class="schedules__comments__list__box--date">
+                    ${comment.created_at_month}/${comment.created_at_day}　${comment.created_at_hour}:${comment.created_at_min}     
+                  </div>
+                </div>`         
     } else{
       var html =`<div class="schedules__comments__list__box" data-comment-id="${comment.id}">
                   <div class="schedules__comments__list__box--name" >
@@ -23,9 +26,15 @@ $(function() {
                   <div class="schedules__comments__list__box--comment">
                     ${comment.content }
                   </div>
-                </div>`   
-    }     
-    return html;
+                  <div  class="schedules__comments__list__box--date">
+                  ${comment.created_at_month}/${comment.created_at_day}　${comment.created_at_hour}:${comment.created_at_min}   
+                  </div>
+                </div>`    
+    }        
+    // var deletebtn =  `<a class="schedules__comments__list__box--btn" rel = "nofollow" data-method="delete" href="/comments/${comment.id}">
+    //                   | 削除"
+    //                   </a>`                                 
+      return html;
   }
   $('.schedules__comments__form form').on('submit', function(e) {
     e.preventDefault();
