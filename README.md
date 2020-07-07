@@ -7,6 +7,7 @@ bread-baking-class
 * コメント機能（新規登録した生徒さんのみコメントできます。）
 * googleapiでmap表示
 * simplecalendarでカレンダー表示
+*　ajaxでコメントを非同期通信
 # 本番環境
 aws
 * テストアカウント（admin）
@@ -26,9 +27,10 @@ aws
 
 # 使用技術
 * action text
-* googleカレンダー
+* simple　calendar
+* ajax非同期通信
 * googlemap
-* webpack
+* webpacker
 * rspec
 * devise
 * toastr
@@ -38,7 +40,6 @@ aws
 * dooker
 * payjpをつかって定期購入できる
 * いいね機能
-* comentをajaxで非同期通信
 # DB設計
 ## Usersテーブル
 |Column|Type|Options|
