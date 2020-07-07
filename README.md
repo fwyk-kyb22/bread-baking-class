@@ -6,8 +6,8 @@ bread-baking-class
 * ブログ機能（パン教室の先生のみ編集、投稿、削除ができます。）
 * コメント機能（新規登録した生徒さんのみコメントできます。）
 * googleapiでmap表示
-* simplecalendarでカレンダー表示
-*　ajaxでコメントを非同期通信
+* simplecalendarでカレンダー表示（パン教室の先生のみ予定の編集、投稿、削除ができます。）
+* ajaxでコメントを非同期通信
 # 本番環境
 aws
 * テストアカウント（admin）
@@ -28,7 +28,7 @@ aws
 # 使用技術
 * action text
 * simple　calendar
-* ajax非同期通信
+* ajax(非同期通信)
 * googlemap
 * webpacker
 * rspec
