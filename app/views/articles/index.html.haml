@@ -12,6 +12,8 @@
             .article_main--container--title
               %p
                 = article.title
+            .article_main--container--date  
+              #{article.created_at.month}/#{article.created_at.day}(#{%w(日 月 火 水 木 金 土)[article.created_at.wday]})　#{article.created_at.hour}:#{article.created_at.min} 
             .article_main--container--content
               = article.content
             = link_to '編集する！', edit_article_path(article),class: "article_main--container--btn"
@@ -22,6 +24,8 @@
             .article_main--container--title
               %p
                 = article.title
+            .article_main--container--date  
+              #{article.created_at.month}/#{article.created_at.day}(#{%w(日 月 火 水 木 金 土)[article.created_at.wday]})　#{article.created_at.hour}:#{article.created_at.min} 
             .article_main--container--content
               = article.content
     - else   
@@ -30,6 +34,8 @@
           .article_main--container--title
             %p
               = article.title
+          .article_main--container--date  
+            #{article.created_at.month}/#{article.created_at.day}(#{%w(日 月 火 水 木 金 土)[article.created_at.wday]})　#{article.created_at.hour}:#{article.created_at.min}     
           .article_main--container--content
             = article.content
     .nav-links      

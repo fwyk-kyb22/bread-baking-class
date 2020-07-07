@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
   root to: 'home#index'
   devise_for :users
-  # resources :cards, only: [:index] do
-  #   collection do
-  #     post 'pay', to: 'cards#pay'
-  #   end
-  # end
   resources :articles
   resources :home, only: :index
   resources :lesson,  only: :index
   resources :meetings, except: :show
-  resources :comments, only: :create
+  namespace :api do
+    resources :comments, only: :index, defaults: { format: 'json' }
+  end
+  resources :comments, only:[:create, :destroy] do
+    collection do
+      delete 'destroy_all'
+    end
+  end
 end

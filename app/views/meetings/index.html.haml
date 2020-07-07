@@ -23,6 +23,8 @@
               = link_to '予定を追加', new_meeting_path ,class: "meeting__new--btn btn btn-outline-primary btn-sm"
   .schedules__comments
     - if user_signed_in?
+      - if current_user == @user || current_user.admin?
+        = link_to "※※※※※※　注意！！　コメント全て削除　※※※※※", destroy_all_comments_path, method: :delete   ,id: "comment--destroy_all" ,class:"btn btn-outline-danger"
       .schedules__comments__form    
         = form_with(model:@comment, local: true) do |form|
           = form.text_area :content , placeholder: "コメントしてみて！" ,class: "schedules__comments__form--area"
@@ -30,20 +32,27 @@
     .schedules__comments__list
       - @comments.each do |comment|
         - if comment.user.admin?
-          .schedules__comments__list__box.admin--comment
+          .schedules__comments__list__box.admin--comment{data: {comment: {id: comment.id}}}
             .schedules__comments__list__box--name.admin--comment--name
               #{comment.user.nickname}さん
               %span のこめんと  
             .schedules__comments__list__box--comment.admin--comment--comment
-              = comment.content    
+              = comment.content  
+            .schedules__comments__list__box--date 
+              #{comment.created_at.month}/#{comment.created_at.day}(#{%w(日 月 火 水 木 金 土)[comment.created_at.wday]})　#{comment.created_at.hour}:#{comment.created_at.min}   
+            - if current_user == comment.user
+              = link_to "| 削除",comment_path(comment.id) ,method: :delete ,class: "schedules__comments__list__box--btn"
         - else 
-          .schedules__comments__list__box
+          .schedules__comments__list__box{data: {comment: {id: comment.id}}}
             .schedules__comments__list__box--name  
               #{comment.user.nickname}さん
               %span のこめんと  
             .schedules__comments__list__box--comment
-              = comment.content      
-
+              = comment.content  
+            .schedules__comments__list__box--date    
+              #{comment.created_at.month}/#{comment.created_at.day}(#{%w(日 月 火 水 木 金 土)[comment.created_at.wday]})　#{comment.created_at.hour}:#{comment.created_at.min}
+            - if current_user == comment.user
+              = link_to "| 削除",comment_path(comment.id) ,method: :delete ,class: "schedules__comments__list__box--btn"
               
 
  

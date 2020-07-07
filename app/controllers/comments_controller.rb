@@ -1,9 +1,21 @@
 class CommentsController < ApplicationController
   
-  
   def create
-    Comment.create(comment_params)
-    redirect_to meetings_path
+    @comment = Comment.create(comment_params)
+    respond_to do |format|
+      format.json 
+    end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to meetings_path, method: :get
+  end
+
+  def destroy_all
+    Comment.destroy_all
+    redirect_to meetings_path, method: :get
   end
 
   private

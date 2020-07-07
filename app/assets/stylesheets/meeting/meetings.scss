@@ -155,7 +155,21 @@
           }
         }
         &--comment{
-          padding: 20px;
+          padding: 20px 20px 0 20px;
+        }
+        &--date{
+          color: #918d8d;
+          font-size: 13px;
+          display: inline;
+          padding-left: 54px;
+        }
+        &--btn{
+          color: #918d8d;
+          font-size: 13px;
+          padding-left: 10px;
+          &:hover{
+            text-decoration: none;
+          }
         }
       }
       .admin--comment{
@@ -168,10 +182,14 @@
           }
         }
         &--comment{
-          padding: 20px;
+          padding: 20px 20px 0 20px;
         }
       }
     }
   }
 }  
- 
+#comment--destroy_all{
+  margin: 20px 0;
+  display: block;
+  text-align: center;
+}
