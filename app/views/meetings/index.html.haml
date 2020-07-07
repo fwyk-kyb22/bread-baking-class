@@ -32,7 +32,7 @@
     .schedules__comments__list
       - @comments.each do |comment|
         - if comment.user.admin?
-          .schedules__comments__list__box.admin--comment
+          .schedules__comments__list__box.admin--comment{data: {comment: {id: comment.id}}}
             .schedules__comments__list__box--name.admin--comment--name
               #{comment.user.nickname}さん
               %span のこめんと  
@@ -43,7 +43,7 @@
             - if current_user == comment.user
               = link_to "| 削除",comment_path(comment.id) ,method: :delete ,class: "schedules__comments__list__box--btn"
         - else 
-          .schedules__comments__list__box
+          .schedules__comments__list__box{data: {comment: {id: comment.id}}}
             .schedules__comments__list__box--name  
               #{comment.user.nickname}さん
               %span のこめんと  
