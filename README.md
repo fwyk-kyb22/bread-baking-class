@@ -78,7 +78,3 @@ actiontextのdb設計は省略させていただきます
 |name|string||
 |content|text||
 |start_time|datetime||
-# Author
- 
-* 大野絵美子
- 
