@@ -6,12 +6,14 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all.page(params[:page]).per(3).order(created_at: "DESC")
+    @like = Like.new
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
+    @like = Like.new
   end
 
   # GET /articles/new
