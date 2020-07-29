@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :timeoutable
   has_many :comments       
-
+  has_many :likes, dependent: :destroy
+  has_many :liked_articles, through: :likes, source: :article
   validates :nickname,:familyname,:firstname,:familyname_kana,:firstname_kana,:phone_number,:PIN,presence: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, {presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }}
