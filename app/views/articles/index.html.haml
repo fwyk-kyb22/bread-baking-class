@@ -18,14 +18,6 @@
               = article.content
             = link_to '編集する！', edit_article_path(article),class: "article_main--container--btn"
             = link_to '消しちゃう！', article, method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "article_main--container--btn"
-            - if current_user.already_liked?(article) 
-              = link_to  article_like_path(article,current_user), method: :delete ,class: "like__destory--btn" do
-                = icon("fas", "heart")   
-                いいねを取り消す #{article.likes.count}
-            - else 
-              = link_to article_likes_path(article),method: :post ,class: "like__create--btn" do
-                = icon("far", "heart")   
-                いいね！ #{article.likes.count}
       - else
         - @articles.each do |article|
           .article_main--container
@@ -36,12 +28,14 @@
               #{article.created_at.month}/#{article.created_at.day}(#{%w(日 月 火 水 木 金 土)[article.created_at.wday]})　#{article.created_at.hour}:#{article.created_at.min} 
             .article_main--container--content
               = article.content
-            %h3 
-              いいね件数: #{article.likes.count} 
             - if current_user.already_liked?(article) 
-              = button_to 'いいねを取り消す', article_like_path(article,current_user), method: :delete 
+              = link_to  article_like_path(article,current_user), method: :delete ,class: "like__destory--btn" do
+                = icon("fas", "heart")   
+                いいねを取り消す #{article.likes.count}
             - else 
-              = button_to 'いいね', article_likes_path(article) 
+              = link_to article_likes_path(article),method: :post ,class: "like__create--btn" do
+                = icon("far", "heart")   
+                いいね！ #{article.likes.count}
     - else   
       - @articles.each do |article|
         .article_main--container
@@ -52,7 +46,8 @@
             #{article.created_at.month}/#{article.created_at.day}(#{%w(日 月 火 水 木 金 土)[article.created_at.wday]})　#{article.created_at.hour}:#{article.created_at.min}     
           .article_main--container--content
             = article.content
-          %h3 
-            いいね件数: #{article.likes.count} 
+          .like--btn
+            = icon("far", "heart")   
+            いいね！ #{article.likes.count}
     .nav-links      
       = paginate @articles 
