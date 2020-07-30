@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_28_064533) do
+ActiveRecord::Schema.define(version: 2020_07_30_130511) do
 
   create_table "action_text_rich_texts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -57,6 +57,15 @@ ActiveRecord::Schema.define(version: 2020_07_28_064533) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "liked_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "like_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["like_id"], name: "index_liked_users_on_like_id"
+    t.index ["user_id"], name: "index_liked_users_on_user_id"
+  end
+
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "article_id", null: false
     t.bigint "user_id", null: false
@@ -95,6 +104,8 @@ ActiveRecord::Schema.define(version: 2020_07_28_064533) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "liked_users", "likes"
+  add_foreign_key "liked_users", "users"
   add_foreign_key "likes", "articles"
   add_foreign_key "likes", "users"
 end

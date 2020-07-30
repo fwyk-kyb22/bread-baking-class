@@ -1,5 +1,4 @@
 class Article < ApplicationRecord
   has_rich_text :content
-  has_many :likes
-  has_many :liked_users, through: :likes, source: :user
+  has_many :likes, dependent: :destroy
 end
