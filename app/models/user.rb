@@ -14,4 +14,9 @@ class User < ApplicationRecord
   STATUS_VALUES = ['mfsadkljfe']
   validates :PIN, inclusion: { in: STATUS_VALUES , message: "暗証番号が間違ってます！"}
   validates :phone_number, format: { with: /\A\d{10}\z|\A\d{11}\z/ , message: "ハイフンなしでお願いします！10桁or11桁になってますか？ご確認お願いします！"}
+
+  def already_liked?(article)
+    self.likes.exists?(article_id: article.id)
+  end
+
 end
