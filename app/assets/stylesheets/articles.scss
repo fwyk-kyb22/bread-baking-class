@@ -130,9 +130,6 @@
         }
       }
       
-      &--content{
-          
-      }
       &--date{   
         float: right;
         color: #918d8d;
@@ -178,3 +175,26 @@
   }
 }
 
+.like__create--btn{
+  border: 1px solid #ffafa9;
+  padding: 1em;
+  color: #ffafa9;
+  border-radius: 10px;
+  &:hover{
+    color: white;
+    text-decoration: none;
+    background-color:#ffafa9;
+  }
+}
+.like__destory--btn{
+  background-color:#ffafa9;
+  color: white;
+  padding: 1em;
+  border-radius: 10px;
+  &:hover{
+    border: 1px solid#ffafa9;
+    color: #ffafa9;
+    background-color: white;
+    text-decoration: none;
+  }
+}

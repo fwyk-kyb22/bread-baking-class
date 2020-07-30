@@ -1,6 +1,8 @@
 @import "_a.mixin";
 @import "_reset";
 @import "_header";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 @import "./lesson/index";
 @import "./home/index";
 @import "toastr";
