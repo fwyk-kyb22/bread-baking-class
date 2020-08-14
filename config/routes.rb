@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
   devise_for :users
   resources :articles do
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy], defaults: { format: 'js' }
   end
   resources :home, only: :index
   resources :lesson,  only: :index

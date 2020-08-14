@@ -101,32 +101,47 @@
       margin: 40px;
       padding: 30px;
       &--title{  
-        position: absolute;
         display: inline-block;
         position: relative;
-        padding: 4px 0;
-        left: -30px;
-        top: 0px;
-        p {
-          display: inline-block;
-          position: relative;
-          box-sizing: border-box;
-          padding: 10px;
-          margin: 0 0 0 -20px;
-          width: calc(100% + 20px);
-          font-size: 22px;
-          color: white;
-          background: #a5cff3;
-          height: 51px;
-        }
-        p:before {
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        padding: 7px 0;
+        font-size: 18px;
+        background: #a4d0f3c7;
+        color: #FFF;
+        box-sizing: border-box;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+        &:before{
           position: absolute;
           content: '';
-          top: 100%;
-          left: 0;
-          border: none;
-          border-bottom: solid 15px transparent;
-          border-right: solid 20px #6eb3e0;
+          width: 0px;
+          height: 0px;
+          z-index: 1;
+          top: -2px;
+          left: -2px;
+          border-width: 32px 0px 32px 15px;
+          border-color: transparent transparent transparent #fff;
+          border-style: solid;
+        }
+        &:after{
+          position: absolute;
+          content: '';
+          width: 0px;
+          height: 0px;
+          z-index: 1;
+          top: -2px;
+          right: -2px;
+          border-width: 32px 15px 32px 0px;
+          border-color: transparent #fff transparent transparent;
+          border-style: solid;
+        }
+        p{
+          margin: 0;
+          padding: 0 30px;
+          border-top: dashed 2px rgba(255, 255, 255, 0.5);
+          border-bottom: dashed 2px rgba(255, 255, 255, 0.5);
+          line-height: 42px;
         }
       }
       
@@ -141,10 +156,12 @@
 
       &--btn{
         margin: 0 1%;
-        @include btn1;
+        float: right;
+        float: right;
       }
       &--btn:hover{
         @include btn1_hover;
+        float: right;
       }
     }
   }
@@ -201,7 +218,7 @@
     text-decoration: none;
   }
 }
-.like--btn{
+.like--btn--signout{
   border: 1px solid #ffafa9;
   padding: 1em;
   color: #ffafa9;

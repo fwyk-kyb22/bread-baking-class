@@ -7,7 +7,7 @@ environment.plugins.append('Provide', new webpack.ProvidePlugin({
   Popper: ['popper.js', 'default'],
   Toastr: 'toastr'
 }))
-
+environment.config.set('resolve.alias', {jquery: 'jquery/src/jquery'});
 module.exports = environment
 
 
