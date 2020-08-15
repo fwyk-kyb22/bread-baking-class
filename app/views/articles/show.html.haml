@@ -1,12 +1,32 @@
 .article
   .article_main
-    -# %p#notice= notice
     .article_main--container
-      .article_main--container--title
-        %p
-          = @article.title
-      .article_main--container--content
-        = @article.content
-
-    = link_to 'もう一回編集する！', edit_article_path(@article),class: "article__edit--btn"
-    = link_to '一覧に戻る！', articles_path,class: "article__back--btn"
+      = render partial: "articles/container", locals: { article: @article } 
+      - if user_signed_in?
+        - if current_user.admin?
+          .like--btn{ id: "lile--btn--#{@article.id}" } 
+            = render partial: "articles/like", locals: { article: @article } 
+          .tweet-btn
+            = render partial: "articles/twetter", locals: { article: @article }
+          - unless @article.likes.count == 0
+            .like_user  
+              いいねを押してくださった方
+              - @article.liked_users.each do |user|
+                %li
+                  #{user.nickname} さん
+          = link_to '編集する！', edit_article_path(@article),class: "article_main--container--btn"
+          = link_to '消しちゃう！', article_path, method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "article_main--container--btn"      
+        - else
+          .like--btn{ id: "lile--btn--#{@article.id}" } 
+            = render partial: "articles/like", locals: { article: @article } 
+          .tweet-btn
+            = render partial: "articles/twetter", locals: { article: @article } 
+      - else
+        .like--btn--signout
+          = icon("far", "heart")   
+          いいね！ #{@article.likes.count}
+        .tweet-btn
+          = render partial: "articles/twetter", locals: { article: @article } 
+    = link_to  articles_path,class: "article__back--btn" do
+      = icon("fas", "reply") 
+      一覧に戻る！

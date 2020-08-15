@@ -56,6 +56,8 @@ aws
 |admin|boolean|default: false|
 ### Association
 - has_many :comments
+- has_many :likes, dependent: :destroy
+- has_many :liked_articles, through: :likes, source: :article
 
 ## Comments テーブル
 |Column|Type|Options|
@@ -71,10 +73,24 @@ aws
 |------|----|-------|
 |title|string||
 
+### Association
+- has_many :likes
+- has_many :liked_users, through: :likes, source: :user
 actiontextのdb設計は省略させていただきます
- ## meetings テーブル
+
+## meetings テーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string||
 |content|text||
 |start_time|datetime||
+
+## likes テーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false, foreign_key: true |
+|article_id|references|null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :article

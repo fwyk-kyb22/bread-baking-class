@@ -68,7 +68,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'carrierwave'
 gem "haml-rails", "~> 2.0"
-gem 'jquery-rails'
 gem 'actiontext'
 gem 'image_processing'
 gem "toastr-rails"
@@ -85,3 +84,4 @@ gem 'bootstrap', '~> 4.5.0'
 gem 'aws-sdk-s3', require: false 
 gem "simple_calendar", "~> 2.0"
 gem 'gon'
+gem 'font-awesome-sass'

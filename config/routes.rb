@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root to: 'home#index'
   devise_for :users
-  resources :articles
+  resources :articles do
+    resources :likes, only: [:create, :destroy], defaults: { format: 'js' }
+  end
   resources :home, only: :index
   resources :lesson,  only: :index
   resources :meetings, except: :show
