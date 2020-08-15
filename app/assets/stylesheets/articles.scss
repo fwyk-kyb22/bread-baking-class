@@ -165,15 +165,6 @@
     }
   }
   
-  &__edit {
-    &--btn{
-      @include btn1;
-      margin: 20px;
-    }
-    &--btn:hover{
-      @include btn1_hover;
-    }
-  }
   &__save {
     &--btn{
       @include btn1;
@@ -185,11 +176,22 @@
   }
   &__back {
     &--btn{
-      @include btn1;
-      margin: 20px;
+      background-color: #ffa249;
+      color: white;
+      padding: 1em;
+      border-radius: 10px;
+      display: inline-block;
+      position: absolute;
+      bottom: 3em;
+      right: 7em;
+      z-index: 1;
+      position: fixed;
     }
     &--btn:hover{
-      @include btn1_hover;
+      border: 1px solid #ffa249;
+      color: #ffa249;
+      background-color: white;
+      text-decoration: none;
     }
   }
 }
