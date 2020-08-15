@@ -18,6 +18,10 @@
               = article.content
             .like--btn{ id: "lile--btn--#{article.id}" } 
               = render partial: "articles/like", locals: { article: article } 
+            .tweet-btn
+              = link_to  "https://twitter.com/share?url=http://176.34.2.180/articles/#{article.id}/&text=今日のパン教室！", title: 'Twitter', target: '_blank' do
+                = icon("fab", "twitter")   
+                ツイート
             = link_to '編集する！', edit_article_path(article),class: "article_main--container--btn"
             = link_to '消しちゃう！', article, method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "article_main--container--btn"
       - else
@@ -32,6 +36,10 @@
               = article.content
             .like--btn{ id: "lile--btn--#{article.id}" } 
               = render partial: "like", locals: { article: article } 
+            .tweet-btn
+              = link_to  "https://twitter.com/share?url=http://176.34.2.180/articles/#{article.id}/&text=今日のパン教室！", title: 'Twitter', target: '_blank' do
+                = icon("fab", "twitter")   
+                ツイート  
     - else   
       - @articles.each do |article|
         .article_main--container
@@ -45,5 +53,9 @@
           .like--btn--signout
             = icon("far", "heart")   
             いいね！ #{article.likes.count}
+          .tweet-btn
+            = link_to  "https://twitter.com/share?url=http://176.34.2.180/articles/#{article.id}/&text=今日のパン教室！", title: 'Twitter', target: '_blank' do
+              = icon("fab", "twitter")   
+              ツイート  
     .nav-links      
       = paginate @articles 

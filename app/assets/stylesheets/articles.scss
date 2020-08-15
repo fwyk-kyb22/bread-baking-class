@@ -194,12 +194,15 @@
     }
   }
 }
-
+.like--btn{
+  display: inline-block;
+}
 .like__create--btn{
   border: 1px solid #ffafa9;
   padding: 1em;
   color: #ffafa9;
   border-radius: 10px;
+  display: inline-block;
   &:hover{
     color: white;
     text-decoration: none;
@@ -211,6 +214,7 @@
   color: white;
   padding: 1em;
   border-radius: 10px;
+  display: inline-block;
   &:hover{
     border: 1px solid #ffafa9;
     color: #ffafa9;
@@ -224,4 +228,20 @@
   color: #ffafa9;
   border-radius: 10px;
   display: inline-block;
+}
+.tweet-btn{
+  display: inline-block;
+  border: 1px solid #8ec4f1;
+  padding: 1em;
+  border-radius: 10px;
+  &:hover{
+    background-color:#8ec4f1;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  }
+  a{
+    color: #8ec4f1;
+  }
 }
