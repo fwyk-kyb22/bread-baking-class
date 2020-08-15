@@ -7,6 +7,11 @@
           = @article.title
       .article_main--container--content
         = @article.content
-
+      - if user_signed_in?
+        - if current_user.admin?
+          いいねを押してくださった方
+          - @article.liked_users.each do |user|
+            %li
+              #{user.nickname} さん
     = link_to 'もう一回編集する！', edit_article_path(@article),class: "article__edit--btn"
     = link_to '一覧に戻る！', articles_path,class: "article__back--btn"

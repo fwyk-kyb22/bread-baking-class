@@ -158,10 +158,9 @@
         margin: 0 1%;
         float: right;
         float: right;
-      }
-      &--btn:hover{
-        @include btn1_hover;
-        float: right;
+        &:hover{
+          text-decoration: none;
+        }
       }
     }
   }
