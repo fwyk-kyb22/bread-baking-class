@@ -6,17 +6,19 @@
       = date.day
       .meeting__container
         - meetings.each do |meeting| 
-          .meeting-name
-            #{meeting.start_time.hour}時〜
-            %br
-            = meeting.name 
-            - if user_signed_in?
-              .meeting__container--content
-                = meeting.content
-              - if current_user == @user || current_user.admin?
-                .meeting__btn
-                  = link_to '編集', edit_meeting_path(meeting),class: "meeting__edit--btn btn btn-outline-secondary btn-sm"
-                  = link_to '消す！', meeting_path(meeting), method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "meeting__destroy--btn btn btn-outline-danger btn-sm"
+          .meeting__container__one
+            .meeting-name
+              #{meeting.start_time.hour}時〜
+              %br
+              = meeting.name 
+              - if user_signed_in?
+                - unless meeting.content.blank?
+                  .meeting__container--content
+                    = meeting.content
+                - if current_user == @user || current_user.admin?
+                  .meeting__btn
+                    = link_to '編集', edit_meeting_path(meeting),class: "meeting__edit--btn btn btn-outline-secondary btn-sm"
+                    = link_to '消す！', meeting_path(meeting), method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "meeting__destroy--btn btn btn-outline-danger btn-sm"
         - if user_signed_in?
           - if current_user == @user || current_user.admin?
             .meeting__btn
