@@ -16,6 +16,9 @@ class MeetingsController < ApplicationController
   # GET /meetings/new
   def new
     @meeting = Meeting.new
+    params[:day]
+    params[:month]
+    params[:year]
   end
 
   # GET /meetings/1/edit
