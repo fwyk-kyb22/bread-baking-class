@@ -41,14 +41,14 @@
 
   .meeting__container{
     height: 80px;
+    width: 80px;
     // &:hover{
     //   z-index: 1;
     //   position: absolute;
     // }
     &__one{
       position: relative;
-      padding: 0.2em 0.5em;
-      margin: 0.3em 0;
+      padding: 1em;
       border: dashed 2px white;
     }
     .meeting-name{
@@ -68,8 +68,8 @@
     .meeting__btn{
       .meeting__new--btn{
         position: absolute;
-        right: 5px;
-        bottom: 5px;
+        right: -24px;
+        top: -5px;
       }
       .meeting__edit--btn{
         position: absolute;
@@ -100,6 +100,17 @@
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
   white-space: nowrap;
   width: 97%;
+  margin: 5px 0;
+  &:hover {
+    i{
+      display: inline-block;
+    }
+  }
+  i{
+    display: none;
+    color: #7c7878;
+  }
+  
 }
 .popup{
   display: none;
@@ -117,7 +128,7 @@
   .popup--inner{
     position: absolute;
     background-color: #bfd8d8;
-    padding:0 4%;
+    padding:4%;
     box-sizing:border-box;
     top:50%;
     left:50%;
@@ -125,6 +136,7 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     width:30%;
+    border-radius: 50px;
   }
 }
 
