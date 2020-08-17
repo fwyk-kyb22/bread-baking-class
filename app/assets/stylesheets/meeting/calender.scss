@@ -1,7 +1,9 @@
+.schedules__calendar{
+
 .simple-calendar {
   padding: 20px;
   margin: 0 auto;
-  
+  position: relative;
   .calendar-heading{
     font-size: 20px;
     text-align: center;
@@ -25,14 +27,24 @@
       }
       .day{
         width: 100px;
-        height: 100px;
         position: relative;
+        &:hover{
+          z-index: 1;
+          background-color: #bfd8d8;
+          #details_btn{
+            background-color: white;
+          }
+        }
       }
     }
   }
 
   .meeting__container{
     height: 80px;
+    // &:hover{
+    //   z-index: 1;
+    //   position: absolute;
+    // }
     &__one{
       position: relative;
       padding: 0.2em 0.5em;
@@ -43,25 +55,21 @@
       position: relative;
     }
     &--content{
-      overflow-wrap: anywhere;
-      font-size: 13px;
-      position: absolute;
-      top: 0;
-      right: -10em;
-      width: 100px;
-      padding: 0.2em 0.5em;
-      margin: 0.3em 0;
-      border: dashed 2px #bfd8d8;
-      background-color: white;
-      z-index: 1;
+      word-break: break-all;
+      p{
+        font-size: 13px;
+        width: 100%;
+        white-space: pre-line;
+      }
+     
     }
   } 
   .day{
     .meeting__btn{
       .meeting__new--btn{
         position: absolute;
-        top: 0.5em;
-        right: 0;
+        right: 5px;
+        bottom: 5px;
       }
       .meeting__edit--btn{
         position: absolute;
@@ -82,3 +90,41 @@
     }
   }  
 }
+}
+
+.details_btn{
+  font-size: 13px;
+  background-color: #bfd8d8;
+  padding: 3px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  width: 97%;
+}
+.popup{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  left: 0;
+  .popup__bg{
+    background: rgba(0,0,0,0.2);
+    height: 100vh;
+    width: 100%;
+  }
+  .popup--inner{
+    position: absolute;
+    background-color: #bfd8d8;
+    padding:0 4%;
+    box-sizing:border-box;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width:30%;
+  }
+}
+
