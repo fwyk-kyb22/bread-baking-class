@@ -1,7 +1,9 @@
+.schedules__calendar{
+
 .simple-calendar {
   padding: 20px;
   margin: 0 auto;
-  
+  position: relative;
   .calendar-heading{
     font-size: 20px;
     text-align: center;
@@ -25,55 +27,73 @@
       }
       .day{
         width: 100px;
-        height: 100px;
         position: relative;
+        &:hover{
+          z-index: 1;
+          background-color: #bfd8d8;
+          #details_btn{
+            background-color: white;
+          }
+        }
       }
     }
   }
 
   .meeting__container{
     height: 80px;
+    width: 80px;
+    // &:hover{
+    //   z-index: 1;
+    //   position: absolute;
+    // }
     &__one{
       position: relative;
-      padding: 0.2em 0.5em;
-      margin: 0.3em 0;
-      border: dashed 2px white;
+      padding: 1em;
+      margin: 0 0 0 15px;
+      padding: 7px 10px;
+      min-width: 120px;
+      max-width: 100%;
+      color: #555;
+      font-size: 16px;
+      background: #bfd8d8;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: -30px;
+        margin-top: -15px;
+        border: 15px solid transparent;
+        border-right: 15px solid #bfd8d8;
+      }
     }
     .meeting-name{
       position: relative;
     }
     &--content{
-      overflow-wrap: anywhere;
-      font-size: 13px;
-      position: absolute;
-      top: 0;
-      right: -10em;
-      width: 100px;
-      padding: 0.2em 0.5em;
-      margin: 0.3em 0;
-      border: dashed 2px #bfd8d8;
-      background-color: white;
-      z-index: 1;
+      word-break: break-all;
+      p{
+        font-size: 13px;
+        width: 100%;
+        white-space: pre-line;
+      }
+     
     }
   } 
   .day{
     .meeting__btn{
       .meeting__new--btn{
         position: absolute;
-        top: 0.5em;
-        right: 0;
+        right: -24px;
+        top: -5px;
+        display: none;
       }
       .meeting__edit--btn{
-        position: absolute;
-        top: 0em;
-        left: -3.3em;
-        // background-color: white;
+        
+        color: #157171;
       }
       .meeting__destroy--btn{
-        position: absolute;
-        top: 2.2em;
-        left: -4.3em;
-        // background-color: white;
+       
+        color: #157171;
       }
       a:hover{
         text-decoration: none;
@@ -82,3 +102,49 @@
     }
   }  
 }
+}
+
+.details_btn{
+  font-size: 13px;
+  background-color: #bfd8d8;
+  padding: 3px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  width: 97%;
+  margin: 5px 0;
+  position: relative;
+  &:hover {
+    i{
+      display: inline-block;
+    }
+  }
+  i{
+    display: none;
+    color: #7c7878;
+  }
+  
+}
+
+
+.popup__bg{
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+  
+.popup--inner{
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  top: -60%;
+  right: -31vw;
+  z-index: 2;
+  width: 30vw;
+  border-radius: 50px;
+}
+
