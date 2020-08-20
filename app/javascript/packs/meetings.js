@@ -2,7 +2,7 @@
 
 $(function(){
 
-  $(".day a").hide(); 
+  
   $(".meeting__container").css('overflow','hidden');
   
   $(".day").hover(
@@ -17,20 +17,15 @@ $(function(){
       $(this).find(".meeting__container").css('height','80px');
     }
   );
-  $(".meeting__container__one").hover(
-    function () {
-      $(this).find('a').show();
-    },
-    function () {
-      $(".day a").hide();
-    }
-  );
+ 
   $('.details_btn').on('click',function(){
-    $(this).find('.popup').show();
+    $(this).find('.popup__bg').show();
+    $(this).find('.popup--inner').show();
   });
 
   $('.popup__bg').on('click',function(){
-    $(this).parent().fadeOut();
+    $(this).fadeOut();
+    $(this).parent().find('.popup--inner').fadeOut();
   });
   
 

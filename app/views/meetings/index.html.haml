@@ -12,23 +12,21 @@
                 #{ meeting.start_time.hour}時〜
                 = meeting.name
                 = icon("fas","arrow-right")
-                .popup  
-                  .popup__bg
-                  .popup--inner
-                    .meeting__container__one
-                      .meeting-name
-                        = meeting.name 
-                        開始時間: #{meeting.start_time.hour}時〜
-                        %br
-                        所要時間: #{meeting.time_required}分
-                        .meeting__container--content
-                          %p  
-                            = meeting.content
-                        - if user_signed_in?      
-                          - if current_user == @user || current_user.admin?
-                            .meeting__btn
-                              = link_to '編集', edit_meeting_path(meeting),class: "meeting__edit--btn btn btn-outline-secondary btn-sm"
-                              = link_to '消す！', meeting_path(meeting), method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "meeting__destroy--btn btn btn-outline-danger btn-sm"
+                .popup__bg
+                .popup--inner
+                  .meeting__container__one
+                    .meeting-name
+                      開始時間: #{meeting.start_time.hour}時〜
+                      %br
+                      所要時間: #{meeting.time_required}分
+                      .meeting__container--content
+                        %p  
+                          = meeting.content
+                      - if user_signed_in?      
+                        - if current_user == @user || current_user.admin?
+                          .meeting__btn
+                            = link_to '編集', edit_meeting_path(meeting,day: date.day,month: date.month ,year: date.year),class: "meeting__edit--btn"
+                            = link_to '消す！', meeting_path(meeting), method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "meeting__destroy--btn"
         - if user_signed_in?
           - if current_user == @user || current_user.admin?
             .meeting__btn
