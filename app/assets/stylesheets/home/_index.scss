@@ -50,41 +50,33 @@
               th{
                 text-align: center;
                 background-color: #bfd8d8;
+                font-size: 13px;
               }
             }
             tbody{
+              font-size: 10px;
               tr:nth-of-type(odd){
                 background-color: #ffffff;
               }
               td{
                 border: 1px solid #bfd8d8;
-              }
-              .day{
-                width: 100px;
-                height: 10vh;
-                position: relative;
+                padding: 0.3rem;
               }
             }
           }
         }
-        &--container{
-          position: absolute;
-          top: 0;
-          left: 40px;
-          background-color: #bfd8d8;
-          width: 200px;
-          z-index: 1;
+        &--height{
+          overflow: hidden;
+          height: 2em;
+          width: 6.2em;
         }
         &--mark{
-          background-color: #057bfe;
-          height: 12px;
-          width: 12px;
+          background-color: #30b1b1;
+          height: 0.75em;
+          width: 0.75em;
           display: inline-block;
           border-radius: 50%;
           z-index: 1;
-        }
-        .day{
-          width: 12%;
         }
       }
     }
