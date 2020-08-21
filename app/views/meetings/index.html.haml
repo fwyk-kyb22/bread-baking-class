@@ -22,9 +22,13 @@
                       .meeting__container--content
                         %p  
                           = meeting.content
+                      予約可能人数残り: #{meeting.max_reservations-meeting.users.count}人  
+                      %br  
                       - if user_signed_in? 
                         - if meeting.users.include?(current_user)
                           予約済
+                        - elsif meeting.max_reservations <= meeting.users.count
+                          満員のためご予約できません！
                         - else
                           = link_to '予約する！', new_meeting_reservation_path(meeting),class: "meeting__container__reservations--btn"
                         - if current_user == @user || current_user.admin?

@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2020_08_21_021859) do
     t.text "content"
     t.datetime "start_time"
     t.integer "time_required"
+    t.integer "max_reservations"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
