@@ -1,0 +1,66 @@
+.reservations{
+  padding: 30px;
+  width: calc(100%-60px);
+  min-height: 80vh;
+  @include background-image;
+  @include font-family;
+  &__container{
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    margin: 0.5rem;
+    h3{
+      padding: 0.25em 0.5em;/*上下 左右の余白*/
+      color: #494949;/*文字色*/
+      background: transparent;/*背景透明に*/
+      border-left: solid 5px #7db4e6;/*左線*/
+    }
+    span{
+      font-size: large;
+    }
+    &--link{
+      // display: flex;
+      // justify-content:  space-around;
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+.reservations--create--btn{
+  background-color: #ff6262;
+  color: white;
+  padding: 1em;
+  border-radius: 10px;
+  display: inline-block;
+  border: 1px solid #ff6262;
+  width: 45%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  &:hover{
+    border: 1px solid #ff6262;
+    color: #ff6262;
+    background-color: white;
+    text-decoration: none;
+  }
+}
+.reservations--back--btn{
+  background-color: #ffa249;
+  color: white;
+  padding: 1em;
+  border-radius: 10px;
+  display: inline-block;
+  border: 1px solid #ffa249;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  &:hover{
+    border: 1px solid #ffa249;
+    color: #ffa249;
+    background-color: white;
+    text-decoration: none;
+    z-index: 1;
+  }
+}
