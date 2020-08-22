@@ -5,9 +5,61 @@
   @include font-family;
 }
 .meeting__new__container{
+ 
   background-color: #ffffff;
   border-radius: 10px;
   width: 90%;
   margin: 0 auto;
   padding: 20px;
+  margin: 0.5rem;
+  input{
+    padding: 2px;
+  }
+  input[type="number"]{
+    width: 8%;
+  }
+  textarea{
+    height: 10rem;
+    width: 50%;
+  }
+  select{
+    width: 10%;
+    height: 37px;
+    display: none;
+    position: relative;
+  }
+  #meeting_start_time_4i,#meeting_start_time_5i{
+    display: inline-block;
+  }
+  .label--start_time{
+    position: relative;
+    padding-right: 0rem;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 1.6rem;
+      height: 2rem;
+      top: 0rem;
+      left: 4rem;
+      background-color: white;
+      z-index: 1;
+    }
+  }
+  label{
+    padding-right: 1rem;
+  }
+  input[type="submit"]{
+    background-color: #ffafa9;
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+    display: inline-block;
+    border: 1px solid;
+  &:hover{
+    border: 1px solid #ffafa9;
+    color: #ffafa9;
+    background-color: white;
+    text-decoration: none;
+  }
+  }
 }
