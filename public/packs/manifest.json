@@ -1,15 +1,15 @@
 {
-  "application.js": "/packs/js/application-a646eed357be6ac9483b.js",
-  "application.js.map": "/packs/js/application-a646eed357be6ac9483b.js.map",
+  "application.js": "/packs/js/application-fc18b083fe2554f23051.js",
+  "application.js.map": "/packs/js/application-fc18b083fe2554f23051.js.map",
   "comments.js": "/packs/js/comments-2a66b0d4ad4384ca622f.js",
   "comments.js.map": "/packs/js/comments-2a66b0d4ad4384ca622f.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-a646eed357be6ac9483b.js"
+        "/packs/js/application-fc18b083fe2554f23051.js"
       ],
       "js.map": [
-        "/packs/js/application-a646eed357be6ac9483b.js.map"
+        "/packs/js/application-fc18b083fe2554f23051.js.map"
       ]
     },
     "comments": {
@@ -22,13 +22,13 @@
     },
     "meetings": {
       "js": [
-        "/packs/js/meetings-bb964cfa50a6d16f0f72.js"
+        "/packs/js/meetings-648b1d810afa7a3ca060.js"
       ],
       "js.map": [
-        "/packs/js/meetings-bb964cfa50a6d16f0f72.js.map"
+        "/packs/js/meetings-648b1d810afa7a3ca060.js.map"
       ]
     }
   },
-  "meetings.js": "/packs/js/meetings-bb964cfa50a6d16f0f72.js",
-  "meetings.js.map": "/packs/js/meetings-bb964cfa50a6d16f0f72.js.map"
+  "meetings.js": "/packs/js/meetings-648b1d810afa7a3ca060.js",
+  "meetings.js.map": "/packs/js/meetings-648b1d810afa7a3ca060.js.map"
 }
