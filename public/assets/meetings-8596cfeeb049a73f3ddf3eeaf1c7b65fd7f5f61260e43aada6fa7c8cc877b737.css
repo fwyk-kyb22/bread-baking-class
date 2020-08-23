@@ -1,0 +1,12 @@
+/* line 57, app/assets/stylesheets/meetings.scss */
+.simple-calendar .meeting__container {
+  height: 100px;
+  width: 100px;
+}
+
+/* line 66, app/assets/stylesheets/meetings.scss */
+.simple-calendar .meeting__new--btn a {
+  text-decoration: none;
+  background-color: wheat;
+  color: white;
+}

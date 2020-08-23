@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* line 26, app/assets/stylesheets/schedules.scss */
+.schedules {
+  display: flex;
+  background-image: url(/assets/iStock-778d63042ee918dde28692b763cb5df97c83dc5a165f6a2cbb13f79d456da5aa.jpg);
+  background-size: contain;
+  padding: 20px 0;
+  font-family: Hiragino Maru Gothic ProN;
+}
+
+/* line 31, app/assets/stylesheets/schedules.scss */
+.schedules__calendar {
+  width: 55%;
+  margin: 0 auto;
+}
+
+/* line 34, app/assets/stylesheets/schedules.scss */
+.schedules__calendar iframe {
+  height: 90vh;
+  width: 100%;
+}
+
+/* line 39, app/assets/stylesheets/schedules.scss */
+.schedules__comments {
+  width: 35%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 47px;
+  height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* line 48, app/assets/stylesheets/schedules.scss */
+.schedules__comments__form {
+  padding-bottom: 20px;
+}
+
+/* line 50, app/assets/stylesheets/schedules.scss */
+.schedules__comments__form--area {
+  padding-left: 5px;
+  height: 80px;
+  width: 100%;
+}
+
+/* line 55, app/assets/stylesheets/schedules.scss */
+.schedules__comments__form--btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+  margin: 0 37%;
+  border-top: solid 1px white;
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+
+/* line 62, app/assets/stylesheets/schedules.scss */
+.schedules__comments__form--btn:hover {
+  transform: translateY(4px);
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* line 66, app/assets/stylesheets/schedules.scss */
+.schedules__comments__list {
+  height: 100%;
+}
+
+/* line 69, app/assets/stylesheets/schedules.scss */
+.schedules__comments__list__box--name {
+  height: 28px;
+  position: relative;
+  display: inline-block;
+  margin: 3px 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #e0edff;
+  border-radius: 15px;
+  line-height: 12px;
+}
+
+/* line 82, app/assets/stylesheets/schedules.scss */
+.schedules__comments__list__box--name span {
+  font-size: 11px;
+}
+
+/* line 86, app/assets/stylesheets/schedules.scss */
+.schedules__comments__list__box--name:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 26%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+}
+
+/* line 95, app/assets/stylesheets/schedules.scss */
+.schedules__comments__list__box--comment {
+  padding: 20px;
+}

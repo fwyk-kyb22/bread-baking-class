@@ -1,0 +1,52 @@
+/* line 4, app/assets/stylesheets/_header.scss */
+header {
+  background-image: url(/assets/iStock-y-ef5234e9de4df91edee0285c47cbae9888b1a5b14c377b9578de9041084a9a13.jpg);
+  background-size: 787px 294px;
+  padding-top: 20px;
+  width: 100%;
+  font-family: Hiragino Maru Gothic ProN;
+}
+
+/* line 10, app/assets/stylesheets/_header.scss */
+header .top-container {
+  margin: 0 auto;
+  height: 80px;
+  width: 85%;
+}
+
+/* line 14, app/assets/stylesheets/_header.scss */
+header .top-container__name {
+  font-size: 40px;
+}
+
+/* line 17, app/assets/stylesheets/_header.scss */
+header .top-container__content {
+  color: #585353;
+  padding-left: 10px;
+}
+
+/* line 23, app/assets/stylesheets/_header.scss */
+header .header-menu {
+  background-color: #fff;
+  height: 60px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* line 30, app/assets/stylesheets/_header.scss */
+header .header-menu ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+/* line 34, app/assets/stylesheets/_header.scss */
+header .header-menu ul .header-menu__right {
+  font-size: 15px;
+  list-style: none;
+  line-height: 60px;
+  padding-right: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #585353;
+}
