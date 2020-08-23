@@ -42,6 +42,13 @@
                         .meeting__btn
                           = link_to '編集', edit_meeting_path(meeting,day: date.day,month: date.month ,year: date.year),class: "meeting__edit--btn"
                           = link_to '消す！', meeting_path(meeting), method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "meeting__destroy--btn"
+                        %ul  
+                          現在予約している方
+                          - meeting.users.each do |user| 
+                            %li 
+                              #{user.familyname} #{user.firstname} さん
+                              - if user.coupon_use
+                                (クーポン利用の方)
         - if user_signed_in?
           - if current_user == @user || current_user.admin?
             .meeting__btn

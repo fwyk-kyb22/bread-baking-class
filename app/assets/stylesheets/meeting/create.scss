@@ -1,0 +1,32 @@
+.coupon{
+  display: flex;
+  flex-wrap: wrap;
+  width: 41em;
+  height: 17em;
+  position: relative;
+  margin: 0 auto;
+  &--container{
+    border: 1px solid black;
+    width: 8em;
+    height: 8em;
+    z-index: 1;
+  }
+  .white{
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    width: 2em;
+    height: 2em;
+    background-color: white;
+    z-index: 1;
+  }
+  .stanp{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    .image{
+      width: 7.7em;
+      height: 7.9em; 
+    }
+  }
+}
