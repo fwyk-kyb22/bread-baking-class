@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
 # Use postgresql as the database for Active Record
-# gem 'mysql2', '>= 0.18', '< 2.0'
+gem 'mysql2', '~> 0.4.10'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -31,7 +31,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'mysql2'
   gem 'capistrano'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
@@ -58,7 +57,6 @@ group :test do
 end
 
 group :production do
-  gem 'mysql2'
   gem 'unicorn', '5.4.1'
 end
 
@@ -72,7 +70,6 @@ gem 'actiontext'
 gem 'image_processing'
 gem "toastr-rails"
 gem 'rails-i18n'
-gem 'mysql2'
 gem 'pry-rails'
 gem 'rspec-rails'
 gem 'factory_bot_rails'

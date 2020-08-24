@@ -1,184 +1,193 @@
 .schedules__calendar{
 
-.simple-calendar {
-  padding: 20px;
-  margin: 0 auto;
-  position: relative;
-  .calendar-heading{
-    font-size: 20px;
-    text-align: center;
-    a{
-      font-size: 15px;
-    }
-  }
-  .table{
-    thead{
-      th{
-        text-align: center;
-        background-color: #bfd8d8;
+  .simple-calendar {
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    .calendar-heading{
+      font-size: 20px;
+      text-align: center;
+      a{
+        font-size: 15px;
       }
     }
-    tbody{
-      tr:nth-of-type(odd){
-        background-color: #ffffff;
+    .table{
+      thead{
+        th{
+          text-align: center;
+          background-color: #bfd8d8;
+        }
       }
-      td{
-        border: 1px solid #bfd8d8;
-      }
-      .day{
-        width: 100px;
-        position: relative;
-        &:hover{
-          z-index: 1;
+      tbody{
+        tr:nth-of-type(odd){
+          background-color: #ffffff;
+        }
+        td{
+          border: 1px solid #bfd8d8;
+        }
+        .day{
+          width: 100px;
+          position: relative;
+          &:hover{
+            z-index: 1;
+          }
         }
       }
     }
-  }
-
-  .meeting__container{
-    height: 80px;
-    width: 80px;
-    &--inner{
-      // display: none;
-      position: absolute;
-      box-sizing: border-box;
-      top: -60%;
-      right: -31vw;
-      z-index: 2;
-      width: 30vw;
-      border-radius: 50px;
-    }
-    &__one{
-      position: relative;
-      padding: 1em;
-      margin: 0 0 0 15px;
-      padding: 7px 10px;
-      min-width: 120px;
-      max-width: 100%;
-      color: #555;
-      font-size: 14px;
-      background: white;
-      border: solid 3px #bfd8d8;	
-      box-sizing: border-box;
-      &:before{
-        content: "";
+  
+    .meeting__container{
+      height: 80px;
+      width: 80px;
+      &--inner{
+        display: none;
         position: absolute;
-        top: 24px;
-        left: -39px;
-        margin-top: -15px;
-        border: 18px solid transparent;
-        border-right: 21px solid #bfd8d8;
+        box-sizing: border-box;
+        top: -60%;
+        right: -31vw;
         z-index: 2;
+        width: 30vw;
+        border-radius: 50px;
       }
-      &:after{
-        content: "";
-        position: absolute;
-        top: 24px;
-        left: -33px;
-        margin-top: -15px;
-        border: 18px solid transparent;
-        border-right: 21px solid white;
-        z-index: 3;
+      &__one{
+        position: relative;
+        padding: 1em;
+        margin: 0 0 0 15px;
+        padding: 7px 10px;
+        min-width: 120px;
+        max-width: 100%;
+        color: #555;
+        font-size: 14px;
+        background: white;
+        border: solid 3px #bfd8d8;  
+        box-sizing: border-box;
+        &:before{
+          content: "";
+          position: absolute;
+          top: 24px;
+          left: -39px;
+          margin-top: -15px;
+          border: 18px solid transparent;
+          border-right: 21px solid #bfd8d8;
+          z-index: 2;
+        }
+        &:after{
+          content: "";
+          position: absolute;
+          top: 24px;
+          left: -33px;
+          margin-top: -15px;
+          border: 18px solid transparent;
+          border-right: 21px solid white;
+          z-index: 3;
+        }
+        span{
+          font-size: large;
+        }
+        ul{
+          padding-left: 1em;
+          list-style: inherit;
+          li{
+            font-size: 0.7rem;
+          }
+        }
       }
-      span{
+      .meeting-name{
         font-size: large;
       }
-    }
-    .meeting-name{
-      font-size: large;
-    }
-    &--content{
-      word-break: break-all;
-      p{
-        font-size: 13px;
-        width: 100%;
-        white-space: pre-line;
+      &--content{
+        word-break: break-all;
+        p{
+          font-size: 13px;
+          width: 100%;
+          white-space: pre-line;
+          margin: 0;
+        }
+       
       }
-     
-    }
-
-  } 
-  .day{
-    .meeting__new--btn{
-      position: absolute;
-      right: -24px;
-      top: -5px;
-      display: none;
-    }
-    .meeting__edit--btn{
-      color: #157171;
-      z-index: 2;
-    }
-    .meeting__destroy--btn{
-      z-index: 2;
-      color: #157171;
-    }
-    .meeting__reservations--btn{
-      background-color: #63c1bd;
-      color: white;
-      padding: 0.5em;
-      width: 100%;
-      margin-top: 10px;
-      text-align: center;
-      border-radius: 10px;
-      display: inline-block;
-      &:hover{
-        border: 1px solid #63c1bd;
-        color: #63c1bd;
-        background-color: white;
+  
+    } 
+    .day{
+      .meeting__new--btn{
+        position: absolute;
+        right: -24px;
+        top: -5px;
+        display: none;
+      }
+      .meeting__edit--btn{
+        color: #157171;
+        z-index: 2;
+      }
+      .meeting__destroy--btn{
+        z-index: 2;
+        color: #157171;
+      }
+      .meeting__reservations--btn{
+        background-color: #63c1bd;
+        color: white;
+        padding: 0.5em;
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+        border-radius: 10px;
+        display: inline-block;
+        &:hover{
+          border: 1px solid #63c1bd;
+          color: #63c1bd;
+          background-color: white;
+          text-decoration: none;
+        }
+        &--red{
+          background-color: #ff6363;
+          color: white;
+          padding: 0.5em;
+          width: 100%;
+          margin: 10px 0;
+          text-align: center;
+          border-radius: 10px;
+          display: inline-block;
+        }
+        &--yellow{
+          background-color: #e6a91f;
+          color: white;
+          padding: 0.5em;
+          width: 100%;
+          margin: 10px 0;
+          text-align: center;
+          border-radius: 10px;
+          display: inline-block;
+        }
+      }
+      a:hover{
         text-decoration: none;
       }
-      &--red{
-        background-color: #ff6363;
-        color: white;
-        padding: 0.5em;
-        width: 100%;
-        margin-top: 10px;
-        text-align: center;
-        border-radius: 10px;
-        display: inline-block;
-      }
-      &--yellow{
-        background-color: #e6a91f;
-        color: white;
-        padding: 0.5em;
-        width: 100%;
-        margin-top: 10px;
-        text-align: center;
-        border-radius: 10px;
-        display: inline-block;
-      }
-    }
-    a:hover{
-      text-decoration: none;
-    }
-  }  
-}
-}
-
-.details_btn{
-  font-size: 13px;
-  background-color: #bfd8d8;
-  padding: 3px;
-  border-radius: 25px;
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  white-space: nowrap;
-  width: 97%;
-  margin: 5px 0;
-  position: relative;
-  &:hover {
-    i{
-      display: inline-block;
-    }
-    .meeting__container--inner{
-      display: block;
-    }
+    }  
   }
-  i{
-    display: none;
-    color: #7c7878;
   }
   
-}
-
-
+  .details_btn{
+    font-size: 13px;
+    background-color: #bfd8d8;
+    padding: 3px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    width: 97%;
+    margin: 5px 0;
+    position: relative;
+    &:hover {
+      i{
+        display: inline-block;
+      }
+      .meeting__container--inner{
+        display: block;
+      }
+    }
+    i{
+      display: none;
+      color: #7c7878;
+    }
+    
+  }
+  
+  
+    
