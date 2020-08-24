@@ -1,0 +1,1924 @@
+@charset "UTF-8";
+/*
+	TODO will need to remove settings on HTML since we can't namespace it.
+	TODO with the prefix, should I group by selector or property for weight savings?
+*/
+/* line 5, app/assets/stylesheets/_reset.scss */
+html {
+  color: #000;
+  background: #FFF;
+}
+
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF.
+*/
+/* line 16, app/assets/stylesheets/_reset.scss */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 44, app/assets/stylesheets/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 48, app/assets/stylesheets/_reset.scss */
+fieldset,
+img {
+  border: 0;
+}
+
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+/* line 55, app/assets/stylesheets/_reset.scss */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 68, app/assets/stylesheets/_reset.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 73, app/assets/stylesheets/_reset.scss */
+caption,
+th {
+  text-align: left;
+}
+
+/* line 77, app/assets/stylesheets/_reset.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* line 86, app/assets/stylesheets/_reset.scss */
+q:before,
+q:after {
+  content: '';
+}
+
+/* line 90, app/assets/stylesheets/_reset.scss */
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* to preserve line-height and selector appearance */
+/* line 96, app/assets/stylesheets/_reset.scss */
+sup {
+  vertical-align: text-top;
+}
+
+/* line 99, app/assets/stylesheets/_reset.scss */
+sub {
+  vertical-align: text-bottom;
+}
+
+/* line 102, app/assets/stylesheets/_reset.scss */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  *font-size: 100%;
+  /*to enable resizing for IE*/
+}
+
+/*because legend doesn't inherit in IE */
+/* line 111, app/assets/stylesheets/_reset.scss */
+legend {
+  color: #000;
+}
+
+/* line 4, app/assets/stylesheets/_header.scss */
+header {
+  background-image: url(/assets/iStock-y-ef5234e9de4df91edee0285c47cbae9888b1a5b14c377b9578de9041084a9a13.jpg);
+  background-size: 787px 294px;
+  padding-top: 20px;
+  width: 100%;
+  font-family: Hiragino Maru Gothic ProN;
+}
+
+/* line 10, app/assets/stylesheets/_header.scss */
+header .top-container {
+  margin: 0 auto;
+  height: 80px;
+  width: 85%;
+}
+
+/* line 14, app/assets/stylesheets/_header.scss */
+header .top-container__name {
+  font-size: 40px;
+}
+
+/* line 17, app/assets/stylesheets/_header.scss */
+header .top-container__content {
+  color: #585353;
+  padding-left: 10px;
+}
+
+/* line 23, app/assets/stylesheets/_header.scss */
+header .header-menu {
+  background-color: #fff;
+  height: 60px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* line 30, app/assets/stylesheets/_header.scss */
+header .header-menu ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+/* line 34, app/assets/stylesheets/_header.scss */
+header .header-menu ul .header-menu__right {
+  font-size: 15px;
+  list-style: none;
+  line-height: 60px;
+  padding-right: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #585353;
+}
+
+/* line 1, app/assets/stylesheets/lesson/_index.scss */
+.lesson {
+  padding: 20px 30px;
+  background-image: url(/assets/iStock-778d63042ee918dde28692b763cb5df97c83dc5a165f6a2cbb13f79d456da5aa.jpg);
+  background-size: contain;
+  font-family: arial unicode ms;
+  color: #585353;
+  font-family: Hiragino Maru Gothic ProN;
+}
+
+/* line 7, app/assets/stylesheets/lesson/_index.scss */
+.lesson--container {
+  width: 90%;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+/* line 13, app/assets/stylesheets/lesson/_index.scss */
+.lesson--container__headline {
+  position: relative;
+  padding: 0.5em 0.7em;
+  background: #a5e5e2;
+  font-weight: bold;
+  width: 50%;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 20px;
+}
+
+/* line 23, app/assets/stylesheets/lesson/_index.scss */
+.lesson--container__headline:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 206px;
+  border: 15px solid transparent;
+  border-top: 15px solid #a5e5e2;
+  width: 0;
+  height: 0;
+}
+
+/* line 33, app/assets/stylesheets/lesson/_index.scss */
+.lesson--container__content {
+  padding-top: 20px;
+  line-height: 50px;
+}
+
+/* line 1, app/assets/stylesheets/home/_index.scss */
+.home {
+  padding: 0 30px;
+  background-image: url(/assets/iStock-778d63042ee918dde28692b763cb5df97c83dc5a165f6a2cbb13f79d456da5aa.jpg);
+  background-size: contain;
+  font-family: arial unicode ms;
+  color: #585353;
+  font-family: Hiragino Maru Gothic ProN;
+}
+
+/* line 7, app/assets/stylesheets/home/_index.scss */
+.home .main {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* line 11, app/assets/stylesheets/home/_index.scss */
+.home .main--left {
+  width: 60%;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+/* line 16, app/assets/stylesheets/home/_index.scss */
+.home .main--left__access {
+  position: relative;
+  padding: 0.5em 0.7em;
+  background: #a5e5e2;
+  font-weight: bold;
+  width: 25%;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  font-size: 20px;
+}
+
+/* line 27, app/assets/stylesheets/home/_index.scss */
+.home .main--left__access:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #a5e5e2;
+  width: 0;
+  height: 0;
+}
+
+/* line 38, app/assets/stylesheets/home/_index.scss */
+.home .main--right {
+  width: 36%;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+/* line 43, app/assets/stylesheets/home/_index.scss */
+.home .main--right__headline {
+  position: relative;
+  padding: 0.5em 0.7em;
+  background: #a5e5e2;
+  font-weight: bold;
+  width: 50%;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 20px;
+}
+
+/* line 53, app/assets/stylesheets/home/_index.scss */
+.home .main--right__headline:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #a5e5e2;
+  width: 0;
+  height: 0;
+}
+
+/* line 63, app/assets/stylesheets/home/_index.scss */
+.home .main--right__introduction {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* line 66, app/assets/stylesheets/home/_index.scss */
+.home .main--right__introduction--content {
+  padding: 20px 0 0 20px;
+}
+
+/* line 69, app/assets/stylesheets/home/_index.scss */
+.home .main--right__introduction--image {
+  padding-top: 20px;
+  width: 70px;
+  height: 70px;
+}
+
+/* line 1, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast-title {
+  font-weight: bold;
+}
+
+/* line 4, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast-message {
+  word-wrap: break-word;
+}
+
+/* line 8, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast-message a,
+.toast-message label {
+  color: #FFF;
+}
+
+/* line 12, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast-message a:hover {
+  color: #CCC;
+  text-decoration: none;
+}
+
+/* line 17, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast-top-left {
+  top: 12px;
+  left: 12px;
+}
+
+/* line 22, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast-bottom-right {
+  right: 12px;
+  bottom: 12px;
+}
+
+/* line 27, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast-bottom-left {
+  left: 12px;
+  bottom: 12px;
+}
+
+/* line 32, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+#toast-container {
+  position: fixed;
+  z-index: 9999;
+}
+
+/* line 37, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+#toast-container > div {
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  border-radius: 3px 3px 3px 3px;
+  -o-box-shadow: 0 0 12px #999999;
+  box-shadow: 0 0 12px #999999;
+  color: #FFFFFF;
+  margin: 0 0 6px;
+  filter: alpha(opacity=80);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  opacity: 0.8;
+  padding: 15px 15px 15px 50px;
+  width: 300px;
+}
+
+/* line 56, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast {
+  background-color: #030303;
+}
+
+/* line 60, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast-success {
+  background-color: #51A351;
+}
+
+/* line 64, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast-error {
+  background-color: #BD362F;
+}
+
+/* line 68, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast-info {
+  background-color: #2F96B4;
+}
+
+/* line 72, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast-warning {
+  background-color: #F89406;
+}
+
+/* line 75, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+.toast-top-right {
+  top: 12px;
+  right: 12px;
+}
+
+/* line 80, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+#toast-container > :hover {
+  -o-box-shadow: 0 0 12px #000000;
+  box-shadow: 0 0 12px #000000;
+  filter: alpha(opacity=100);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* line 91, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+#toast-container > .toast-info {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVEhLtZa9SgNBEMc9sUxxRcoUKSzSWIhXpFMhhYWFhaBg4yPYiWCXZxBLERsLRS3EQkEfwCKdjWJAwSKCgoKCcudv4O5YLrt7EzgXhiU3/4+b2ckmwVjJSpKkQ6wAi4gwhT+z3wRBcEz0yjSseUTrcRyfsHsXmD0AmbHOC9Ii8VImnuXBPglHpQ5wwSVM7sNnTG7Za4JwDdCjxyAiH3nyA2mtaTJufiDZ5dCaqlItILh1NHatfN5skvjx9Z38m69CgzuXmZgVrPIGE763Jx9qKsRozWYw6xOHdER+nn2KkO+Bb+UV5CBN6WC6QtBgbRVozrahAbmm6HtUsgtPC19tFdxXZYBOfkbmFJ1VaHA1VAHjd0pp70oTZzvR+EVrx2Ygfdsq6eu55BHYR8hlcki+n+kERUFG8BrA0BwjeAv2M8WLQBtcy+SD6fNsmnB3AlBLrgTtVW1c2QN4bVWLATaIS60J2Du5y1TiJgjSBvFVZgTmwCU+dAZFoPxGEEs8nyHC9Bwe2GvEJv2WXZb0vjdyFT4Cxk3e/kIqlOGoVLwwPevpYHT+00T+hWwXDf4AJAOUqWcDhbwAAAAASUVORK5CYII=") !important;
+}
+
+/* line 95, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+#toast-container > .toast-error {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVEhLrZa/SgNBEMZzh0WKCClSCKaIYOED+AAKeQQLG8HWztLCImBrYadgIdY+gIKNYkBFSwu7CAoqCgkkoGBI/E28PdbLZmeDLgzZzcx83/zZ2SSXC1j9fr+I1Hq93g2yxH4iwM1vkoBWAdxCmpzTxfkN2RcyZNaHFIkSo10+8kgxkXIURV5HGxTmFuc75B2RfQkpxHG8aAgaAFa0tAHqYFfQ7Iwe2yhODk8+J4C7yAoRTWI3w/4klGRgR4lO7Rpn9+gvMyWp+uxFh8+H+ARlgN1nJuJuQAYvNkEnwGFck18Er4q3egEc/oO+mhLdKgRyhdNFiacC0rlOCbhNVz4H9FnAYgDBvU3QIioZlJFLJtsoHYRDfiZoUyIxqCtRpVlANq0EU4dApjrtgezPFad5S19Wgjkc0hNVnuF4HjVA6C7QrSIbylB+oZe3aHgBsqlNqKYH48jXyJKMuAbiyVJ8KzaB3eRc0pg9VwQ4niFryI68qiOi3AbjwdsfnAtk0bCjTLJKr6mrD9g8iq/S/B81hguOMlQTnVyG40wAcjnmgsCNESDrjme7wfftP4P7SP4N3CJZdvzoNyGq2c/HWOXJGsvVg+RA/k2MC/wN6I2YA2Pt8GkAAAAASUVORK5CYII=") !important;
+}
+
+/* line 99, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+#toast-container > .toast-success {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVEhLY2AYBfQMgf///3P8+/evAIgvA/FsIF+BavYDDWMBGroaSMMBiE8VC7AZDrIFaMFnii3AZTjUgsUUWUDA8OdAH6iQbQEhw4HyGsPEcKBXBIC4ARhex4G4BsjmweU1soIFaGg/WtoFZRIZdEvIMhxkCCjXIVsATV6gFGACs4Rsw0EGgIIH3QJYJgHSARQZDrWAB+jawzgs+Q2UO49D7jnRSRGoEFRILcdmEMWGI0cm0JJ2QpYA1RDvcmzJEWhABhD/pqrL0S0CWuABKgnRki9lLseS7g2AlqwHWQSKH4oKLrILpRGhEQCw2LiRUIa4lwAAAABJRU5ErkJggg==") !important;
+}
+
+/* line 103, ../../.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets/toastr.css */
+#toast-container > .toast-warning {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVEhL5ZSvTsNQFMbXZGICMYGYmJhAQIJAICYQPAACiSDB8AiICQQJT4CqQEwgJvYASAQCiZiYmJhAIBATCARJy+9rTsldd8sKu1M0+dLb057v6/lbq/2rK0mS/TRNj9cWNAKPYIJII7gIxCcQ51cvqID+GIEX8ASG4B1bK5gIZFeQfoJdEXOfgX4QAQg7kH2A65yQ87lyxb27sggkAzAuFhbbg1K2kgCkB1bVwyIR9m2L7PRPIhDUIXgGtyKw575yz3lTNs6X4JXnjV+LKM/m3MydnTbtOKIjtz6VhCBq4vSm3ncdrD2lk0VgUXSVKjVDJXJzijW1RQdsU7F77He8u68koNZTz8Oz5yGa6J3H3lZ0xYgXBK2QymlWWA+RWnYhskLBv2vmE+hBMCtbA7KX5drWyRT/2JsqZ2IvfB9Y4bWDNMFbJRFmC9E74SoS0CqulwjkC0+5bpcV1CZ8NMej4pjy0U+doDQsGyo1hzVJttIjhQ7GnBtRFN1UarUlH8F3xict+HY07rEzoUGPlWcjRFRr4/gChZgc3ZL2d8oAAAAASUVORK5CYII=") !important;
+}
+
+/* line 26, app/assets/stylesheets/schedules.scss */
+.schedules {
+  display: flex;
+  background-image: url(/assets/iStock-778d63042ee918dde28692b763cb5df97c83dc5a165f6a2cbb13f79d456da5aa.jpg);
+  background-size: contain;
+  padding: 20px 0;
+  font-family: Hiragino Maru Gothic ProN;
+}
+
+/* line 31, app/assets/stylesheets/schedules.scss */
+.schedules__calendar {
+  width: 55%;
+  margin: 0 auto;
+}
+
+/* line 34, app/assets/stylesheets/schedules.scss */
+.schedules__calendar iframe {
+  height: 90vh;
+  width: 100%;
+}
+
+/* line 39, app/assets/stylesheets/schedules.scss */
+.schedules__comments {
+  width: 35%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 47px;
+  height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* line 48, app/assets/stylesheets/schedules.scss */
+.schedules__comments__form {
+  padding-bottom: 20px;
+}
+
+/* line 50, app/assets/stylesheets/schedules.scss */
+.schedules__comments__form--area {
+  padding-left: 5px;
+  height: 80px;
+  width: 100%;
+}
+
+/* line 55, app/assets/stylesheets/schedules.scss */
+.schedules__comments__form--btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+  margin: 0 37%;
+  border-top: solid 1px white;
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+
+/* line 62, app/assets/stylesheets/schedules.scss */
+.schedules__comments__form--btn:hover {
+  transform: translateY(4px);
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* line 66, app/assets/stylesheets/schedules.scss */
+.schedules__comments__list {
+  height: 100%;
+}
+
+/* line 69, app/assets/stylesheets/schedules.scss */
+.schedules__comments__list__box--name {
+  height: 28px;
+  position: relative;
+  display: inline-block;
+  margin: 3px 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #e0edff;
+  border-radius: 15px;
+  line-height: 12px;
+}
+
+/* line 82, app/assets/stylesheets/schedules.scss */
+.schedules__comments__list__box--name span {
+  font-size: 11px;
+}
+
+/* line 86, app/assets/stylesheets/schedules.scss */
+.schedules__comments__list__box--name:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 26%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+}
+
+/* line 95, app/assets/stylesheets/schedules.scss */
+.schedules__comments__list__box--comment {
+  padding: 20px;
+}
+
+/* line 2, app/assets/stylesheets/users/Sign_up.scss */
+.user_main {
+  background-image: url(/assets/iStock-778d63042ee918dde28692b763cb5df97c83dc5a165f6a2cbb13f79d456da5aa.jpg);
+  background-size: contain;
+  width: 100%;
+  padding-bottom: 80px;
+  padding-top: 60px;
+  font-family: Hiragino Maru Gothic ProN;
+}
+
+/* line 8, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container {
+  background-color: white;
+  margin: 0 auto;
+  width: 50%;
+  border-radius: 20px;
+  padding-bottom: 120px;
+}
+
+/* line 14, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container--title {
+  font-size: 22px;
+  padding: 32px;
+  line-height: 1.5;
+  text-align: center;
+  border-bottom: 1px solid #f8f8f8;
+  font-weight: bold;
+}
+
+/* line 17, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__name {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* line 22, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__name .field__familyname {
+  width: 35%;
+  padding: 10px 0;
+}
+
+/* line 26, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__name .field__familyname--label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 29, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__name .field__familyname--field {
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+/* line 33, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__name .field__firstname {
+  width: 35%;
+  padding: 10px 0;
+}
+
+/* line 37, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__name .field__firstname--label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 40, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__name .field__firstname--field {
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+/* line 46, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__kana {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* line 51, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__kana .field__familyname_kana {
+  position: relative;
+  width: 35%;
+  padding: 10px 0;
+}
+
+/* line 56, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__kana .field__familyname_kana--label {
+  font-size: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* line 61, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__kana .field__familyname_kana--field {
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+/* line 65, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__kana .field__firstname_kana {
+  position: relative;
+  width: 35%;
+  padding: 10px 0;
+}
+
+/* line 70, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__kana .field__firstname_kana--label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 73, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container__kana .field__firstname_kana--field {
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+/* line 80, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__nickname {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+/* line 82, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__nickname--label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 85, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__nickname--field {
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+/* line 90, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__phone_number {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+/* line 92, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__phone_number--label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 95, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__phone_number--field {
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+/* line 99, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__email {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+/* line 101, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__email--label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 104, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__email--field {
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+/* line 108, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__password {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+/* line 110, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__password--label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 113, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__password--field {
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+/* line 117, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__confirmation {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+/* line 119, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__confirmation--label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 122, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__confirmation--field {
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+/* line 126, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__PIN {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+/* line 128, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__PIN--label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 131, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .field__PIN--field {
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+/* line 136, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .user_submit {
+  padding: 20px 20% 30px 25%;
+}
+
+/* line 138, app/assets/stylesheets/users/Sign_up.scss */
+.user_main__container .user_submit--btn {
+  display: inline-block;
+  border-radius: 20px;
+  font-size: 11pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px calc(50% - 44px);
+  background: #3CCACE;
+  color: #ffffff;
+  line-height: 24px;
+  transition: .3s;
+  border: solid 1px white;
+}
+
+/* line 57, app/assets/stylesheets/_a.mixin.scss */
+.user_main__container .user_submit--btn:hover {
+  opacity: 0.5;
+}
+
+/* line 144, app/assets/stylesheets/users/Sign_up.scss */
+.user_link__login, .user_link__new {
+  text-decoration: none;
+  float: right;
+  color: #3CCACE;
+  height: 40px;
+  width: 100%;
+  padding: 20px 20px 0 0;
+  text-align: right;
+  display: block;
+}
+
+/* line 39, app/assets/stylesheets/_a.mixin.scss */
+.user_link__login:hover, .user_link__new:hover {
+  text-decoration: none;
+  color: #3CCACE;
+  opacity: 0.5;
+}
+
+/* line 2, app/assets/stylesheets/users/Log_in.scss */
+.login_main {
+  background-image: url(/assets/iStock-778d63042ee918dde28692b763cb5df97c83dc5a165f6a2cbb13f79d456da5aa.jpg);
+  background-size: contain;
+  width: 100%;
+  padding-bottom: 80px;
+  padding-top: 60px;
+  font-family: Hiragino Maru Gothic ProN;
+}
+
+/* line 8, app/assets/stylesheets/users/Log_in.scss */
+.login_main__container {
+  background-color: white;
+  margin: 0 auto;
+  width: 50%;
+  border-radius: 20px;
+  padding-bottom: 120px;
+}
+
+/* line 14, app/assets/stylesheets/users/Log_in.scss */
+.login_main__container--title {
+  font-size: 22px;
+  padding: 32px;
+  line-height: 1.5;
+  text-align: center;
+  border-bottom: 1px solid #f8f8f8;
+  font-weight: bold;
+}
+
+/* line 18, app/assets/stylesheets/users/Log_in.scss */
+.login_main__container .field__email {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+/* line 20, app/assets/stylesheets/users/Log_in.scss */
+.login_main__container .field__email--label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 23, app/assets/stylesheets/users/Log_in.scss */
+.login_main__container .field__email--field {
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+}
+
+/* line 29, app/assets/stylesheets/users/Log_in.scss */
+.login_main__container .field__password {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+/* line 31, app/assets/stylesheets/users/Log_in.scss */
+.login_main__container .field__password--label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 34, app/assets/stylesheets/users/Log_in.scss */
+.login_main__container .field__password--field {
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+}
+
+/* line 41, app/assets/stylesheets/users/Log_in.scss */
+.login_main__container .login_submit {
+  padding: 20px 20% 30px 25%;
+}
+
+/* line 43, app/assets/stylesheets/users/Log_in.scss */
+.login_main__container .login_submit--btn {
+  display: inline-block;
+  border-radius: 20px;
+  font-size: 11pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px calc(50% - 44px);
+  background: #3CCACE;
+  color: #ffffff;
+  line-height: 24px;
+  transition: .3s;
+  border: solid 1px white;
+}
+
+/* line 57, app/assets/stylesheets/_a.mixin.scss */
+.login_main__container .login_submit--btn:hover {
+  opacity: 0.5;
+}
+
+/*
+Trix 1.2.3
+Copyright © 2020 Basecamp, LLC
+http://trix-editor.org/*/
+/* line 16, app/assets/stylesheets/actiontext.scss */
+trix-editor {
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  margin: 0;
+  padding: 0.4em 0.6em;
+  min-height: 5em;
+  outline: none;
+}
+
+/* line 23, app/assets/stylesheets/actiontext.scss */
+trix-toolbar * {
+  box-sizing: border-box;
+}
+
+/* line 25, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+
+/* line 30, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button-group {
+  display: flex;
+  margin-bottom: 10px;
+  border: 1px solid #bbb;
+  border-top-color: #ccc;
+  border-bottom-color: #888;
+  border-radius: 3px;
+}
+
+/* line 37, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button-group:not(:first-child) {
+  margin-left: 1.5vw;
+}
+
+@media (max-device-width: 768px) {
+  /* line 40, app/assets/stylesheets/actiontext.scss */
+  trix-toolbar .trix-button-group:not(:first-child) {
+    margin-left: 0;
+  }
+}
+
+/* line 42, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button-group-spacer {
+  flex-grow: 1;
+}
+
+@media (max-device-width: 768px) {
+  /* line 45, app/assets/stylesheets/actiontext.scss */
+  trix-toolbar .trix-button-group-spacer {
+    display: none;
+  }
+}
+
+/* line 47, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button {
+  position: relative;
+  float: left;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.75em;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 0 0.5em;
+  margin: 0;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  background: transparent;
+}
+
+/* line 61, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button:not(:first-child) {
+  border-left: 1px solid #ccc;
+}
+
+/* line 63, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button.trix-active {
+  background: #cbeefa;
+  color: black;
+}
+
+/* line 66, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button:not(:disabled) {
+  cursor: pointer;
+}
+
+/* line 68, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button:disabled {
+  color: rgba(0, 0, 0, 0.125);
+}
+
+@media (max-device-width: 768px) {
+  /* line 71, app/assets/stylesheets/actiontext.scss */
+  trix-toolbar .trix-button {
+    letter-spacing: -0.01em;
+    padding: 0 0.3em;
+  }
+}
+
+/* line 74, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon {
+  font-size: inherit;
+  width: 2.6em;
+  height: 1.6em;
+  max-width: calc(0.8em + 4vw);
+  text-indent: -9999px;
+}
+
+@media (max-device-width: 768px) {
+  /* line 81, app/assets/stylesheets/actiontext.scss */
+  trix-toolbar .trix-button--icon {
+    height: 2em;
+    max-width: calc(0.8em + 3.5vw);
+  }
+}
+
+/* line 84, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon::before {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.6;
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-device-width: 768px) {
+  /* line 97, app/assets/stylesheets/actiontext.scss */
+  trix-toolbar .trix-button--icon::before {
+    right: 6%;
+    left: 6%;
+  }
+}
+
+/* line 100, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon.trix-active::before {
+  opacity: 1;
+}
+
+/* line 102, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon:disabled::before {
+  opacity: 0.125;
+}
+
+/* line 104, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-attach::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M16.5%206v11.5a4%204%200%201%201-8%200V5a2.5%202.5%200%200%201%205%200v10.5a1%201%200%201%201-2%200V6H10v9.5a2.5%202.5%200%200%200%205%200V5a4%204%200%201%200-8%200v12.5a5.5%205.5%200%200%200%2011%200V6h-1.5z%22%2F%3E%3C%2Fsvg%3E);
+  top: 8%;
+  bottom: 4%;
+}
+
+/* line 108, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-bold::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M15.6%2011.8c1-.7%201.6-1.8%201.6-2.8a4%204%200%200%200-4-4H7v14h7c2.1%200%203.7-1.7%203.7-3.8%200-1.5-.8-2.8-2.1-3.4zM10%207.5h3a1.5%201.5%200%201%201%200%203h-3v-3zm3.5%209H10v-3h3.5a1.5%201.5%200%201%201%200%203z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 110, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-italic::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M10%205v3h2.2l-3.4%208H6v3h8v-3h-2.2l3.4-8H18V5h-8z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 112, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-link::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M9.88%2013.7a4.3%204.3%200%200%201%200-6.07l3.37-3.37a4.26%204.26%200%200%201%206.07%200%204.3%204.3%200%200%201%200%206.06l-1.96%201.72a.91.91%200%201%201-1.3-1.3l1.97-1.71a2.46%202.46%200%200%200-3.48-3.48l-3.38%203.37a2.46%202.46%200%200%200%200%203.48.91.91%200%201%201-1.3%201.3z%22%2F%3E%3Cpath%20d%3D%22M4.25%2019.46a4.3%204.3%200%200%201%200-6.07l1.93-1.9a.91.91%200%201%201%201.3%201.3l-1.93%201.9a2.46%202.46%200%200%200%203.48%203.48l3.37-3.38c.96-.96.96-2.52%200-3.48a.91.91%200%201%201%201.3-1.3%204.3%204.3%200%200%201%200%206.07l-3.38%203.38a4.26%204.26%200%200%201-6.07%200z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 114, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-strike::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M12.73%2014l.28.14c.26.15.45.3.57.44.12.14.18.3.18.5%200%20.3-.15.56-.44.75-.3.2-.76.3-1.39.3A13.52%2013.52%200%200%201%207%2014.95v3.37a10.64%2010.64%200%200%200%204.84.88c1.26%200%202.35-.19%203.28-.56.93-.37%201.64-.9%202.14-1.57s.74-1.45.74-2.32c0-.26-.02-.51-.06-.75h-5.21zm-5.5-4c-.08-.34-.12-.7-.12-1.1%200-1.29.52-2.3%201.58-3.02%201.05-.72%202.5-1.08%204.34-1.08%201.62%200%203.28.34%204.97%201l-1.3%202.93c-1.47-.6-2.73-.9-3.8-.9-.55%200-.96.08-1.2.26-.26.17-.38.38-.38.64%200%20.27.16.52.48.74.17.12.53.3%201.05.53H7.23zM3%2013h18v-2H3v2z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 116, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-quote::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20version%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M6%2017h3l2-4V7H5v6h3zm8%200h3l2-4V7h-6v6h3z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 118, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-heading-1::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20version%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M12%209v3H9v7H6v-7H3V9h9zM8%204h14v3h-6v12h-3V7H8V4z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 120, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-code::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M18.2%2012L15%2015.2l1.4%201.4L21%2012l-4.6-4.6L15%208.8l3.2%203.2zM5.8%2012L9%208.8%207.6%207.4%203%2012l4.6%204.6L9%2015.2%205.8%2012z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 122, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-bullet-list::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20version%3D%221%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M4%204a2%202%200%201%200%200%204%202%202%200%200%200%200-4zm0%206a2%202%200%201%200%200%204%202%202%200%200%200%200-4zm0%206a2%202%200%201%200%200%204%202%202%200%200%200%200-4zm4%203h14v-2H8v2zm0-6h14v-2H8v2zm0-8v2h14V5H8z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 124, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-number-list::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M2%2017h2v.5H3v1h1v.5H2v1h3v-4H2v1zm1-9h1V4H2v1h1v3zm-1%203h1.8L2%2013.1v.9h3v-1H3.2L5%2010.9V10H2v1zm5-6v2h14V5H7zm0%2014h14v-2H7v2zm0-6h14v-2H7v2z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 126, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-undo::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M12.5%208c-2.6%200-5%201-6.9%202.6L2%207v9h9l-3.6-3.6A8%208%200%200%201%2020%2016l2.4-.8a10.5%2010.5%200%200%200-10-7.2z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 128, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-redo::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M18.4%2010.6a10.5%2010.5%200%200%200-16.9%204.6L4%2016a8%208%200%200%201%2012.7-3.6L13%2016h9V7l-3.6%203.6z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 130, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-decrease-nesting-level::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M3%2019h19v-2H3v2zm7-6h12v-2H10v2zm-8.3-.3l2.8%202.9L6%2014.2%204%2012l2-2-1.4-1.5L1%2012l.7.7zM3%205v2h19V5H3z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 132, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--icon-increase-nesting-level::before {
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%3Cpath%20d%3D%22M3%2019h19v-2H3v2zm7-6h12v-2H10v2zm-6.9-1L1%2014.2l1.4%201.4L6%2012l-.7-.7-2.8-2.8L1%209.9%203.1%2012zM3%205v2h19V5H3z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+/* line 134, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-dialogs {
+  position: relative;
+}
+
+/* line 136, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 0.75em;
+  padding: 15px 10px;
+  background: #fff;
+  box-shadow: 0 0.3em 1em #ccc;
+  border-top: 2px solid #888;
+  border-radius: 5px;
+  z-index: 5;
+}
+
+/* line 148, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-input--dialog {
+  font-size: inherit;
+  font-weight: normal;
+  padding: 0.5em 0.8em;
+  margin: 0 10px 0 0;
+  border-radius: 3px;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  box-shadow: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* line 160, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-input--dialog.validate:invalid {
+  box-shadow: #F00 0px 0px 1.5px 1px;
+}
+
+/* line 162, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-button--dialog {
+  font-size: inherit;
+  padding: 0.5em;
+  border-bottom: none;
+}
+
+/* line 166, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-dialog--link {
+  max-width: 600px;
+}
+
+/* line 168, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-dialog__link-fields {
+  display: flex;
+  align-items: baseline;
+}
+
+/* line 171, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-dialog__link-fields .trix-input {
+  flex: 1;
+}
+
+/* line 173, app/assets/stylesheets/actiontext.scss */
+trix-toolbar .trix-dialog__link-fields .trix-button-group {
+  flex: 0 0 content;
+  margin: 0;
+}
+
+/* line 176, app/assets/stylesheets/actiontext.scss */
+trix-editor [data-trix-mutable]:not(.attachment__caption-editor) {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 182, app/assets/stylesheets/actiontext.scss */
+trix-editor [data-trix-mutable]::-moz-selection,
+trix-editor [data-trix-cursor-target]::-moz-selection, trix-editor [data-trix-mutable] ::-moz-selection {
+  background: none;
+}
+
+/* line 185, app/assets/stylesheets/actiontext.scss */
+trix-editor [data-trix-mutable]::-moz-selection, trix-editor [data-trix-cursor-target]::-moz-selection, trix-editor [data-trix-mutable] ::-moz-selection {
+  background: none;
+}
+trix-editor [data-trix-mutable]::selection,
+trix-editor [data-trix-cursor-target]::selection, trix-editor [data-trix-mutable] ::selection {
+  background: none;
+}
+
+/* line 189, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment__caption-editor[data-trix-mutable]:focus::-moz-selection {
+  background: highlight;
+}
+
+/* line 191, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment__caption-editor[data-trix-mutable]:focus::-moz-selection {
+  background: highlight;
+}
+trix-editor .attachment__caption-editor[data-trix-mutable]:focus::selection {
+  background: highlight;
+}
+
+/* line 194, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment.attachment--file[data-trix-mutable] {
+  box-shadow: 0 0 0 2px highlight;
+  border-color: transparent;
+}
+
+/* line 197, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment[data-trix-mutable] img {
+  box-shadow: 0 0 0 2px highlight;
+}
+
+/* line 199, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment {
+  position: relative;
+}
+
+/* line 201, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment:hover {
+  cursor: default;
+}
+
+/* line 203, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment--preview .attachment__caption:hover {
+  cursor: text;
+}
+
+/* line 205, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment__progress {
+  position: absolute;
+  z-index: 1;
+  height: 20px;
+  top: calc(50% - 10px);
+  left: 5%;
+  width: 90%;
+  opacity: 0.9;
+  transition: opacity 200ms ease-in;
+}
+
+/* line 214, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment__progress[value="100"] {
+  opacity: 0;
+}
+
+/* line 216, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment__caption-editor {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-align: center;
+  vertical-align: top;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* line 231, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment__toolbar {
+  position: absolute;
+  z-index: 1;
+  top: -0.9em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 238, app/assets/stylesheets/actiontext.scss */
+trix-editor .trix-button-group {
+  display: inline-flex;
+}
+
+/* line 240, app/assets/stylesheets/actiontext.scss */
+trix-editor .trix-button {
+  position: relative;
+  float: left;
+  color: #666;
+  white-space: nowrap;
+  font-size: 80%;
+  padding: 0 0.8em;
+  margin: 0;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+/* line 252, app/assets/stylesheets/actiontext.scss */
+trix-editor .trix-button:not(:first-child) {
+  border-left: 1px solid #ccc;
+}
+
+/* line 254, app/assets/stylesheets/actiontext.scss */
+trix-editor .trix-button.trix-active {
+  background: #cbeefa;
+}
+
+/* line 256, app/assets/stylesheets/actiontext.scss */
+trix-editor .trix-button:not(:disabled) {
+  cursor: pointer;
+}
+
+/* line 258, app/assets/stylesheets/actiontext.scss */
+trix-editor .trix-button--remove {
+  text-indent: -9999px;
+  display: inline-block;
+  padding: 0;
+  outline: none;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.8em;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid highlight;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* line 270, app/assets/stylesheets/actiontext.scss */
+trix-editor .trix-button--remove::before {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  content: "";
+  background-image: url(data:image/svg+xml,%3Csvg%20height%3D%2224%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M19%206.4L17.6%205%2012%2010.6%206.4%205%205%206.4l5.6%205.6L5%2017.6%206.4%2019l5.6-5.6%205.6%205.6%201.4-1.4-5.6-5.6z%22%2F%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+
+/* line 283, app/assets/stylesheets/actiontext.scss */
+trix-editor .trix-button--remove:hover {
+  border-color: #333;
+}
+
+/* line 285, app/assets/stylesheets/actiontext.scss */
+trix-editor .trix-button--remove:hover::before {
+  opacity: 1;
+}
+
+/* line 287, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment__metadata-container {
+  position: relative;
+}
+
+/* line 289, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment__metadata {
+  position: absolute;
+  left: 50%;
+  top: 2em;
+  transform: translate(-50%, 0);
+  max-width: 90%;
+  padding: 0.1em 0.6em;
+  font-size: 0.8em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+}
+
+/* line 300, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment__metadata .attachment__name {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: bottom;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 307, app/assets/stylesheets/actiontext.scss */
+trix-editor .attachment__metadata .attachment__size {
+  margin-left: 0.2em;
+  white-space: nowrap;
+}
+
+/* line 311, app/assets/stylesheets/actiontext.scss */
+.trix-content {
+  line-height: 1.5;
+}
+
+/* line 313, app/assets/stylesheets/actiontext.scss */
+.trix-content * {
+  box-sizing: border-box;
+}
+
+/* line 315, app/assets/stylesheets/actiontext.scss */
+.trix-content h1 {
+  font-size: 1.2em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* line 319, app/assets/stylesheets/actiontext.scss */
+.trix-content blockquote {
+  margin: 0 0 0 0.3em;
+  padding: 0 0 0 0.6em;
+  border-left: 0.3em solid #ccc;
+}
+
+/* line 323, app/assets/stylesheets/actiontext.scss */
+.trix-content pre {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  font-family: monospace;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0.5em;
+  white-space: pre;
+  background-color: #eee;
+  overflow-x: auto;
+}
+
+/* line 334, app/assets/stylesheets/actiontext.scss */
+.trix-content ul, .trix-content ol, .trix-content li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 337, app/assets/stylesheets/actiontext.scss */
+.trix-content ul li, .trix-content ol li, .trix-content li li {
+  margin-left: 1em;
+}
+
+/* line 339, app/assets/stylesheets/actiontext.scss */
+.trix-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 342, app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 348, app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 351, app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment a:hover, .trix-content .attachment a:visited:hover {
+  color: inherit;
+}
+
+/* line 353, app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment__caption {
+  padding: 0;
+  text-align: center;
+}
+
+/* line 356, app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment__caption .attachment__name + .attachment__size::before {
+  content: ' · ';
+}
+
+/* line 358, app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment--preview {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 361, app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment--preview .attachment__caption {
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.2;
+}
+
+/* line 365, app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment--file {
+  color: #333;
+  line-height: 1;
+  margin: 0 2px 2px 0;
+  padding: 0.4em 1em;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+/* line 372, app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 378, app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment-gallery .attachment {
+  flex: 1 0 33%;
+  padding: 0 0.5em;
+  max-width: 33%;
+}
+
+/* line 382, app/assets/stylesheets/actiontext.scss */
+.trix-content .attachment-gallery.attachment-gallery--2 .attachment, .trix-content .attachment-gallery.attachment-gallery--4 .attachment {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+/* line 27, app/assets/stylesheets/articles.scss */
+.article {
+  padding: 30px;
+  width: calc(100%-60px);
+  background-image: url(/assets/iStock-778d63042ee918dde28692b763cb5df97c83dc5a165f6a2cbb13f79d456da5aa.jpg);
+  background-size: contain;
+  font-family: Hiragino Maru Gothic ProN;
+}
+
+/* line 32, app/assets/stylesheets/articles.scss */
+.article_main {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* line 38, app/assets/stylesheets/articles.scss */
+.article_main--title {
+  display: block;
+  position: relative;
+  height: 45px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 300px;
+  z-index: 1;
+}
+
+/* line 48, app/assets/stylesheets/articles.scss */
+.article_main--title:before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  bottom: -10px;
+  left: -3px;
+  border: 20px solid #a5cff3;
+  border-left-color: transparent;
+}
+
+/* line 57, app/assets/stylesheets/articles.scss */
+.article_main--title:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: -10px;
+  right: -2px;
+  border: 20px solid #a5cff3;
+  border-right-color: transparent;
+}
+
+/* line 66, app/assets/stylesheets/articles.scss */
+.article_main--title h1 {
+  width: 254px;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0 20px;
+  line-height: 45px;
+  font-size: 18px;
+  color: #fff;
+  z-index: 1;
+  background-color: #8ec3f1;
+}
+
+/* line 79, app/assets/stylesheets/articles.scss */
+.article_main--title h1:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 10px transparent;
+  border-right: solid 15px #7fafd9;
+}
+
+/* line 88, app/assets/stylesheets/articles.scss */
+.article_main--title h1:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  right: 0;
+  border: none;
+  border-bottom: solid 10px transparent;
+  border-left: solid 15px #7fafd9;
+}
+
+/* line 97, app/assets/stylesheets/articles.scss */
+.article_main--container {
+  position: relative;
+  border: dashed 2px #7fafd9;
+  border-radius: 20px;
+  margin: 40px;
+  padding: 30px;
+}
+
+/* line 103, app/assets/stylesheets/articles.scss */
+.article_main--container--title {
+  position: absolute;
+  display: inline-block;
+  position: relative;
+  padding: 4px 0;
+  left: -30px;
+  top: 0px;
+}
+
+/* line 110, app/assets/stylesheets/articles.scss */
+.article_main--container--title p {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 0 0 -20px;
+  width: calc(100% + 20px);
+  font-size: 22px;
+  color: white;
+  background: #a5cff3;
+  height: 51px;
+}
+
+/* line 122, app/assets/stylesheets/articles.scss */
+.article_main--container--title p:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px #6eb3e0;
+}
+
+/* line 136, app/assets/stylesheets/articles.scss */
+.article_main--container--btn {
+  margin: 0 1%;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+}
+
+/* line 140, app/assets/stylesheets/articles.scss */
+.article_main--container--btn:hover {
+  transform: translateY(4px);
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* line 147, app/assets/stylesheets/articles.scss */
+.article__edit--btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+/* line 151, app/assets/stylesheets/articles.scss */
+.article__edit--btn:hover {
+  transform: translateY(4px);
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* line 156, app/assets/stylesheets/articles.scss */
+.article__save--btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+/* line 160, app/assets/stylesheets/articles.scss */
+.article__save--btn:hover {
+  transform: translateY(4px);
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* line 165, app/assets/stylesheets/articles.scss */
+.article__back--btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+/* line 169, app/assets/stylesheets/articles.scss */
+.article__back--btn:hover {
+  transform: translateY(4px);
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* line 1, app/assets/stylesheets/warning.scss */
+.warning {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #ff7d6e;
+  background: #ffebe9;
+  border-top: solid 10px #ff7d6e;
+  margin: 30px;
+}
+
+/* line 9, app/assets/stylesheets/warning.scss */
+.warning p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1, app/assets/stylesheets/paginate.scss */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+/* line 6, app/assets/stylesheets/paginate.scss */
+.nav-links a, .nav-links span {
+  width: 100px;
+  height: 50px;
+  margin: 2px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #222;
+  transition: .3s;
+}
+
+/* line 18, app/assets/stylesheets/paginate.scss */
+.nav-links a:hover {
+  background-color: #a5e5e2;
+  border-radius: 50px;
+  padding: 20px;
+  transform: rotate(360deg);
+}
+
+/* line 24, app/assets/stylesheets/paginate.scss */
+.nav-links .current {
+  background-color: #a5e5e2;
+  border-radius: 5px;
+}
+
+/* line 28, app/assets/stylesheets/paginate.scss */
+.nav-links .dots {
+  background: none;
+}
+
+/* line 57, app/assets/stylesheets/meetings.scss */
+.simple-calendar .meeting__container {
+  height: 100px;
+  width: 100px;
+}
+
+/* line 66, app/assets/stylesheets/meetings.scss */
+.simple-calendar .meeting__new--btn a {
+  text-decoration: none;
+  background-color: wheat;
+  color: white;
+}

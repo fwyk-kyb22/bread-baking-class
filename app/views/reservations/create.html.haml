@@ -1,0 +1,25 @@
+.reservations
+  .reservations__container
+    予約が確定しました！
+    - if current_user.coupon_use
+      無料クーポン券を消費しました！
+    - else   
+      = current_user.reservations.count
+      あ
+      = current_user.reservations.count % 11
+      あ
+      = current_user.coupon_count
+      あ
+      .coupon
+        =10.times do
+          .coupon--container
+        .white   
+        .stanp 
+          =current_user.coupon_count.times do
+            = image_tag asset_path("french-bread.png"),class: "image"
+      - if current_user.coupon_count == 10 
+        おめでとうございます！    
+        次回無料でご利用いただけます！
+      - else 
+        10個たまると1回無料！！！    
+    = link_to "戻る",  meetings_path , class: "reservations--back--btn"

@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :comments       
   has_many :articles, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :reservations
+  has_many :meetings, through: :reservations
 
   validates :nickname,:familyname,:firstname,:familyname_kana,:firstname_kana,:phone_number,:PIN,presence: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -19,5 +21,10 @@ class User < ApplicationRecord
   def already_liked?(article)
     self.likes.exists?(article_id: article.id)
   end
-  
+  def coupon_count
+    self.reservations.count % 11 
+  end
+  def coupon_use
+    self.reservations.count % 11 == 0
+  end
 end

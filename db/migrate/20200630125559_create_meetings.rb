@@ -5,6 +5,7 @@ class CreateMeetings < ActiveRecord::Migration[6.0]
       t.text :content
       t.datetime :start_time
       t.integer :time_required
+      t.integer :max_reservations
       t.timestamps
     end
   end

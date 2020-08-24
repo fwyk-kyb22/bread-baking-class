@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/* line 27, app/assets/stylesheets/articles.scss */
+.article {
+  padding: 30px;
+  width: calc(100%-60px);
+  background-image: url(/assets/iStock-778d63042ee918dde28692b763cb5df97c83dc5a165f6a2cbb13f79d456da5aa.jpg);
+  background-size: contain;
+  font-family: Hiragino Maru Gothic ProN;
+}
+
+/* line 32, app/assets/stylesheets/articles.scss */
+.article_main {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* line 38, app/assets/stylesheets/articles.scss */
+.article_main--title {
+  display: block;
+  position: relative;
+  height: 45px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 300px;
+  z-index: 1;
+}
+
+/* line 48, app/assets/stylesheets/articles.scss */
+.article_main--title:before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  bottom: -10px;
+  left: -3px;
+  border: 20px solid #a5cff3;
+  border-left-color: transparent;
+}
+
+/* line 57, app/assets/stylesheets/articles.scss */
+.article_main--title:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: -10px;
+  right: -2px;
+  border: 20px solid #a5cff3;
+  border-right-color: transparent;
+}
+
+/* line 66, app/assets/stylesheets/articles.scss */
+.article_main--title h1 {
+  width: 254px;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0 20px;
+  line-height: 45px;
+  font-size: 18px;
+  color: #fff;
+  z-index: 1;
+  background-color: #8ec3f1;
+}
+
+/* line 79, app/assets/stylesheets/articles.scss */
+.article_main--title h1:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 10px transparent;
+  border-right: solid 15px #7fafd9;
+}
+
+/* line 88, app/assets/stylesheets/articles.scss */
+.article_main--title h1:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  right: 0;
+  border: none;
+  border-bottom: solid 10px transparent;
+  border-left: solid 15px #7fafd9;
+}
+
+/* line 97, app/assets/stylesheets/articles.scss */
+.article_main--container {
+  position: relative;
+  border: dashed 2px #7fafd9;
+  border-radius: 20px;
+  margin: 40px;
+  padding: 30px;
+}
+
+/* line 103, app/assets/stylesheets/articles.scss */
+.article_main--container--title {
+  position: absolute;
+  display: inline-block;
+  position: relative;
+  padding: 4px 0;
+  left: -30px;
+  top: 0px;
+}
+
+/* line 110, app/assets/stylesheets/articles.scss */
+.article_main--container--title p {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 0 0 -20px;
+  width: calc(100% + 20px);
+  font-size: 22px;
+  color: white;
+  background: #a5cff3;
+  height: 51px;
+}
+
+/* line 122, app/assets/stylesheets/articles.scss */
+.article_main--container--title p:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px #6eb3e0;
+}
+
+/* line 136, app/assets/stylesheets/articles.scss */
+.article_main--container--btn {
+  margin: 0 1%;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+}
+
+/* line 140, app/assets/stylesheets/articles.scss */
+.article_main--container--btn:hover {
+  transform: translateY(4px);
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* line 147, app/assets/stylesheets/articles.scss */
+.article__edit--btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+/* line 151, app/assets/stylesheets/articles.scss */
+.article__edit--btn:hover {
+  transform: translateY(4px);
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* line 156, app/assets/stylesheets/articles.scss */
+.article__save--btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+/* line 160, app/assets/stylesheets/articles.scss */
+.article__save--btn:hover {
+  transform: translateY(4px);
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* line 165, app/assets/stylesheets/articles.scss */
+.article__back--btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+/* line 169, app/assets/stylesheets/articles.scss */
+.article__back--btn:hover {
+  transform: translateY(4px);
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}

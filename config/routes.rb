@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   end
   resources :home, only: :index
   resources :lesson,  only: :index
-  resources :meetings, except: :show
+  resources :meetings, except: :show do
+    resources :reservations, only: [:new,:create]
+  end
   namespace :api do
     resources :comments, only: :index, defaults: { format: 'json' }
   end

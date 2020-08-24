@@ -7,16 +7,21 @@
           %li= message
 
   .field
-    = f.label :name
-    = f.text_field :name
+    = f.label :タイトル
+    = f.text_field :name, placeholder: "メロンパン"
   .field
-    = f.label :content
-    = f.text_area :content 
+    = f.label :詳細
+    = f.text_area :content ,placeholder: "初心者の方にもおすすめ！比較的簡単につくれますよ！"
   .field
-    = f.label :time_required
-    = f.number_field :time_required 
+    = f.label :所要時間
+    = f.number_field :time_required , value: 120
+    %span 分
   .field
-    = f.label :start_time
+    = f.label :予約最大人数
+    = f.number_field :max_reservations ,value: 5
+    %span 人
+  .field
+    = f.label :開始時間,class: "label--start_time"
     = f.datetime_select :start_time,{default: Date.new("#{params[:year]}".to_i, "#{params[:month]}".to_i,"#{params[:day]}".to_i)+ 19.hour}
   .actions
     = f.submit 'Save',class: "meeting--btn"

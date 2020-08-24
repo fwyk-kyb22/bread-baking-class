@@ -30,10 +30,6 @@
         position: relative;
         &:hover{
           z-index: 1;
-          background-color: #bfd8d8;
-          #details_btn{
-            background-color: white;
-          }
         }
       }
     }
@@ -42,10 +38,16 @@
   .meeting__container{
     height: 80px;
     width: 80px;
-    // &:hover{
-    //   z-index: 1;
-    //   position: absolute;
-    // }
+    &--inner{
+      // display: none;
+      position: absolute;
+      box-sizing: border-box;
+      top: -60%;
+      right: -31vw;
+      z-index: 2;
+      width: 30vw;
+      border-radius: 50px;
+    }
     &__one{
       position: relative;
       padding: 1em;
@@ -54,20 +56,36 @@
       min-width: 120px;
       max-width: 100%;
       color: #555;
-      font-size: 16px;
-      background: #bfd8d8;
-      &:before {
+      font-size: 14px;
+      background: white;
+      border: solid 3px #bfd8d8;	
+      box-sizing: border-box;
+      &:before{
         content: "";
         position: absolute;
-        top: 20%;
-        left: -30px;
+        top: 24px;
+        left: -39px;
         margin-top: -15px;
-        border: 15px solid transparent;
-        border-right: 15px solid #bfd8d8;
+        border: 18px solid transparent;
+        border-right: 21px solid #bfd8d8;
+        z-index: 2;
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: -33px;
+        margin-top: -15px;
+        border: 18px solid transparent;
+        border-right: 21px solid white;
+        z-index: 3;
+      }
+      span{
+        font-size: large;
       }
     }
     .meeting-name{
-      position: relative;
+      font-size: large;
     }
     &--content{
       word-break: break-all;
@@ -78,27 +96,61 @@
       }
      
     }
+
   } 
   .day{
-    .meeting__btn{
-      .meeting__new--btn{
-        position: absolute;
-        right: -24px;
-        top: -5px;
-        display: none;
-      }
-      .meeting__edit--btn{
-        
-        color: #157171;
-      }
-      .meeting__destroy--btn{
-       
-        color: #157171;
-      }
-      a:hover{
+    .meeting__new--btn{
+      position: absolute;
+      right: -24px;
+      top: -5px;
+      display: none;
+    }
+    .meeting__edit--btn{
+      color: #157171;
+      z-index: 2;
+    }
+    .meeting__destroy--btn{
+      z-index: 2;
+      color: #157171;
+    }
+    .meeting__reservations--btn{
+      background-color: #63c1bd;
+      color: white;
+      padding: 0.5em;
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+      border-radius: 10px;
+      display: inline-block;
+      &:hover{
+        border: 1px solid #63c1bd;
+        color: #63c1bd;
+        background-color: white;
         text-decoration: none;
       }
-    
+      &--red{
+        background-color: #ff6363;
+        color: white;
+        padding: 0.5em;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 10px;
+        display: inline-block;
+      }
+      &--yellow{
+        background-color: #e6a91f;
+        color: white;
+        padding: 0.5em;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 10px;
+        display: inline-block;
+      }
+    }
+    a:hover{
+      text-decoration: none;
     }
   }  
 }
@@ -118,6 +170,9 @@
     i{
       display: inline-block;
     }
+    .meeting__container--inner{
+      display: block;
+    }
   }
   i{
     display: none;
@@ -126,25 +181,4 @@
   
 }
 
-
-.popup__bg{
-  display: none;
-  height: 100vh;
-  width: 100vw;
-  z-index: 3;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-  
-.popup--inner{
-  display: none;
-  position: absolute;
-  box-sizing: border-box;
-  top: -60%;
-  right: -31vw;
-  z-index: 2;
-  width: 30vw;
-  border-radius: 50px;
-}
 
