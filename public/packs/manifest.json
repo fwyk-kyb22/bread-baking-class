@@ -1,34 +1,34 @@
 {
-  "application.js": "/packs/js/application-f0934bf4d62afef9245b.js",
-  "application.js.map": "/packs/js/application-f0934bf4d62afef9245b.js.map",
-  "comments.js": "/packs/js/comments-f022d941f9410071a269.js",
-  "comments.js.map": "/packs/js/comments-f022d941f9410071a269.js.map",
+  "application.js": "/packs/js/application-e37a3907d10d49573678.js",
+  "application.js.map": "/packs/js/application-e37a3907d10d49573678.js.map",
+  "comments.js": "/packs/js/comments-83d871fc51d8ff84deb5.js",
+  "comments.js.map": "/packs/js/comments-83d871fc51d8ff84deb5.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-f0934bf4d62afef9245b.js"
+        "/packs/js/application-e37a3907d10d49573678.js"
       ],
       "js.map": [
-        "/packs/js/application-f0934bf4d62afef9245b.js.map"
+        "/packs/js/application-e37a3907d10d49573678.js.map"
       ]
     },
     "comments": {
       "js": [
-        "/packs/js/comments-f022d941f9410071a269.js"
+        "/packs/js/comments-83d871fc51d8ff84deb5.js"
       ],
       "js.map": [
-        "/packs/js/comments-f022d941f9410071a269.js.map"
+        "/packs/js/comments-83d871fc51d8ff84deb5.js.map"
       ]
     },
     "meetings": {
       "js": [
-        "/packs/js/meetings-967f756ad6d291ca10e5.js"
+        "/packs/js/meetings-bfafaa5171adb1adcfb9.js"
       ],
       "js.map": [
-        "/packs/js/meetings-967f756ad6d291ca10e5.js.map"
+        "/packs/js/meetings-bfafaa5171adb1adcfb9.js.map"
       ]
     }
   },
-  "meetings.js": "/packs/js/meetings-967f756ad6d291ca10e5.js",
-  "meetings.js.map": "/packs/js/meetings-967f756ad6d291ca10e5.js.map"
+  "meetings.js": "/packs/js/meetings-bfafaa5171adb1adcfb9.js",
+  "meetings.js.map": "/packs/js/meetings-bfafaa5171adb1adcfb9.js.map"
 }
