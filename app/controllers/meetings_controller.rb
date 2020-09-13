@@ -6,8 +6,6 @@ class MeetingsController < ApplicationController
   # GET /meetings.json
   def index
     @meetings = Meeting.all
-    @comment = Comment.new
-    @comments = Comment.all.order('created_at DESC')
   end
 
   # GET /meetings/1

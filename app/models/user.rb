@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :reservations
   has_many :meetings, through: :reservations
+  has_many :groups
 
   validates :nickname,:familyname,:firstname,:familyname_kana,:firstname_kana,:phone_number,:PIN,presence: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

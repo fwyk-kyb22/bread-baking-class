@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   root to: 'home#index'
-  devise_for :users
+  devise_for :users, :controllers => {
+    :registrations => 'users/registrations', 
+  } 
   resources :articles do
-    resources :likes, only: [:create, :destroy], defaults: { format: 'js' }
+    resources :likes, only: [:create, :destroy], defaults: { format: 'json' }
   end
   resources :home, only: :index
   resources :lesson,  only: :index
@@ -12,9 +14,11 @@ Rails.application.routes.draw do
   namespace :api do
     resources :comments, only: :index, defaults: { format: 'json' }
   end
-  resources :comments, only:[:create, :destroy] do
-    collection do
-      delete 'destroy_all'
+  resources :groups, only: [:index, :show] do
+    resources :comments, only:[:create, :destroy] do
+      collection do
+        delete 'destroy_all'
+      end
     end
   end
 end

@@ -58,34 +58,34 @@ $(function() {
       alert('error');
     });
   });
-  var reloadComments = function() {
-    var first_comment_id = $('.schedules__comments__list__box:first').data("comment-id");
-    $.ajax({
-      url: "/api/comments",
-      type: 'get',
-      dataType: 'json',
-      data: {id: first_comment_id}
-    })
-    .done(function(comments) {
-      if (comments.length !== 0) {
-        var insertHTML = '';
-        $.each(comments, function(i, comment) {
-          insertHTML += buildHTML(comment)
-        });
-        $('.schedules__comments__list').prepend(insertHTML);
-      }
-    })
-    .fail(function() {
-      alert('error');
-    });
-  };
+  // var reloadComments = function() {
+  //   var first_comment_id = $('.schedules__comments__list__box:first').data("comment-id");
+  //   $.ajax({
+  //     url: '/api/comments/',
+  //     type: 'get',
+  //     dataType: 'json',
+  //     data: {id: first_comment_id}
+  //   })
+  //   .done(function(comments) {
+  //     if (comments.length !== 0) {
+  //       var insertHTML = '';
+  //       $.each(comments, function(i, comment) {
+  //         insertHTML += buildHTML(comment)
+  //       });
+  //       $('.schedules__comments__list').prepend(insertHTML);
+  //     }
+  //   })
+  //   .fail(function() {
+  //     alert('error');
+  //   });
+  // };
   $('#comment--destroy_all').click(function(){
     if(!confirm('ほんとのほんとに全部削除していいの？\n全部のコメントが消えちゃうよ！')){
         return false;
     }else{
     }
   });
-  if (document.location.href.match(/meetings/)) {
+  if (document.location.href.match(/groups/)) {
     setInterval(reloadComments, 10000);
   }
 });
