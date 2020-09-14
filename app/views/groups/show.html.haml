@@ -30,10 +30,3 @@
             #{comment.created_at.month}/#{comment.created_at.day}(#{%w(日 月 火 水 木 金 土)[comment.created_at.wday]})　#{comment.created_at.hour}:#{comment.created_at.min}
           - if current_user == comment.user
             = link_to "| 削除",group_comment_path(current_user.id,comment.id) ,method: :delete ,class: "schedules__comments__list__box--btn"
-  .schedules__mihon
-    例
-    .schedules__comments__list__box--name.admin--comment--name
-      adminさん
-      %span のこめんと  
-    .schedules__comments__list__box--comment.admin--comment--comment
-      大丈夫ですよ！了解しました！
