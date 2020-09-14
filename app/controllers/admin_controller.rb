@@ -1,7 +1,8 @@
 class AdminController < ApplicationController
   before_action :if_not_admin, except: [:index, :show]
   def index
-    
+    @meetings = Meeting.all.order(start_time: "ASC")
+    @users = User.all
   end
   private
     def if_not_admin

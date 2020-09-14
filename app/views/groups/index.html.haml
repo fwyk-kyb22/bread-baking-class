@@ -1,6 +1,6 @@
 %h1 
   group 一覧
-- @groups.each do |group|
+- @groups.each.with_index(1) do |group,i|
   %p  
-    #{group.id}
+    = i
     = link_to "#{group.user.nickname}さん", group_path(group.id),class: "header-menu__right"
