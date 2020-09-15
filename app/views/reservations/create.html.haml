@@ -1,23 +1,22 @@
 
 .reservations__create
-  .reservations__create__container
-    予約が確定しました！
-    - if current_user.coupon_use
-      無料クーポン券を消費しました！
-    - else   
-      .coupon
-        .coupon--inner
-          =10.times do
-            .coupon--inner--container
-          .white   
-          .stanp 
-            =current_user.coupon_count.times do
-              = image_tag asset_path("french-bread.png"),class: "image"
-        - if current_user.coupon_count == 10 
-          おめでとうございます！    
-          次回無料でご利用いただけます！
-        - else 
-          10個たまると1回無料！！！    
-    .btn      
-      = link_to "戻る",  meetings_path , class: "reservations__create--back--btn"
+  予約が確定しました！
+  - if current_user.coupon_use
+    無料クーポン券を消費しました！
+  - else   
+    .coupon
+      .coupon--inner
+        =10.times do
+          .coupon--inner--container
+        .white   
+        .stanp 
+          =current_user.coupon_count.times do
+            = image_tag asset_path("french-bread.png"),class: "image"
+      - if current_user.coupon_count == 10 
+        おめでとうございます！    
+        次回無料でご利用いただけます！
+      - else 
+        10個たまると1回無料！！！    
+  .reservations__create--back  
+    = link_to "戻る",  meetings_path , class: "reservations__create--back--btn"
 

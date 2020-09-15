@@ -1,32 +1,31 @@
 .reservations
-  .reservations__container
-    %h3
-      ご確認おねがいします！
-    %h5
-      = @meeting.name
-    ・日付:  
-    %span  #{@meeting.start_time.year}
-    年
-    %span  #{@meeting.start_time.month}
-    月
-    %span  #{@meeting.start_time.day}
-    日
-    %br
-    ・開始時間:
-    %span #{@meeting.start_time.hour}
-    時〜
-    %br
-    ・所要時間: 
-    %span #{@meeting.time_required}
-    分 
-    %br
-    ・予約可能人数残り:
-    %span  #{@meeting.max_reservations-@meeting.users.count}
-    人  
-    %h3
-      詳細
-    %p  
-      = @meeting.content 
-    .reservations__container--link
-      = link_to "予約を確定しますか？",  meeting_reservations_path(@meeting.id), method: :post,class: "reservations--create--btn"
-      = link_to "戻る",  meetings_path, class: "reservations--back--btn"
+  %h3
+    ご確認おねがいします！
+  %h5
+    = @meeting.name
+  ・日付:  
+  %span  #{@meeting.start_time.year}
+  年
+  %span  #{@meeting.start_time.month}
+  月
+  %span  #{@meeting.start_time.day}
+  日
+  %br
+  ・開始時間:
+  %span #{@meeting.start_time.hour}
+  時〜
+  %br
+  ・所要時間: 
+  %span #{@meeting.time_required}
+  分 
+  %br
+  ・予約可能人数残り:
+  %span  #{@meeting.max_reservations-@meeting.users.count}
+  人  
+  %h3
+    詳細
+  %p  
+    = @meeting.content 
+  .reservations--link
+    = link_to "予約を確定しますか？",  meeting_reservations_path(@meeting.id), method: :post,class: "reservations--create--btn"
+    = link_to "戻る",  meetings_path, class: "reservations--back--btn"
