@@ -3,6 +3,7 @@ class AdminController < ApplicationController
   def index
     @meetings = Meeting.all.order(start_time: "ASC")
     @users = User.all
+    add_breadcrumb '先生専用のマイページ！'
   end
   private
     def if_not_admin

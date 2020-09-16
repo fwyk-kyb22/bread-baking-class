@@ -1,20 +1,23 @@
-= link_to "先生とのメッセージはこちら！", group_path(@group.id),class: "header-menu__right"
-予約確認
-
--unless @meetings.today_before.blank?
-  - @meetings.today_before.each.with_index(1) do |meeting, i| 
-    .meeting__container--inner
-      = i
-      .meeting__container__one
-        .meeting-name
-          = meeting.name
-        ・日付:
-        %span #{meeting.start_time.strftime("%m月%d日")}
-        %br
-        ・開始時間:
-        %span #{meeting.start_time.hour}
-        時〜
-        %br
-        ・所要時間: 
-        %span #{meeting.time_required}
-        分
+.mypage
+  = render_breadcrumbs :separator => ' / ' 
+  .mypage--btn
+    = link_to "先生とのメッセージはこちら！", group_path(@group.id),class: "mypage--btn--messege"
+  .mypage__reservations
+    予約確認
+    -unless @meetings.today_before.blank?
+      - @meetings.today_before.each.with_index(1) do |meeting, i| 
+        .meeting__container--inner
+          = i
+          .meeting__container__one
+            .meeting-name
+              = meeting.name
+            ・日付:
+            %span #{meeting.start_time.strftime("%m月%d日")}
+            %br
+            ・開始時間:
+            %span #{meeting.start_time.hour}
+            時〜
+            %br
+            ・所要時間: 
+            %span #{meeting.time_required}
+            分

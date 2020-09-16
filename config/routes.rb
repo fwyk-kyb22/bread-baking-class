@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     :sessions => 'users/sessions'  
   } 
   resources :articles do
-    resources :likes, only: [:create, :destroy], defaults: { format: 'json' }
+    resources :likes, only: [:create, :destroy], defaults: { format: 'js' }
   end
   resources :home, only: :index
   resources :lesson,  only: :index

@@ -5,12 +5,22 @@ class GroupsController < ApplicationController
   def index
     @groups = Group.all
     @users = User.all
+    add_breadcrumb '先生専用のマイページ！', :admin_index_path
+    add_breadcrumb '生徒さんのチャットルーム一覧！'
   end
 
   def show
     @group = Group.find(params[:id])
     @comment = Comment.new
     @comments = @group.comments.order('created_at DESC')
+    if current_user.admin?
+      add_breadcrumb '先生専用のマイページ！', :admin_index_path
+      add_breadcrumb '生徒さんのチャットルーム一覧！',:groups_path
+      add_breadcrumb "#{@group.user.nickname}さんとのチャットルーム"
+    else
+      add_breadcrumb 'マイページ', :mypage_index_path
+      add_breadcrumb 'チャットルーム' 
+    end  
   end
 
   private
