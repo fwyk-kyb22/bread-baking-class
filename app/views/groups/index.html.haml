@@ -1,4 +1,7 @@
-= render_breadcrumbs :separator => '  ' 
+.bread
+  %ul
+    %li
+      = render_breadcrumbs :separator => '</li><li>' 
 %h1 
   group 一覧
 - @groups.each.with_index(1) do |group,i|

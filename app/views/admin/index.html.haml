@@ -1,4 +1,7 @@
-= render_breadcrumbs :separator => '  ' 
+.bread
+  %ul
+    %li
+      = render_breadcrumbs :separator => '</li><li>' 
 = link_to "生徒さんとのメッセージ一覧", groups_path,class: "header-menu__right"
 %h2 
   予約一覧

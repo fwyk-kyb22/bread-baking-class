@@ -1,5 +1,8 @@
 .mypage
-  = render_breadcrumbs :separator => ' / ' 
+  .bread
+    %ul
+      %li
+        = render_breadcrumbs :separator => '</li><li>' 
   .mypage--btn
     = link_to "先生とのメッセージはこちら！", group_path(@group.id),class: "mypage--btn--messege"
   .mypage__reservations
