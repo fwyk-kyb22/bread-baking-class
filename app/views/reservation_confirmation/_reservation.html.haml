@@ -1,0 +1,14 @@
+.reservation_confirmation__inner
+  %span #{meeting.start_time.month}
+  月
+  %span #{meeting.start_time.day}
+  日
+  %span #{meeting.start_time.hour}
+  時〜
+  %span #{meeting.name}
+  .reservation_confirmation__details
+    ・所要時間: 
+    %span #{meeting.time_required}
+    分
+    %br
+    = meeting.content

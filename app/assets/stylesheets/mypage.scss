@@ -1,26 +1,25 @@
 .main__mypage--left{
-  width: 36%;
+  width: 33%;
   padding: 30px;
   background-color: #ffffff;
   border-radius: 10px; 
   min-height: calc(100vh - 140px);
 }
 .main__mypage--right{
-  width: 60%;
-  padding: 30px;
+  width: 65%;
+  padding: 2em;
   background-color: #ffffff;
   border-radius: 10px; 
   min-height: calc(100vh - 140px);
 }
 .mypage{
-  padding: 1em 0 1em 1em;
   a.mypage--btn span{
     z-index: 1;
     position: relative;
   }
   a.mypage--btn{
     overflow: hidden;
-    padding: 1.5rem 2rem;
+    padding: 1.3rem 1.5rem;
     color: #494949;
     border-radius: 0;
     background: #fff1d3b8;
@@ -50,4 +49,11 @@
       color: white;
     }
   }
+  &--title{
+    width: 29em;
+  }
+  &--title h1{
+    width: 23em;
+  }
+  @include ribon_orange;
 }

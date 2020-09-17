@@ -1,11 +1,9 @@
-.bread
-  %ul
-    %li
-      = render_breadcrumbs :separator => '</li><li>' 
-管理人と#{@group.user.nickname}さんのチャットルーム！
+.mypage--title
+  %h1
+    管理人と#{@group.user.nickname}さんのチャットルーム！
 .schedules__comments
   - if user_signed_in?
-    = link_to "※※※※※※　注意！！　コメント全て削除　※※※※※", destroy_all_group_comments_path(current_user.id), method: :delete   ,id: "comment--destroy_all" ,class:"btn btn-outline-danger"
+    = link_to "コメント履歴消去", destroy_all_group_comments_path(current_user.id), method: :delete   ,id: "comment--destroy_all" ,class:"btn btn-outline-danger"
     .schedules__comments__form    
       = form_with(model:[@group ,@comment], local: true) do |form|
         = form.text_area :content , placeholder: "コメントしてみて！" ,class: "schedules__comments__form--area"

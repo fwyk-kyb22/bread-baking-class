@@ -1,17 +1,21 @@
--unless @meetings.today_before.blank?
-  - @meetings.today_before.each.with_index(1) do |meeting, i| 
-    .meeting__container--inner
-      = i
-      .meeting__container__one
-        .meeting-name
-          = meeting.name
-        ・日付:
-        %span #{meeting.start_time.strftime("%m月%d日")}
-        %br
-        ・開始時間:
-        %span #{meeting.start_time.hour}
-        時〜
-        %br
-        ・所要時間: 
-        %span #{meeting.time_required}
-        分
+.reservation_confirmation
+  .reservation_confirmation--title
+    %h1
+      予約確認
+  .reservation_confirmation__box 
+    %p 
+      今後の予約済の授業一覧はこちらから！  
+    - if @meetings.today_after.present?
+      - @meetings.today_after.each.with_index(1) do |meeting, i| 
+        - if meeting.start_time.strftime("%Y-%m-%d") == Date.today.strftime("%Y-%m-%d")
+          今日の授業！
+          .reservation_confirmation__outer.reservation_confirmation__outer--red 
+            = render partial: "reservation_confirmation/reservation", locals: { meeting: meeting,i:i } 
+        - elsif meeting.start_time.strftime("%Y-%m-%d") == Date.tomorrow.strftime("%Y-%m-%d")
+          明日の授業！
+          .reservation_confirmation__outer.reservation_confirmation__outer--orange
+            = render partial: "reservation_confirmation/reservation", locals: { meeting: meeting,i:i } 
+        - else  
+          .reservation_confirmation__outer
+            = render partial: "reservation_confirmation/reservation", locals: { meeting: meeting,i:i } 
+        
