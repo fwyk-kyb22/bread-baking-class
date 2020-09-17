@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   namespace :api do
     resources :comments, only: :index, defaults: { format: 'json' }
   end
-  resources :mypage, only: :index
   resources :reservation_confirmation , only: :index
   resources :adimn_reservation_confirmation , only: :index
   resources :groups, only: [:index, :show] do
