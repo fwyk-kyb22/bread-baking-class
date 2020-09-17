@@ -1,4 +1,12 @@
 .lesson
+  .lesson__btn
+    = link_to "https://docs.google.com/forms/d/e/1FAIpQLScE5svnazHEwslTa2_f5_m91HBpk9O5gxLRYUGu_qFvAk63vw/viewform?usp=sf_link",target: :_blank,class: "lesson__head--application" do
+      %span
+        初回体験のお申し込みはこちらから！
+    %br    
+    = link_to "https://docs.google.com/forms/d/e/1FAIpQLScaZ8Ov8dpFkSwNoLgTjqLPG-eg_bJ4rZzvrkqGNoohoHcmXg/viewform?usp=sf_link",target: :_blank,class: "lesson__head--application" do
+      %span
+        お問い合わせはこちらから！       
   .images
     = image_tag asset_path("img1.jpg"),class: "img--1"
     = image_tag asset_path("img2.jpg"),class: "img--2"
@@ -7,36 +15,46 @@
   %h1.lesson__headline
     初回体験をご検討していただいている方へ
   %p.lesson__content  
-    家庭でのパン作りの基本の計量の仕方や
-    簡単に本格的な生地を作る
-    手ごねのやり方を学んで頂けます！
+    初回は体験レッスンとして500円で体験していただいております！
+    また、初回レッスンのパンはあんぱん、フランスパン、食パンからお選びいただけます！！
     %br
-    初回のレッスンではパン作りの流れを掴んでいきましょう。
+    お好きなパンをご自分で作る楽しさ、是非経験してみませんか？
     %br
-    パン屋さんに売っているような
-    お惣菜パンに挑戦していきますので、
-    ご家族皆さんが驚かれたり喜んで頂けるパンになっていますよ！
-    %br
+    お子様がいらっしゃる方や、夜しか通えないとお悩みの方もぜひ一度ご相談ください！
   %h1.lesson__headline
-    こちら作っていくパンの一例です！
-  %p.lesson__content  
-    ●ウインナーロール（４個）
-    %br
-    生地を長く伸ばす成形に挑戦して頂けます。
-    %br
-    ロングウインナーに長く伸ばした生地を巻きつけ、 
-    パン屋さんでも人気のお惣菜パンを作っていきましょう。
-    %br
-    パン作りの基本の伸ばすやり方を覚えて頂く事で、
-    他のパンにも応用して頂けるようになります。
-    %br
-    ウインナー小
-    %br
-    ●パン・オ・フロマージュ（５個）
-    中はとろり、表面はカリッと、
-    %br
-    ２つの食感を楽しめる贅沢なチーズパンです。
-    %br
-    材料を変えてアレンジしやすい惣菜パンの作り方と 
-    %br
-    基本の丸めの方法を学んで頂けます。
+    Q & A
+  .lesson__q_a
+    .lesson__box--left
+      パン作りは一回もやったことなくて不安です、大丈夫ですか？
+    .lesson__box--right  
+      はい、大丈夫です！！
+      家庭でのパン作りの基本の計量の仕方からまなんでいただきます！
+      慣れてきたら本格的な生地作りまで学んでいただけます♪
+    .lesson__box--left
+      一回だけの体験でもいいんでしょうか？または半年に一度などの間が空いてもいいですか？
+    .lesson__box--right  
+      大丈夫ですよ！！初回は体験ですので、お気軽にご参加ください！また、週に１回決まった日に通うなどの定期的なコースはありません！
+      一回ずつお好きな日時にご自身で予約していただくシステムにしておりますので、半年でも、１年に１回でもかまいません！
+    .lesson__box--left
+      子供に通わせたいと考えているのですが、小学生でも大丈夫ですか？
+    .lesson__box--right  
+      もちろんです！！
+      小学１年生に教えた経験もございます！是非ご検討ください！
+    .lesson__box--left
+      １レッスンに何人同時に行いますか？できれば少人数で行いたいのですが。
+    .lesson__box--right  
+      基本1レッスンに１人から４人までとなります！先にご予約していただいた方優先にはなりますが、ご要望ございましたら可能な限り対応させていただきますね！
+    .lesson__box--left
+      通常のレッスン料金はいくらでしょうか？
+    .lesson__box--right  
+      １回3000円になります！
+  %h1.lesson__headline   
+    お申し込み　＆　お問い合わせ
+  .lesson__btn
+    = link_to "https://docs.google.com/forms/d/e/1FAIpQLScE5svnazHEwslTa2_f5_m91HBpk9O5gxLRYUGu_qFvAk63vw/viewform?usp=sf_link",target: :_blank,class: "lesson__btn--application" do
+      %span
+        お申し込みはこちらから！
+    = link_to "https://docs.google.com/forms/d/e/1FAIpQLScaZ8Ov8dpFkSwNoLgTjqLPG-eg_bJ4rZzvrkqGNoohoHcmXg/viewform?usp=sf_link",target: :_blank,class: "lesson__btn--application" do
+      %span
+        お問い合わせはこちらから！    
+    

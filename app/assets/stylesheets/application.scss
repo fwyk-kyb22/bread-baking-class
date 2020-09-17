@@ -1,10 +1,10 @@
-@import "_a.mixin";
-@import "_reset";
-@import "_header";
+@import "mixin";
+@import "reset";
+@import "header";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-@import "./lesson/index";
-@import "./home/index";
+@import "lesson";
+@import "home";
 @import "toastr";
 @import "users/Sign_up";
 @import "users/Log_in";

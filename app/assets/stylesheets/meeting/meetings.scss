@@ -8,6 +8,11 @@
 }
 .schedules{
   padding: 2em;
+  &--text{
+    color: #585353;
+    text-align: center;
+    margin-top: 1em;
+  }
   &--title{
     width: 22.3em;
   }

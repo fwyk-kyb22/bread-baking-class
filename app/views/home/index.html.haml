@@ -1,7 +1,7 @@
 .home
   .main
     .main--left
-      %h2{class:"main--left__access"} 今後の予定！
+      %h2{class:"main--left__access"} 今後の授業予定！
       .main--left__calendar
         = month_calendar events: @meetings do |date, meetings| 
           = date.day

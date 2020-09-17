@@ -9,8 +9,7 @@
           %li= link_to "Home", home_index_path ,class: "header-menu__right"
           %li= link_to "Lesson内容",lesson_index_path,class: "header-menu__right"
           %li= link_to "ブログ", articles_path, class: "header-menu__right"
-          %li= link_to "お申し込み", "https://docs.google.com/forms/d/e/1FAIpQLScE5svnazHEwslTa2_f5_m91HBpk9O5gxLRYUGu_qFvAk63vw/viewform?usp=sf_link",target: :_blank,class: "header-menu__right"
-          %li= link_to "スケジュール", meetings_path ,class: "header-menu__right"
+          %li= link_to "レッスン予約", meetings_path ,class: "header-menu__right"
           %li= link_to "ログアウト", destroy_user_session_path,method: :delete,class: "header-menu__right"
           %li= link_to "先生のマイページ",admin_reservation_confirmation_index_path,class: "header-menu__right"
     - else
@@ -19,8 +18,7 @@
           %li= link_to "Home", home_index_path ,class: "header-menu__right"
           %li= link_to "Lesson内容",lesson_index_path,class: "header-menu__right"
           %li= link_to "ブログ", articles_path, class: "header-menu__right"
-          %li= link_to "お申し込み", "https://docs.google.com/forms/d/e/1FAIpQLScE5svnazHEwslTa2_f5_m91HBpk9O5gxLRYUGu_qFvAk63vw/viewform?usp=sf_link",target: :_blank,class: "header-menu__right"
-          %li= link_to "スケジュール", meetings_path ,class: "header-menu__right"
+          %li= link_to "レッスン予約", meetings_path ,class: "header-menu__right"
           %li= link_to "ログアウト", destroy_user_session_path,method: :delete,class: "header-menu__right"
           %li= link_to "#{current_user.nickname}さんのマイページ", reservation_confirmation_index_path,class: "header-menu__right"
   - else
@@ -29,6 +27,5 @@
         %li= link_to "Home", home_index_path ,class: "header-menu__right"
         %li= link_to "Lesson内容",lesson_index_path,class: "header-menu__right"
         %li= link_to "ブログ",articles_path , class: "header-menu__right"
-        %li= link_to "お申し込み","https://docs.google.com/forms/d/e/1FAIpQLScE5svnazHEwslTa2_f5_m91HBpk9O5gxLRYUGu_qFvAk63vw/viewform?usp=sf_link",target: :_blank,class: "header-menu__right"
-        %li= link_to "スケジュール", meetings_path ,class: "header-menu__right"
+        %li= link_to "レッスン予約", meetings_path ,class: "header-menu__right"
         %li= link_to "教室の生徒さんはこちら(新規登録)", new_user_session_path,class: "header-menu__right"  

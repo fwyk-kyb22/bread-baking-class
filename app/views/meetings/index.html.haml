@@ -1,6 +1,8 @@
 .schedules
   .schedules--title
-    %h1 パン教室の予定はここから〜
+    %h1 レッスン予約カレンダー
+  .schedules--text
+    レッスンの予約や今後のレッスンの確認はこちらから〜
   = month_calendar events: @meetings do |date, meetings| 
     = date.day
     .meeting__container

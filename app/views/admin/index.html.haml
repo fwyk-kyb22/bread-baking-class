@@ -2,9 +2,7 @@
   .reservation_confirmation--title
     %h1
       生徒一覧
-  .reservation_confirmation__box 
-    %p 
-      今後の授業の一覧！ 
+  .reservation_confirmation__box  
     - @users.each.with_index(1) do |user,i|
       .reservation_confirmation__outer 
         .reservation_confirmation__inner

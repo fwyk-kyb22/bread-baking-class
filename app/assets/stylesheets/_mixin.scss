@@ -217,3 +217,21 @@
     border-left: solid 15px #ffd294;
   }
 }
+@mixin q_and_a {
+  &:before {  
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 12px;
+    bottom: 0;
+    border-radius: 50%;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    bottom: 3px;
+    border-radius: 50%;
+  }
+}

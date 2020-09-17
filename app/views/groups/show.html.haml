@@ -1,6 +1,6 @@
 .mypage--title
   %h1
-    管理人と#{@group.user.nickname}さんのチャットルーム！
+    先生と#{@group.user.nickname}さんのチャットルーム！
 .schedules__comments
   - if user_signed_in?
     = link_to "コメント履歴消去", destroy_all_group_comments_path(current_user.id), method: :delete   ,id: "comment--destroy_all" ,class:"btn btn-outline-danger"
