@@ -1,14 +1,29 @@
-%h2 
-  生徒一覧
-- @users.each.with_index(1) do |user,i|
-  = i
-  %p
-    ニックネーム: #{user.nickname}さん
-  %p
-    #{user.familyname} #{user.firstname}さん
-  %p
-    #{user.familyname_kana} #{user.firstname_kana}さん
-  %p
-    電話番号: #{user.phone_number}
-  %p
-    email: #{user.email} 
+.reservation_confirmation
+  .reservation_confirmation--title
+    %h1
+      生徒一覧
+  .reservation_confirmation__box 
+    %p 
+      今後の授業の一覧！ 
+    - @users.each.with_index(1) do |user,i|
+      .reservation_confirmation__outer 
+        .reservation_confirmation__inner
+          = i
+          %table.table
+            %tr
+              %th ニックネーム
+              %td{colspan: 2} #{user.nickname}　さん
+            %tr
+              %th 名前
+              %td #{user.familyname}
+              %td #{user.firstname}
+            %tr
+              %th かな
+              %td #{user.familyname_kana}
+              %td #{user.firstname_kana}
+            %tr
+              %th 電話番号
+              %td{colspan: 2} #{user.phone_number}
+            %tr
+              %th email
+              %td{colspan: 2} #{user.email} 

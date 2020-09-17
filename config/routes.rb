@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :comments, only: :index, defaults: { format: 'json' }
   end
   resources :reservation_confirmation , only: :index
-  resources :adimn_reservation_confirmation , only: :index
+  resources :admin_reservation_confirmation , only: :index
   resources :groups, only: [:index, :show] do
     resources :comments, only:[:create, :destroy] do
       collection do
