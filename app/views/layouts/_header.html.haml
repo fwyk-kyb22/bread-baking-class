@@ -12,7 +12,7 @@
           %li= link_to "お申し込み", "https://docs.google.com/forms/d/e/1FAIpQLScE5svnazHEwslTa2_f5_m91HBpk9O5gxLRYUGu_qFvAk63vw/viewform?usp=sf_link",target: :_blank,class: "header-menu__right"
           %li= link_to "スケジュール", meetings_path ,class: "header-menu__right"
           %li= link_to "ログアウト", destroy_user_session_path,method: :delete,class: "header-menu__right"
-          %li= link_to "先生のマイページ", admin_index_path,class: "header-menu__right"
+          %li= link_to "先生のマイページ",adimn_reservation_confirmation_index_path,class: "header-menu__right"
     - else
       .header-menu
         %ul

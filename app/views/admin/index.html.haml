@@ -1,0 +1,14 @@
+%h2 
+  生徒一覧
+- @users.each.with_index(1) do |user,i|
+  = i
+  %p
+    ニックネーム: #{user.nickname}さん
+  %p
+    #{user.familyname} #{user.firstname}さん
+  %p
+    #{user.familyname_kana} #{user.firstname_kana}さん
+  %p
+    電話番号: #{user.phone_number}
+  %p
+    email: #{user.email} 
