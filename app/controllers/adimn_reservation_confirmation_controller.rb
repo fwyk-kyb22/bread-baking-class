@@ -1,4 +1,4 @@
-class AdminController < ApplicationController
+class AdimnReservationConfirmationController < ApplicationController
   before_action :if_not_admin, except: [:index, :show]
   layout 'admin'
   def index

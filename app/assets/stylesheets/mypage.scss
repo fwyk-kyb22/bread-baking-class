@@ -1,11 +1,52 @@
+.main__mypage--left{
+  width: 36%;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px; 
+  min-height: calc(100vh - 140px);
+}
+.main__mypage--right{
+  width: 60%;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px; 
+  min-height: calc(100vh - 140px);
+}
 .mypage{
-  padding: 1em;
-  &--btn{
-    padding: 0.5rem;
-    border: 1px solid black;
-    background-color: burlywood;
-    &--messege{
-      color: black;
+  padding: 1em 0 1em 1em;
+  h1{
+    padding: 0.5em;
+    color: #494949;
+    background: #fff1d3b8;
+    border-left: solid 5px #f7b664;
+    font-size: 1.5rem;
+    display: inline-block;
+  }
+  &__messege{
+    &--btn{
+      overflow: hidden;
+      padding: 1.5rem 6rem;
+      color: #fff;
+      border-radius: 0;
+      background: #000;
+      position: relative;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        -webkit-transform: translateX(-96%);
+        transform: translateX(-96%);
+        background: #eb6877;
+      }
+      &:hover:before {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+      }
     }
   }
   &__reservations{
