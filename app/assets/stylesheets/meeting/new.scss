@@ -1,10 +1,4 @@
-.meeting__new{
-  padding: 30px;
-  width: calc(100%-60px);
-  @include background-image;
-  @include font-family;
-}
-.meeting__new__container{
+.meeting__container{
  
   background-color: #ffffff;
   border-radius: 10px;

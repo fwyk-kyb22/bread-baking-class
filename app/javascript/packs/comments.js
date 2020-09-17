@@ -61,7 +61,7 @@ $(function() {
   var reloadComments = function() {
     var first_comment_id = $('.schedules__comments__list__box:first').data("comment-id");
     $.ajax({
-      url: "/api/comments",
+      url: '/api/comments/',
       type: 'get',
       dataType: 'json',
       data: {id: first_comment_id}
@@ -85,7 +85,7 @@ $(function() {
     }else{
     }
   });
-  if (document.location.href.match(/meetings/)) {
+  if (document.location.href.match(/groups/)) {
     setInterval(reloadComments, 10000);
   }
 });

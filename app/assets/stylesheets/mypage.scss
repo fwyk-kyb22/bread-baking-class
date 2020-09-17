@@ -1,0 +1,59 @@
+.main__mypage--left{
+  width: 33%;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px; 
+  min-height: calc(100vh - 140px);
+}
+.main__mypage--right{
+  width: 65%;
+  padding: 2em;
+  background-color: #ffffff;
+  border-radius: 10px; 
+  min-height: calc(100vh - 140px);
+}
+.mypage{
+  a.mypage--btn span{
+    z-index: 1;
+    position: relative;
+  }
+  a.mypage--btn{
+    overflow: hidden;
+    padding: 1.3rem 1.5rem;
+    color: #494949;
+    border-radius: 0;
+    background: #fff1d3b8;
+    display: block;
+    margin: 0.5rem;
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+      -webkit-transform: translateX(-96%);
+      transform: translateX(-96%);
+      background: #f7b664;
+      z-index: 1;
+    }
+    &:hover:before {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+    }
+    &:hover{
+      text-decoration: none;
+      color: white;
+    }
+  }
+  &--title{
+    width: 29em;
+  }
+  &--title h1{
+    width: 23em;
+  }
+  @include ribon_orange;
+}

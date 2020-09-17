@@ -1,0 +1,237 @@
+@mixin user-form{
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0;  
+}
+@mixin label{
+  font-size: 15px;
+  font-weight: bold;
+}
+@mixin field{
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+@mixin title{
+  font-size: 22px;
+  padding: 32px;
+  line-height: 1.5;
+  text-align: center;
+  border-bottom: 1px solid #f8f8f8;
+  font-weight: bold;
+}
+@mixin link{
+  text-decoration: none;
+  float: right;
+  color: #3CCACE; 
+}
+@mixin link_set{
+  text-decoration: none;
+  float: right;
+  color: #3CCACE; 
+  height: 40px;
+  width: 100%;
+  padding: 20px 20px 0 0;
+  text-align: right;
+  display: block;
+  &:hover{
+    text-decoration: none;
+    color: #3CCACE; 
+    opacity: 0.5;
+  }
+}
+@mixin submit{
+  display       : inline-block;
+  border-radius : 20px;         
+  font-size     : 11pt;   
+  text-align    : center;     
+  cursor        : pointer;     
+  padding       : 12px calc(50% - 44px);  
+  background    : #3CCACE;    
+  color         : #ffffff;     
+  line-height   : 24px;         
+  transition    : .3s;  
+  border: solid 1px white;   
+  &:hover{
+    opacity: 0.5;
+  }
+}
+// @mixin require--btn {
+//   background: #3CCACE;
+//   padding: 5px 10px;
+//   color: #fff;
+//   font-size: 11px;
+//   font-weight: normal;
+//   vertical-align: top;
+//   border-radius: 2px;
+//   height: 28px;
+// }
+@mixin background-image{
+  background-image: image-url("iStock.jpg");
+  background-size:contain;
+}
+@mixin font-family{
+  font-family: Hiragino Maru Gothic ProN;
+}
+@mixin btn1 {
+  
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #8fabe7;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #6c7892;
+  border-radius: 3px;
+  }
+@mixin btn1_hover {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+  text-decoration: none;
+  color: #FFF;
+}
+@mixin ribon_blue{
+ 
+  &--title {
+    display: block;
+    position: relative;
+    height: 45px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    z-index: 1;
+    // width: 29em;
+  }
+  &--title:before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    bottom: -10px;
+    left: 0px;
+    border: 20px solid #a5cff3;
+    border-left-color: transparent;
+  }
+  &--title:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: -10px;
+    right: 0px;
+    border: 20px solid #a5cff3;
+    border-right-color: transparent;
+  }
+  &--title h1 {
+    // width: 23em;
+    font-weight: bold;  
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0 20px;
+    line-height: 45px;
+    font-size: 18px;
+    color: #fff;
+    z-index: 1;
+    background-color: #8ec3f1;
+  }
+  &--title h1:before {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    border: none;
+    border-bottom: solid 10px transparent;
+    border-right: solid 15px #7fafd9;
+  }
+  &--title h1:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    right: 0;
+    border: none;
+    border-bottom: solid 10px transparent;
+    border-left: solid 15px #7fafd9;
+  }
+}
+@mixin ribon_orange{
+ 
+  &--title {
+    display: block;
+    position: relative;
+    height: 45px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    z-index: 1;
+    // width: 29em;
+  }
+  &--title:before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    bottom: -10px;
+    left: 0px;
+    border: 20px solid #fdb85c;
+    border-left-color: transparent;
+  }
+  &--title:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: -10px;
+    right: 0px;
+    border: 20px solid #fdb85c;
+    border-right-color: transparent;
+  }
+  &--title h1 {
+    // width: 23em;
+    font-weight: bold;  
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0 20px;
+    line-height: 45px;
+    font-size: 18px;
+    color: #fff;
+    z-index: 1;
+    background-color: #ff9b17;
+  }
+  &--title h1:before {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    border: none;
+    border-bottom: solid 10px transparent;
+    border-right: solid 15px #ffd294;
+  }
+  &--title h1:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    right: 0;
+    border: none;
+    border-bottom: solid 10px transparent;
+    border-left: solid 15px #ffd294;
+  }
+}
+@mixin q_and_a {
+  &:before {  
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 12px;
+    bottom: 0;
+    border-radius: 50%;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    bottom: 3px;
+    border-radius: 50%;
+  }
+}

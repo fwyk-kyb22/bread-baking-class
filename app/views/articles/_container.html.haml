@@ -1,7 +1,7 @@
-.article_main--container--title
+.article--container--title
   %p
     = article.title
-.article_main--container--date  
+.article--container--date  
   #{article.created_at.month}/#{article.created_at.day}(#{%w(日 月 火 水 木 金 土)[article.created_at.wday]})　#{article.created_at.hour}:#{article.created_at.min} 
-.article_main--container--content
+.article--container--content
   = article.content

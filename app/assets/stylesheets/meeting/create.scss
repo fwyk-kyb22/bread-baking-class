@@ -52,37 +52,30 @@
 }
 
 .reservations__create{
-  padding: 30px;
-  width: calc(100%-60px);
-  min-height: 80vh;
-  @include background-image;
-  @include font-family;
-  &__container{
-    background-color: #ffffff;
-    border-radius: 10px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 30px 30px 10px 30px;
-    margin: 0.5rem;
-  }
-  .btn{
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 90%;
+  padding: 30px 30px 10px 30px;
+  margin: 0.5rem auto;
+  &--back{
     display: flex;
     justify-content: flex-end;
-  }
-  .reservations__create--back--btn{
-    background-color: #ffa249;
-    color: white;
-    padding: 1em;
-    border-radius: 10px;
-    display: inline-block;
-    border: 1px solid #ffa249;
-    
-    &:hover{
+    margin-top: 15px;
+    &--btn{
+      background-color: #ffa249;
+      color: white;
+      padding: 1em;
+      border-radius: 10px;
+      display: inline-block;
       border: 1px solid #ffa249;
-      color: #ffa249;
-      background-color: white;
-      text-decoration: none;
-      z-index: 1;
+      
+      &:hover{
+        border: 1px solid #ffa249;
+        color: #ffa249;
+        background-color: white;
+        text-decoration: none;
+        z-index: 1;
+      }
     }
   }
 }

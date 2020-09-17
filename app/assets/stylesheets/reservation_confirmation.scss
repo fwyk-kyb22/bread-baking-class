@@ -1,0 +1,51 @@
+.reservation_confirmation{
+  padding: 1em;
+  &--title{
+    width: 15.5em;
+    h1{
+      width: 11em;
+    }
+  }
+  @include ribon_orange;
+  &__box{
+    padding-top: 2em;
+    p{
+      text-align: center;
+    }
+  }
+  span{
+    font-size: 1.3em;
+  }
+  &__outer{
+    position: relative;
+    padding: 1em;
+    background: #fff1d3b8;
+    border-radius: 15px 0px 0px 15px;
+    margin: 1em;
+    &:before{
+      display:inline-block; 
+      vertical-align: middle;
+      content:'';
+      width: 2em;
+      height: 2em;
+      background: #fff;
+      border-radius: 50%;
+      margin-right: 8px;
+      position: absolute;
+      top: calc(50% - 1em);
+    }
+    &--red{
+      background: #ff9393;
+    }
+    &--orange{
+      background: #f7b763;
+    }
+  }
+  &__inner{
+    padding-left: 3em;
+  }
+  &__details{
+    padding-left: 1.5em;
+    font-size: 0.9em;
+  }
+}

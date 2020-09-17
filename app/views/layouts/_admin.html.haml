@@ -1,0 +1,18 @@
+.home 
+  .main
+    .main__mypage--left
+      .mypage
+        = link_to admin_reservation_confirmation_index_path,class: "mypage--btn" do
+          %span
+            予約一覧
+            = icon("fas","chevron-right")
+        = link_to admin_index_path,class: "mypage--btn" do
+          %span
+            生徒さん一覧
+            = icon("fas","chevron-right")  
+        = link_to groups_path,class: "mypage--btn" do
+          %span
+            生徒さんとのメッセージ一覧
+            = icon("fas","chevron-right")  
+    .main__mypage--right
+      = yield

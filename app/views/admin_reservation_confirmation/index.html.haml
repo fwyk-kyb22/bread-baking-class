@@ -1,0 +1,21 @@
+.reservation_confirmation
+  .reservation_confirmation--title
+    %h1
+      予約一覧
+  .reservation_confirmation__box 
+    %p 
+      今後のレッスン一覧！  
+    -unless @meetings.today_after.blank?
+      - @meetings.today_after.each.with_index(1) do |meeting, i| 
+        - if meeting.start_time.strftime("%Y-%m-%d") == Date.today.strftime("%Y-%m-%d")
+          今日のレッスン！
+          .reservation_confirmation__outer.reservation_confirmation__outer--red 
+            = render partial: "admin_reservation_confirmation/reservation", locals: { meeting: meeting,i:i } 
+        - elsif meeting.start_time.strftime("%Y-%m-%d") == Date.tomorrow.strftime("%Y-%m-%d")
+          明日のレッスン！
+          .reservation_confirmation__outer.reservation_confirmation__outer--orange
+            = render partial: "admin_reservation_confirmation/reservation", locals: { meeting: meeting,i:i } 
+        - else  
+          .reservation_confirmation__outer
+            = render partial: "admin_reservation_confirmation/reservation", locals: { meeting: meeting,i:i } 
+    

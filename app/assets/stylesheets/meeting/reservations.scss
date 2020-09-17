@@ -1,31 +1,24 @@
 .reservations{
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
   padding: 30px;
-  width: calc(100%-60px);
-  min-height: 80vh;
-  @include background-image;
-  @include font-family;
-  &__container{
-    background-color: #ffffff;
-    border-radius: 10px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 30px;
-    margin: 0.5rem;
-    h3{
-      padding: 0.25em 0.5em;/*上下 左右の余白*/
-      color: #494949;/*文字色*/
-      background: transparent;/*背景透明に*/
-      border-left: solid 5px #7db4e6;/*左線*/
-    }
-    span{
-      font-size: large;
-    }
-    &--link{
-      // display: flex;
-      // justify-content:  space-around;
-      position: relative;
-      width: 100%;
-    }
+  margin: 0.5rem;
+  h3{
+    padding: 0.25em 0.5em;/*上下 左右の余白*/
+    color: #494949;/*文字色*/
+    background: transparent;/*背景透明に*/
+    border-left: solid 5px #7db4e6;/*左線*/
+  }
+  span{
+    font-size: large;
+  }
+  &--link{
+    // display: flex;
+    // justify-content:  space-around;
+    position: relative;
+    width: 100%;
   }
 }
 .reservations--create--btn{

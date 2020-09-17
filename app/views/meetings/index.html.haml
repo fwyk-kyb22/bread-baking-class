@@ -1,90 +1,58 @@
 .schedules
-  .schedules__calendar
-    .schedules__calendar--title
-      %h1 パン教室の予定はここから〜
-    = month_calendar events: @meetings do |date, meetings| 
-      = date.day
-      .meeting__container
-        - unless meetings.blank?
-          %label
-            - meetings.each do |meeting| 
-              .details_btn
-                #{ meeting.start_time.hour}時〜 
-                = icon("fas","arrow-right")
-                .meeting__container--inner
-                  .meeting__container__one
-                    .meeting-name
-                      = meeting.name
-                    ・開始時間:
-                    %span #{meeting.start_time.hour}
-                    時〜
-                    %br
-                    ・所要時間: 
-                    %span #{meeting.time_required}
-                    分
-                    %br  
-                    ・予約可能人数残り:
-                    %span  #{meeting.max_reservations-meeting.users.count}
-                    人  
-                    %br 
-                    - if meeting.content.present?
-                      .meeting__container--content
-                        %p  
-                          = meeting.content
-                    - if user_signed_in? 
-                      - if meeting.users.include?(current_user)
-                        .meeting__reservations--btn--red
-                          予約済
-                      - elsif meeting.max_reservations <= meeting.users.count
-                        .meeting__reservations--btn--yellow
-                          満員のためご予約できません！
-                      - else
-                        = link_to '予約する！', new_meeting_reservation_path(meeting),class: "meeting__reservations--btn"
-                      - if current_user == @user || current_user.admin?
-                        .meeting__btn
-                          = link_to '編集', edit_meeting_path(meeting,day: date.day,month: date.month ,year: date.year),class: "meeting__edit--btn"
-                          = link_to '消す！', meeting_path(meeting), method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "meeting__destroy--btn"
-                        %ul  
-                          現在予約している方
-                          - meeting.users.each do |user| 
-                            %li 
-                              #{user.familyname} #{user.firstname} さん
-                              - if user.coupon_use
-                                (クーポン利用の方)
-        - if user_signed_in?
-          - if current_user == @user || current_user.admin?
-            .meeting__btn
-              = link_to '予定を追加', new_meeting_path(day: date.day,month: date.month ,year: date.year) ,class: "meeting__new--btn btn btn-outline-primary btn-sm"
-  .schedules__comments
-    - if user_signed_in?
-      - if current_user == @user || current_user.admin?
-        = link_to "※※※※※※　注意！！　コメント全て削除　※※※※※", destroy_all_comments_path, method: :delete   ,id: "comment--destroy_all" ,class:"btn btn-outline-danger"
-      .schedules__comments__form    
-        = form_with(model:@comment, local: true) do |form|
-          = form.text_area :content , placeholder: "コメントしてみて！" ,class: "schedules__comments__form--area"
-          = form.submit "送信！" ,class: "schedules__comments__form--btn"
-    .schedules__comments__list
-      - @comments.each do |comment|
-        - if comment.user.admin?
-          .schedules__comments__list__box.admin--comment{data: {comment: {id: comment.id}}}
-            .schedules__comments__list__box--name.admin--comment--name
-              #{comment.user.nickname}さん
-              %span のこめんと  
-            .schedules__comments__list__box--comment.admin--comment--comment
-              = comment.content  
-            .schedules__comments__list__box--date 
-              #{comment.created_at.month}/#{comment.created_at.day}(#{%w(日 月 火 水 木 金 土)[comment.created_at.wday]})　#{comment.created_at.hour}:#{comment.created_at.min}   
-            - if current_user == comment.user
-              = link_to "| 削除",comment_path(comment.id) ,method: :delete ,class: "schedules__comments__list__box--btn"
-        - else 
-          .schedules__comments__list__box{data: {comment: {id: comment.id}}}
-            .schedules__comments__list__box--name  
-              #{comment.user.nickname}さん
-              %span のこめんと  
-            .schedules__comments__list__box--comment
-              = comment.content  
-            .schedules__comments__list__box--date    
-              #{comment.created_at.month}/#{comment.created_at.day}(#{%w(日 月 火 水 木 金 土)[comment.created_at.wday]})　#{comment.created_at.hour}:#{comment.created_at.min}
-            - if current_user == comment.user
-              = link_to "| 削除",comment_path(comment.id) ,method: :delete ,class: "schedules__comments__list__box--btn"
-              
+  .schedules--title
+    %h1 レッスン予約カレンダー
+  .schedules--text
+    レッスンの予約や今後のレッスンの確認はこちらから〜
+  = month_calendar events: @meetings do |date, meetings| 
+    = date.day
+    .meeting__container
+      - unless meetings.blank?
+        %label
+          - meetings.each do |meeting| 
+            .details_btn
+              #{ meeting.start_time.hour}時〜 
+              = icon("fas","arrow-right")
+              .meeting__container--inner
+                .meeting__container__one
+                  .meeting-name
+                    = meeting.name
+                  ・開始時間:
+                  %span #{meeting.start_time.hour}
+                  時〜
+                  %br
+                  ・所要時間: 
+                  %span #{meeting.time_required}
+                  分
+                  %br  
+                  ・予約可能人数残り:
+                  %span  #{meeting.max_reservations-meeting.users.count}
+                  人  
+                  %br 
+                  - if meeting.content.present?
+                    .meeting__container--content
+                      %p  
+                        = meeting.content
+                  - if user_signed_in? 
+                    - if meeting.users.include?(current_user)
+                      .meeting__reservations--btn--red
+                        予約済
+                    - elsif meeting.max_reservations <= meeting.users.count
+                      .meeting__reservations--btn--yellow
+                        満員のためご予約できません！
+                    - else
+                      = link_to '予約する！', new_meeting_reservation_path(meeting),class: "meeting__reservations--btn"
+                    - if current_user == @user || current_user.admin?
+                      .meeting__btn
+                        = link_to '編集', edit_meeting_path(meeting,day: date.day,month: date.month ,year: date.year),class: "meeting__edit--btn"
+                        = link_to '消す！', meeting_path(meeting), method: :delete, data: { confirm: 'ほんとに消してええか?' },class: "meeting__destroy--btn"
+                      %ul  
+                        現在予約している方
+                        - meeting.users.each do |user| 
+                          %li 
+                            #{user.familyname} #{user.firstname} さん
+                            - if user.coupon_use
+                              (クーポン利用の方)
+      - if user_signed_in?
+        - if current_user == @user || current_user.admin?
+          .meeting__btn
+            = link_to '予定を追加', new_meeting_path(day: date.day,month: date.month ,year: date.year) ,class: "meeting__new--btn btn btn-outline-primary btn-sm"

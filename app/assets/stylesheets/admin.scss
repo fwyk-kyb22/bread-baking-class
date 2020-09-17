@@ -1,0 +1,52 @@
+.admin__groups{
+  padding: 1em;
+  &--title{
+    width: 21.5em;
+    h1{
+      width: 16.2em;
+    }
+  }
+  @include ribon_orange;
+  &__box{
+    padding-top: 2em;
+  }
+  &__outer{
+    position: relative;
+    padding: 1em;
+    background: #fff1d3b8;
+    border-radius: 15px 0px 0px 15px;
+    margin: 1em;
+    display: block;
+    overflow: hidden;
+    &:before{
+      display:inline-block; 
+      vertical-align: middle;
+      content:'';
+      width: 2em;
+      height: 2em;
+      background: #fff;
+      border-radius: 50%;
+      margin-right: 8px;
+      position: absolute;
+      top: calc(50% - 1em);
+    }
+    span{
+      padding-left: 3em;
+      position: relative;
+    }
+  }
+  a{
+    color:  #494949;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    &:hover {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+      background: #f7b664;
+    }
+    &:hover{
+      text-decoration: none;
+      color: white;
+    }
+  }
+}

@@ -3,16 +3,17 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
-
+  layout 'home'
   # GET /resource/sign_up
   # def new
   #   super
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+    @group = Group.create!(group_params)
+  end
 
   # GET /resource/edit
   # def edit
@@ -59,4 +60,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  def group_params
+    params.permit(:id).merge(user_id: current_user.id)
+  end
 end

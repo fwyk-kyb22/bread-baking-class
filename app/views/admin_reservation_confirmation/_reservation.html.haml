@@ -1,0 +1,30 @@
+.reservation_confirmation__inner
+  %span #{meeting.start_time.month}
+  月
+  %span #{meeting.start_time.day}
+  日
+  %span #{meeting.start_time.hour}
+  時〜
+  %span #{meeting.name}
+  .reservation_confirmation__details
+    ・所要時間: 
+    %span #{meeting.time_required}
+    分
+    %br
+    ・予約人数:
+    %span  #{meeting.users.count}
+    人  
+    %br  
+    = meeting.content
+    %br 
+    - if meeting.content.present?
+      .meeting__container--content
+        %p  
+          = meeting.content
+    %ul  
+      現在予約している方
+      - meeting.users.each do |user| 
+        %li 
+          #{user.familyname} #{user.firstname} さん
+          - if user.coupon_use
+            (クーポン利用の方)
