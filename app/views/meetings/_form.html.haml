@@ -12,6 +12,9 @@
   .field
     = f.label :詳細
     = f.text_area :content ,placeholder: "初心者の方にもおすすめ！比較的簡単につくれますよ！"
+  -# .field
+  -#   = f.label :rate
+  -#   = f.hidden_field :rate, id: :star 
   .field
     = f.label :所要時間
     = f.number_field :time_required , value: 120

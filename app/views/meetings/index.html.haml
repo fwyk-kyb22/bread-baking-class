@@ -16,6 +16,20 @@
                 .meeting__container__one
                   .meeting-name
                     = meeting.name
+                  ・難易度: 
+                  - if meeting.rate == 1
+                    = image_tag asset_path("star-on.png"),class: "main--right__introduction--image"
+                    = image_tag asset_path("star-off.png"),class: "main--right__introduction--image"
+                    = image_tag asset_path("star-off.png"),class: "main--right__introduction--image"
+                  - elsif  meeting.rate == 2
+                    = image_tag asset_path("star-on.png"),class: "main--right__introduction--image"
+                    = image_tag asset_path("star-on.png"),class: "main--right__introduction--image"
+                    = image_tag asset_path("star-off.png"),class: "main--right__introduction--image"
+                  - else  meeting.rate == 3
+                    = image_tag asset_path("star-on.png"),class: "main--right__introduction--image"
+                    = image_tag asset_path("star-on.png"),class: "main--right__introduction--image"
+                    = image_tag asset_path("star-on.png"),class: "main--right__introduction--image"  
+                  %br  
                   ・開始時間:
                   %span #{meeting.start_time.hour}
                   時〜

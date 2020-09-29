@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 2020_09_25_131109) do
     t.integer "max_reservations"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.float "rate", default: 0.0, null: false
+    t.integer "rate", default: 1, null: false
   end
 
   create_table "reservations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

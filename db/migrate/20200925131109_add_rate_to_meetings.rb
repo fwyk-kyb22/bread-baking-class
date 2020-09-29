@@ -1,5 +1,5 @@
 class AddRateToMeetings < ActiveRecord::Migration[6.0]
   def change
-    add_column :meetings, :rate, :float, null: false, default: 0
+    add_column :meetings, :rate, :integer, null: false, default: 1
   end
 end
