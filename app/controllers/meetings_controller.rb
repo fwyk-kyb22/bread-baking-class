@@ -1,5 +1,7 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: :index
+  before_action :if_not_admin, except: :index
   # before_action :authenticate_user! 
 
   # GET /meetings
@@ -69,8 +71,12 @@ class MeetingsController < ApplicationController
       @meeting = Meeting.find(params[:id])
     end
 
+    def if_not_admin
+      redirect_to root_path unless current_user.admin?
+    end
+
     # Only allow a list of trusted parameters through.
     def meeting_params
-      params.require(:meeting).permit(:name, :start_time, :content, :time_required, :max_reservations)
+      params.require(:meeting).permit(:name, :start_time, :content, :time_required, :max_reservations, :rate)
     end
 end
