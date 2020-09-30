@@ -1,4 +1,4 @@
-.meeting__container{
+.meeting-new__container{
  
   background-color: #ffffff;
   border-radius: 10px;
@@ -39,8 +39,23 @@
       z-index: 1;
     }
   }
-  label{
+  label,span{
     padding-right: 1rem;
+  }
+  input[type="radio"]{
+    display: none;
+  }
+  // input[type="radio"]:checked + label {
+  //   .star--off{
+  //     display: none;
+  //   }
+  //   .star--on{
+  //     display: inline-block;
+  //   }
+  //  }
+  
+  .star--on{
+    display: none;  
   }
   input[type="submit"]{
     background-color: #ffafa9;

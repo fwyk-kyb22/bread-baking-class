@@ -13,6 +13,20 @@
     = f.label :詳細
     = f.text_area :content ,placeholder: "初心者の方にもおすすめ！比較的簡単につくれますよ！"
   .field
+    %span 難易度
+    = f.radio_button :rate,"1",id:"rate--1"
+    = f.label :"1" ,for:"rate--1",class: "rate--1" do
+      = image_tag asset_path("star-off.png"),class: "star--off"
+      = image_tag asset_path("star-on.png"),class: "star--on"
+    = f.radio_button :rate,"2",id:"rate--2"
+    = f.label :"2" ,for:"rate--2",class: "rate--2"  do
+      = image_tag asset_path("star-off.png"),class: "star--off"
+      = image_tag asset_path("star-on.png"),class: "star--on"  
+    = f.radio_button :rate,"3" ,id:"rate--3"
+    = f.label :"3" ,for:"rate--3",class: "rate--3"  do
+      = image_tag asset_path("star-off.png"),class: "star--off"
+      = image_tag asset_path("star-on.png"),class: "star--on"    
+  .field
     = f.label :所要時間
     = f.number_field :time_required , value: 120
     %span 分
