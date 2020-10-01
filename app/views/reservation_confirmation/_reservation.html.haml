@@ -7,6 +7,20 @@
   時〜
   %span #{meeting.name}
   .reservation_confirmation__details
+    ・難易度: 
+    - if meeting.rate == 1
+      = image_tag asset_path("star-on.png"),class: "star--img"
+      = image_tag asset_path("star-off.png"),class: "star--img"
+      = image_tag asset_path("star-off.png"),class: "star--img"
+    - elsif  meeting.rate == 2
+      = image_tag asset_path("star-on.png"),class: "star--img"
+      = image_tag asset_path("star-on.png"),class: "star--img"
+      = image_tag asset_path("star-off.png"),class: "star--img"
+    - else  meeting.rate == 3
+      = image_tag asset_path("star-on.png"),class: "star--img"
+      = image_tag asset_path("star-on.png"),class: "star--img"
+      = image_tag asset_path("star-on.png"),class: "star--img" 
+    %br  
     ・所要時間: 
     %span #{meeting.time_required}
     分
